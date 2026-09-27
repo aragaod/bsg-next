@@ -20,3 +20,6 @@ static/images/latest/
 
 # Private progress log (history before the squash, lessons learned)
 PROGRESS.md
+
+# Private committee papers, never published
+private/
