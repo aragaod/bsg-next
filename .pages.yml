@@ -61,6 +61,13 @@ content:
       - { name: author, label: Author, type: string }
       - { name: summary, label: Summary, type: text, description: One or two sentences for lists and the home page. }
       - { name: image, label: Image, type: image, description: Optional. Only use photos of people with their permission., options: { media: images } }
+      - name: attachments
+        label: Attachments (PDFs, posters, programmes)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Link text, type: string, required: true, description: 'e.g. "Poster (PDF)"' }
+          - { name: file, label: File, type: file, options: { media: documents } }
       - { name: body, component: body }
 
   # ------------------------------------------------------------ Meetings
@@ -93,6 +100,14 @@ content:
       - { name: venue, label: Venue, type: string }
       - { name: theme, label: Theme, type: string }
       - { name: programme, label: Programme (PDF), type: file, options: { media: documents } }
+      - { name: poster, label: Poster, type: image, description: Image of the meeting poster (a PDF can go in Attachments), options: { media: images } }
+      - name: attachments
+        label: Attachments (PDFs, posters, programmes)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Link text, type: string, required: true, description: 'e.g. "Poster (PDF)"' }
+          - { name: file, label: File, type: file, options: { media: documents } }
       - { name: registration, label: Registration link, type: string }
       - { name: body, component: body }
 
@@ -135,6 +150,7 @@ content:
       - { name: pdb, label: PDB IDs, type: string, list: true, description: The first one is shown in the 3D viewer. }
       - { name: emdb, label: EMDB IDs, type: string, list: true, description: 'e.g. EMD-3741' }
       - { name: sasbdb, label: SASBDB IDs, type: string, list: true, description: 'e.g. SASDWL2' }
+      - { name: bmrb, label: BMRB IDs, type: string, list: true, description: 'e.g. 34925' }
       - { name: molstar, label: Show the interactive 3D viewer, type: boolean, default: true }
       - { name: body, label: Story (about 100 words), type: rich-text }
 
@@ -307,7 +323,7 @@ content:
                 fields:
                   - { name: citation, label: Citation, type: string }
                   - { name: doi, label: DOI, type: string }
-              - { name: data, label: Data (database IDs), type: string }
+              - { name: data, label: Data (database IDs), type: string, description: 'Separate with " · ". Links are made automatically, e.g. "PDB 8QVU · EMD-18657 · SASBDB SASDVA6 · BMRB 34925".' }
               - { name: method, label: How it was made, type: text }
 
       - name: announcements
@@ -323,7 +339,8 @@ content:
             list: true
             fields:
               - { name: text, label: Message, type: string, required: true }
-              - { name: url, label: Link, type: string, description: 'A page on this site (e.g. /prizes/) or a full URL' }
+              - { name: url, label: Link, type: string, description: 'A page on this site (e.g. /prizes/) or a full URL. Leave empty if you upload a file instead.' }
+              - { name: file, label: Or upload a file (PDF), type: file, options: { media: documents } }
               - { name: until, label: Show until, type: date }
 
       - name: events
@@ -347,6 +364,7 @@ content:
               - { name: location, label: Location, type: string }
               - { name: techniques, component: techniques }
               - { name: description, label: Description, type: text }
+              - { name: file, label: Flyer or programme (PDF), type: file, options: { media: documents } }
 
       - name: training
         label: Training

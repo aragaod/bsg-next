@@ -1,0 +1,10 @@
+{{- /* List of downloadable files. Context: list of {label, file}. */ -}}
+{{- with . }}
+<ul class="mt-6 flex flex-wrap gap-3">
+  {{- range $a := . }}{{ with $a.file }}
+  <li><a href="{{ partial "fn/file-url.html" . }}" class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-brand-800 ring-1 ring-brand-200 hover:bg-brand-50 dark:text-brand-200 dark:ring-brand-800 dark:hover:bg-brand-950">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+    {{ $a.label | default "Download" }}</a></li>
+  {{- end }}{{ end }}
+</ul>
+{{- end }}

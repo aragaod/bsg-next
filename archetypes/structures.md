@@ -15,6 +15,7 @@ links: []               # e.g. [{label: "AlphaFold DB", url: "https://..."}]
 pdb: []
 emdb: []                # e.g. [EMD-1234]
 sasbdb: []              # e.g. [SASDA12]
+bmrb: []                # e.g. [34925]
 molstar: false
 ---
 

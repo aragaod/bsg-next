@@ -38,7 +38,7 @@ The Pages CMS GitHub app must stay installed on the `bsg-next` repository (GitHu
 | **Community** | Member spotlights and podcast episodes. |
 | **Pages** | The text of About, History, Join, Committee, Community, Chat and Mentoring, and the introductions on Meetings, Training and Resources. |
 | **Lists** | The announcements bar, events calendar, training courses, committee, prizes and winners, and Resources links. |
-| **Media** | Uploaded images and documents (for example meeting programmes). |
+| **Media** | Uploaded files. Images are stored in `images`, documents (PDF, Word, PowerPoint) in `archive`; each upload field puts files in the right place automatically. |
 
 ### Making a change
 
@@ -54,7 +54,11 @@ Every save is recorded with your name. Mistakes can always be undone, so don't w
 
 - **Post news:** News → Add an entry → title, date, a one-sentence summary and the text.
 - **Announce the Winter Meeting date:** Meetings → the meeting → set **Start date** (and **Registration link** when ready). The home page countdown starts straight away.
-- **Add a meeting programme:** Meetings → the meeting → **Programme** → upload the PDF.
+- **Add a meeting programme or poster:** Meetings → the meeting → **Programme** (PDF), **Poster** (image), or **Attachments** for anything else (abstract book, travel info).
+- **Attach a PDF to a news post:** News → the post → **Attachments** → link text (e.g. "Poster (PDF)") and upload the file.
+- **Point the announcements bar at a PDF:** Lists → Announcements bar → leave **Link** empty and use **Or upload a file**.
+- **Add a flyer to an event:** Lists → Events calendar → the event → **Flyer or programme (PDF)**.
+- **Database links on the home page images:** Lists → Home page images → **Data**, e.g. `PDB 8QVU · EMD-18657 · SASBDB SASDVA6 · BMRB 34925`; links are added automatically.
 - **Add an event from another organisation:** Lists → Events calendar → add an item with a title, organiser, link and dates. Past events disappear by themselves.
 - **Schedule a structure of the month:** Structure of the month → Add an entry → date = 1st of the month. Include the PDB IDs; the first one is shown in the 3D viewer.
 - **Add a temporary notice to the top bar:** Lists → Announcements bar → add a message with a **Show until** date.

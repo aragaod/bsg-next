@@ -4,8 +4,10 @@
   <div class="prose-bsg lg:col-span-2">
     {{- with .Params.theme }}<p class="text-xl text-slate-700 italic dark:text-slate-300">{{ . }}</p>{{ end }}
     {{ .Content }}
+    {{ partial "attachments.html" .Params.attachments }}
   </div>
   <aside class="h-fit rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
+    {{- with .Params.poster }}<a href="{{ partial "fn/file-url.html" . }}"><img src="{{ partial "fn/file-url.html" . }}" alt="Meeting poster" class="mb-6 w-full rounded-lg shadow-sm"></a>{{ end }}
     <dl class="space-y-4 text-sm">
       <div>
         <dt class="font-semibold text-slate-900 dark:text-white">When</dt>

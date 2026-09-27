@@ -28,7 +28,8 @@
       {{- $db := slice
         (dict "name" "PDB" "ids" .Params.pdb "url" "https://www.ebi.ac.uk/pdbe/entry/pdb/%s")
         (dict "name" "EMDB" "ids" .Params.emdb "url" "https://www.ebi.ac.uk/emdb/%s")
-        (dict "name" "SASBDB" "ids" .Params.sasbdb "url" "https://www.sasbdb.org/data/%s/") }}
+        (dict "name" "SASBDB" "ids" .Params.sasbdb "url" "https://www.sasbdb.org/data/%s/")
+        (dict "name" "BMRB" "ids" .Params.bmrb "url" "https://bmrb.io/data_library/summary/index.php?bmrbId=%s") }}
       {{- range $db }}{{ if .ids }}
       <div>
         <p class="font-semibold text-slate-900 dark:text-white">{{ .name }}</p>
