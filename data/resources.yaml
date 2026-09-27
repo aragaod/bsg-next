@@ -674,6 +674,9 @@ groups:
     - name: Lightsources.org careers
       url: https://lightsources.org/careers/
       description: Jobs at synchrotron and free-electron laser facilities worldwide.
+    - name: Diamond Light Source vacancies
+      url: https://www.diamond.ac.uk/Careers/Vacancies.html
+      description: Jobs at the UK's synchrotron, including beamline and industrial liaison scientists.
     - name: EMBL jobs
       url: https://www.embl.org/jobs/
     - name: MRC Laboratory of Molecular Biology careers
