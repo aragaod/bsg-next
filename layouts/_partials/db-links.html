@@ -1,0 +1,20 @@
+{{- /*
+  Turns a "data" string such as "SASBDB SASDVA6 · EMD-19717 · PDB 8S50 · 9FUL"
+  into links: PDB IDs → PDBe, EMD-… → EMDB, SASD… → SASBDB, BMRB n → BMRB.
+  Bare 4-character IDs following a PDB item are treated as PDB IDs.
+*/ -}}
+{{- $out := slice }}
+{{- range split . " · " }}
+  {{- $t := strings.TrimSpace . }}
+  {{- $id := replaceRE `^(PDB|SASBDB|BMRB|EMDB)\s+` "" $t }}
+  {{- $url := "" }}
+  {{- if findRE `^EMD-\d+$` $id }}{{ $url = printf "https://www.ebi.ac.uk/emdb/%s" $id }}
+  {{- else if findRE `^SASD[A-Z0-9]+$` $id }}{{ $url = printf "https://www.sasbdb.org/data/%s/" $id }}
+  {{- else if strings.HasPrefix $t "BMRB" }}{{ $url = printf "https://bmrb.io/data_library/summary/index.php?bmrbId=%s" $id }}
+  {{- else if findRE `^[0-9][A-Za-z0-9]{3}$` $id }}{{ $url = printf "https://www.ebi.ac.uk/pdbe/entry/pdb/%s" (lower $id) }}
+  {{- end }}
+  {{- if $url }}
+    {{- $out = $out | append (printf `<a href="%s" class="underline decoration-slate-300 hover:text-brand-700 dark:hover:text-brand-300" rel="noopener">%s</a>` $url $t) }}
+  {{- else }}{{ $out = $out | append $t }}{{ end }}
+{{- end }}
+{{- delimit $out " · " | safeHTML -}}

@@ -95,7 +95,7 @@ images:
     lab: Anthony Green's group, Manchester Institute of Biotechnology
     layers:
       - { colour: amber, technique: X-ray crystallography, where: Diamond I03, note: "1.7 Å, substrate in electron density (blue)" }
-      - { colour: green, technique: "Directed evolution, kinetics and simulation", where: "University of Manchester", note: "Used to engineer and understand the enzyme" }
+      - { colour: green, technique: Molecular dynamics and docking, where: "GROMACS, AutoDock Vina", note: "Showed how Arg124 holds the substrate in a reactive position" }
     paper: { citation: "Lister et al., Nature 639, 375–381 (2025)", doi: 10.1038/s41586-025-08611-0 }
     data: "PDB 9FUG · 9FUL · 9FUO"
-    method: "Crystal structure with the 2Fo−Fc density (PDBe) around the bound substrate. The paper also used enzyme kinetics, protein mass spectrometry and molecular dynamics. Rendered with UCSF ChimeraX."
+    method: "Crystal structure with the 2Fo−Fc density (PDBe) around the bound substrate. The enzyme was improved by directed evolution and characterised by kinetics and protein mass spectrometry; docking (AutoDock Vina) and molecular dynamics (GROMACS 2018, AMBER14 force field) were performed at the Manchester Institute of Biotechnology. The simulations are described in the paper, not shown in the image. Rendered with UCSF ChimeraX."
