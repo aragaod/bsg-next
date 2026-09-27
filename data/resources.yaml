@@ -553,6 +553,9 @@ groups:
     - name: EURAXESS
       url: https://euraxess.ec.europa.eu/jobs/search
       description: Research jobs across Europe.
+    - name: Lightsources.org careers
+      url: https://lightsources.org/careers/
+      description: Jobs at synchrotron and free-electron laser facilities worldwide.
     - name: EMBL jobs
       url: https://www.embl.org/jobs/
     - name: MRC Laboratory of Molecular Biology careers
