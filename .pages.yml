@@ -278,7 +278,7 @@ content:
             description: One image per day, in this order, repeating. List an image more than once to show it more often.
             type: select
             list: true
-            options: { values: [ptx3, pla2r, toll5a, il33, spd2] }
+            options: { values: [ptx3, pla2r, toll5a, il33, spd2, kras, snar] }
           - name: images
             label: Images and credits
             description: New images need to be rendered and added by the web team.

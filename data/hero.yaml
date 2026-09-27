@@ -1,7 +1,7 @@
 # Home page hero images. One is shown per day, following "schedule" in order
 # (the nightly rebuild moves to the next day's entry). Listing an image more
 # than once shows it more often.
-schedule: [ptx3, pla2r, toll5a, ptx3, il33, spd2]
+schedule: [ptx3, kras, pla2r, ptx3, snar, toll5a, ptx3, il33, spd2]
 
 images:
   - id: ptx3
@@ -73,3 +73,29 @@ images:
     paper: { citation: "Hu et al., Science Advances 11, eadr5744 (2025)", doi: 10.1126/sciadv.adr5744 }
     data: "PDB 9FU8 · BMRB 34925 · PDB 9C72"
     method: "The two domains were oriented the same way by structural alignment (TM-align; TM-score about 0.5, the same fold). The paper does not name the NMR facility. Rendered with UCSF ChimeraX."
+
+  - id: kras
+    image: images/hero/kras.png
+    title: A degrader drug for cancer-causing KRAS
+    alt: "A teal cryo-EM surface of the ubiquitin ligase machinery with a window revealing the amber crystal structure of KRAS and VHL held together by a degrader molecule, shown in blue electron density."
+    summary: A small molecule that glues cancer-causing KRAS to the cell's disposal machinery, degrading 13 of the 17 most common KRAS mutants.
+    lab: Alessio Ciulli's group, University of Dundee, with Boehringer Ingelheim
+    layers:
+      - { colour: amber, technique: X-ray crystallography, where: SLS, note: "KRAS–degrader–VHL complex, 2.2 Å, with electron density (blue)" }
+      - { colour: teal, technique: Cryo-EM, where: Titan Krios, note: "Full ligase complex, 3.5 Å" }
+    paper: { citation: "Popow et al., Science 385, 1338–1347 (2024)", doi: 10.1126/science.adm8684 }
+    data: "PDB 8QVU · EMD-18657 · PDB 8QU8"
+    method: "The crystal structure was superposed on the cryo-EM model through VHL; the cryo-EM surface is cut away around it. The X-ray density is the PDBe 2Fo−Fc map. Rendered with UCSF ChimeraX."
+
+  - id: snar
+    image: images/hero/snar.png
+    title: An enzyme evolved for pharmaceutical chemistry
+    alt: "An amber designed enzyme with a pale surface, and the bound substrate in the active site shown inside blue electron density."
+    summary: A designed enzyme, improved by directed evolution, that performs a key pharmaceutical reaction with precise control of the product's handedness.
+    lab: Anthony Green's group, Manchester Institute of Biotechnology
+    layers:
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I03, note: "1.7 Å, substrate in electron density (blue)" }
+      - { colour: green, technique: "Directed evolution, kinetics and simulation", where: "University of Manchester", note: "Used to engineer and understand the enzyme" }
+    paper: { citation: "Lister et al., Nature 639, 375–381 (2025)", doi: 10.1038/s41586-025-08611-0 }
+    data: "PDB 9FUG · 9FUL · 9FUO"
+    method: "Crystal structure with the 2Fo−Fc density (PDBe) around the bound substrate. The paper also used enzyme kinetics, protein mass spectrometry and molecular dynamics. Rendered with UCSF ChimeraX."
