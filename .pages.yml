@@ -32,8 +32,8 @@ components:
         - { value: cryo-em, label: Cryo-EM & tomography }
         - { value: saxs, label: Bio-SAXS & SANS }
         - { value: nmr, label: NMR }
-        - { value: mass-spec, label: Mass spectrometry }
-        - { value: biophysics, label: Biophysics }
+        - { value: mass-spec, label: Structural mass spectrometry }
+        - { value: biophysics, label: Biophysical characterisation }
         - { value: imaging, label: Imaging }
         - { value: modelling-ai, label: "Modelling, simulation & AI" }
         - { value: drug-design, label: Drug design }
@@ -143,6 +143,36 @@ content:
     label: Community
     type: group
     items:
+      - name: podcast-settings
+        label: Podcast section settings
+        type: file
+        path: content/community/podcast/_index.md
+        fields:
+          - name: cascade
+            label: Visibility
+            type: object
+            fields:
+              - { name: draft, label: "Hide the podcast section and all its episodes", type: boolean }
+              - { name: type, type: string, hidden: true, default: podcast }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: status, label: Status badge, type: string, description: 'e.g. "Proposal"; leave empty to hide the badge' }
+          - { name: body, component: body }
+      - name: spotlights-settings
+        label: Spotlights section settings
+        type: file
+        path: content/community/spotlights/_index.md
+        fields:
+          - name: cascade
+            label: Visibility
+            type: object
+            fields:
+              - { name: draft, label: "Hide the spotlights section and all spotlights", type: boolean }
+              - { name: type, type: string, hidden: true, default: spotlight }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: status, label: Status badge, type: string, description: 'e.g. "Proposal"; leave empty to hide the badge' }
+          - { name: body, component: body }
       - name: spotlights
         label: Member spotlights
         type: collection
@@ -205,8 +235,8 @@ content:
       - { name: page-history, label: History, type: file, path: content/about/history.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
       - { name: page-join, label: Join, type: file, path: content/about/join.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
       - { name: page-community, label: Community (overview), type: file, path: content/community/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
-      - { name: page-chat, label: Community chat, type: file, path: content/community/chat.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string, description: 'e.g. "Pilot proposal"; leave empty to hide' }, { name: body, component: body }] }
-      - { name: page-mentoring, label: Mentoring, type: file, path: content/community/mentoring.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string }, { name: body, component: body }] }
+      - { name: page-chat, label: Community chat, type: file, path: content/community/chat.md, fields: [{ name: draft, label: Hide this page from the website, type: boolean, description: Use while a proposal is not yet running. }, { name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string, description: 'e.g. "Pilot proposal"; leave empty to hide' }, { name: body, component: body }] }
+      - { name: page-mentoring, label: Mentoring, type: file, path: content/community/mentoring.md, fields: [{ name: draft, label: Hide this page from the website, type: boolean, description: Use while a proposal is not yet running. }, { name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string }, { name: body, component: body }] }
       - { name: page-meetings, label: Meetings (intro text), type: file, path: content/meetings/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
       - { name: page-training, label: Training (intro text), type: file, path: content/training/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
       - { name: page-resources, label: Resources (intro text), type: file, path: content/resources/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }

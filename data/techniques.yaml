@@ -7,9 +7,9 @@
 - id: nmr
   label: NMR
 - id: mass-spec
-  label: Mass spectrometry
+  label: Structural mass spectrometry
 - id: biophysics
-  label: Biophysics
+  label: Biophysical characterisation
 - id: imaging
   label: Imaging
 - id: modelling-ai
