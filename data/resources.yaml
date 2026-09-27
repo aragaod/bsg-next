@@ -5,7 +5,7 @@
 # Notes: Diamond pages block automated link checks, so the eBIC and B21 URLs
 # should be checked by hand. Removed as dead (Sep 2026): BMSC Washington
 # tutorials and Raster3D (server unreachable).
-# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB).
+# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB), AstraZeneca, Charles River.
 groups:
 - id: facilities
   title: Facilities
@@ -30,7 +30,7 @@ groups:
     - name: B21 bio-SAXS beamline, Diamond
       url: https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/B21.html
       description: Solution scattering, including size-exclusion chromatography SAXS.
-      techniques: &id003
+      techniques: &id004
       - saxs
     - name: ISIS Neutron and Muon Source
       url: https://www.isis.stfc.ac.uk/
@@ -52,6 +52,28 @@ groups:
       - cryo-em
       - saxs
       - imaging
+  - title: UK structural mass spectrometry
+    links:
+    - name: Kavli Institute for NanoScience Discovery, Oxford
+      url: https://kavlinano.ox.ac.uk/
+      description: Native mass spectrometry of membrane proteins and complexes (Robinson group and others).
+      techniques: &id001
+      - mass-spec
+    - name: Biomolecular Mass Spectrometry Facility, Leeds (Astbury Centre)
+      url: https://biologicalsciences.leeds.ac.uk/facilities/doc/mass-spectrometry
+      description: Native MS, ion mobility, hydrogen–deuterium exchange and crosslinking.
+      techniques: *id001
+    - name: Mass spectrometry and separations facility, Manchester
+      url: https://research.manchester.ac.uk/en/equipments/a-core-facility-for-mass-spectrometry-and-separations/
+      description: Includes the Michael Barber Centre for Collaborative Mass Spectrometry (Manchester Institute of Biotechnology).
+      techniques: *id001
+  - title: UK NMR
+    links:
+    - name: Connect NMR UK
+      url: https://www.connectnmruk.ac.uk/
+      description: Network of UK NMR facilities, including access to high-field instruments.
+      techniques:
+      - nmr
   - title: European facilities
     links:
     - name: ESRF
@@ -79,7 +101,7 @@ groups:
     - name: Elettra
       url: http://www.elettra.trieste.it/
       description: Synchrotron, Trieste.
-      techniques: &id001
+      techniques: &id002
       - crystallography
     - name: MAX IV
       url: https://www.maxiv.lu.se/
@@ -96,7 +118,7 @@ groups:
     - name: Swiss Light Source (PSI)
       url: https://www.psi.ch/en
       description: Synchrotron at the Paul Scherrer Institute.
-      techniques: *id001
+      techniques: *id002
   - title: Worldwide
     links:
     - name: Lightsources.org
@@ -118,16 +140,16 @@ groups:
     links:
     - name: DIALS
       url: http://dials.github.io/
-      techniques: *id001
+      techniques: *id002
     - name: MOSFLM
       url: https://www.mrc-lmb.cam.ac.uk/mosflm/imosflm/ver740/introduction.html
-      techniques: *id001
+      techniques: *id002
     - name: HKL
       url: http://www.hkl-xray.com/
-      techniques: *id001
+      techniques: *id002
     - name: XDS
       url: https://xds.mr.mpg.de/
-      techniques: *id001
+      techniques: *id002
   - title: 'Crystallography: structure solution, refinement and model building'
     links:
     - name: CCP4
@@ -142,54 +164,54 @@ groups:
       - cryo-em
     - name: CNS
       url: http://cns-online.org/v1.3/
-      techniques: *id001
+      techniques: *id002
     - name: SHARP
       url: http://www.globalphasing.com/sharp/
-      techniques: *id001
+      techniques: *id002
     - name: SHELX
       url: http://shelx.uni-goettingen.de/
-      techniques: *id001
+      techniques: *id002
     - name: ARP/wARP
       url: https://cloud.ccp4.ac.uk/manuals/html-taskref/doc.task.ArpWarp.html
-      techniques: *id001
+      techniques: *id002
     - name: MAID
       url: https://jonbcooper.github.io/cxp/maid.html
-      techniques: *id001
+      techniques: *id002
     - name: SIMBAD
       url: https://simbad.readthedocs.io/en/latest/server.html
       description: Sequence-independent molecular replacement.
-      techniques: *id001
+      techniques: *id002
     - name: SAUC
       url: https://sauc.lbl.gov
       description: Search the PDB for structures with similar unit cells.
-      techniques: *id001
+      techniques: *id002
     - name: ContaMiner
       url: https://strube.cbrc.kaust.edu.sa/contaminer/submit/
       description: Identify crystallisation contaminants.
-      techniques: *id001
+      techniques: *id002
     - name: Coordinate transformation tool
       url: http://ic50.org/fractorth/
       description: Convert between fractional and orthogonal coordinates online.
-      techniques: *id001
+      techniques: *id002
     - name: Convert CIF to PDB online
       url: http://ic50.org/ciftopdb
-      techniques: *id001
+      techniques: *id002
     - name: General crystallographic calculator
       url: http://ic50.org/gencrycal/
-      techniques: *id001
+      techniques: *id002
   - title: Cryo-EM and tomography
     links:
     - name: CCP-EM
       url: https://www.ccpem.ac.uk/
       description: UK collaborative computational project for cryo-EM.
-      techniques: &id002
+      techniques: &id003
       - cryo-em
     - name: RELION
       url: https://relion.readthedocs.io/
-      techniques: *id002
+      techniques: *id003
     - name: cryoSPARC
       url: https://cryosparc.com/
-      techniques: *id002
+      techniques: *id003
     - name: Warp
       url: https://www.warpem.com/
       techniques:
@@ -206,18 +228,18 @@ groups:
     - name: ATSAS
       url: https://www.embl-hamburg.de/biosaxs/software.html
       description: SAXS analysis suite from EMBL Hamburg.
-      techniques: *id003
+      techniques: *id004
     - name: ATSAS online
       url: https://www.embl-hamburg.de/biosaxs/atsas-online/
-      techniques: *id003
+      techniques: *id004
     - name: BioXTAS RAW
       url: https://bioxtas-raw.readthedocs.io/
-      techniques: *id003
+      techniques: *id004
   - title: Imaging
     links:
     - name: Fiji (ImageJ)
       url: https://fiji.sc/
-      techniques: &id006
+      techniques: &id007
       - imaging
   - title: NMR
     links:
@@ -238,6 +260,14 @@ groups:
       techniques:
       - mass-spec
       description: Proteomics and mass spectrometry data repository at EMBL-EBI.
+    - name: UniDec
+      url: https://unidec.chem.ox.ac.uk/
+      description: Deconvolution of native mass spectra and ion mobility data.
+      techniques: *id001
+    - name: xiSEARCH (Rappsilber lab)
+      url: https://github.com/Rappsilber-Laboratory/XiSearch
+      description: Search engine for crosslinking mass spectrometry; with xiFDR and xiVIEW.
+      techniques: *id001
   - title: Simulation
     links:
     - name: GROMACS
@@ -258,20 +288,20 @@ groups:
     links:
     - name: AlphaFold Server
       url: https://alphafoldserver.com
-      techniques: &id004
+      techniques: &id005
       - modelling-ai
     - name: ColabFold
       url: https://github.com/sokrypton/ColabFold
-      techniques: *id004
+      techniques: *id005
     - name: SWISS-MODEL
       url: https://swissmodel.expasy.org/
-      techniques: *id004
+      techniques: *id005
     - name: ExPASy
       url: http://www.expasy.ch
-      techniques: *id004
+      techniques: *id005
     - name: Modeller
       url: http://salilab.org/modeller/
-      techniques: *id004
+      techniques: *id005
     - name: Rosetta
       url: https://www.rosettacommons.org/
       techniques:
@@ -279,7 +309,7 @@ groups:
       - drug-design
     - name: Threader (UCL Bioinformatics)
       url: http://bioinf.cs.ucl.ac.uk/
-      techniques: *id004
+      techniques: *id005
     - name: HADDOCK
       url: https://wenmr.science.uu.nl/haddock2.4/
       techniques:
@@ -287,12 +317,12 @@ groups:
       - drug-design
     - name: SwissDock
       url: https://www.swissdock.ch/
-      techniques: &id005
+      techniques: &id006
       - drug-design
     - name: CCPBioSim
       url: https://www.ccpbiosim.ac.uk/
       description: UK collaborative computational project for biomolecular simulation.
-      techniques: *id004
+      techniques: *id005
   - title: Molecular graphics
     links:
     - name: Coot
@@ -324,19 +354,19 @@ groups:
       url: https://www.3ds.com/products-services/biovia/products/molecular-modeling-simulation/biovia-discovery-studio/visualization/
     - name: Mini map aide
       url: https://minimapai.de/
-      techniques: *id001
+      techniques: *id002
     - name: Very simple protein space group viewer
       url: https://ic50.org/vspsgv.html
-      techniques: *id001
+      techniques: *id002
     - name: Space group viewer (stereo)
       url: https://ic50.org/stereo.html
-      techniques: *id001
+      techniques: *id002
     - name: Crystallify 3D space group viewer
       url: https://crystallify.com
-      techniques: *id001
+      techniques: *id002
     - name: Symotter 3D space group viewer
       url: https://spacegroups.symotter.org/
-      techniques: *id001
+      techniques: *id002
   - title: Figures, movies and other tools
     links:
     - name: Jalview and other Dundee tools
@@ -344,7 +374,7 @@ groups:
       description: Coloured sequence alignments.
     - name: LigPlot+
       url: https://www.ebi.ac.uk/thornton-srv/software/LigPlus/
-      techniques: *id005
+      techniques: *id006
     - name: ImageMagick
       url: http://www.imagemagick.org/
     - name: GIMP
@@ -355,10 +385,10 @@ groups:
       url: http://www.vim.org/
     - name: Dose-response curves and enzyme kinetics
       url: http://ic50.org.uk/
-      techniques: *id005
+      techniques: *id006
     - name: Dose-response curves (alternative site)
       url: http://ic50.org
-      techniques: *id005
+      techniques: *id006
     - name: Michaelis–Menten Plotly tool
       url: http://ic50.org/kmvmaxly/
 - id: databases
@@ -389,7 +419,7 @@ groups:
     - name: EMDB
       url: https://www.ebi.ac.uk/emdb/
       description: 'Electron Microscopy Data Bank: maps.'
-      techniques: *id002
+      techniques: *id003
     - name: EMPIAR
       url: https://www.ebi.ac.uk/empiar/
       description: Raw electron microscopy image data.
@@ -404,24 +434,28 @@ groups:
     - name: SASBDB
       url: https://www.sasbdb.org/
       description: Small Angle Scattering Biological Data Bank.
-      techniques: *id003
+      techniques: *id004
     - name: PDB-IHM
       url: https://pdb-ihm.org/
       description: Integrative and hybrid structural models.
       techniques:
       - saxs
       - modelling-ai
+    - name: ProteomeXchange
+      url: https://proteomecentral.proteomexchange.org/
+      description: Consortium of mass spectrometry data repositories (PRIDE, MassIVE and others).
+      techniques: *id001
     - name: AlphaFold Protein Structure Database
       url: https://alphafold.ebi.ac.uk/
-      techniques: *id004
+      techniques: *id005
     - name: UniProt
       url: https://www.uniprot.org/
     - name: BioImage Archive
       url: https://www.ebi.ac.uk/bioimage-archive/
-      techniques: *id006
+      techniques: *id007
     - name: Crystallography Open Database
       url: http://crystallography.net/cod/
-      techniques: *id001
+      techniques: *id002
     - name: EMBL-EBI
       url: http://www.ebi.ac.uk
       description: European Bioinformatics Institute.
@@ -508,6 +542,87 @@ groups:
       url: https://warwick.ac.uk/fac/sci/lifesci/research/crystallography
     - name: 'York: York Structural Biology Laboratory'
       url: http://www.york.ac.uk/chemistry/research/ysbl/
+- id: industry
+  title: Industry
+  intro: 'UK companies doing structural biology, or producing proteins for it: drug discovery, biotech and contract research. Listing is not an endorsement. Suggestions welcome.'
+  sections:
+  - title: Drug discovery and biotech
+    links:
+    - name: Astex Pharmaceuticals (Cambridge)
+      url: https://astx.com/
+      description: Pioneer of fragment-based drug discovery; part of the Otsuka group.
+      techniques:
+      - crystallography
+      - nmr
+      - drug-design
+    - name: AstraZeneca (Cambridge)
+      url: https://www.astrazeneca.com/
+      description: Crystallography and cryo-EM teams supporting drug discovery.
+      techniques:
+      - crystallography
+      - cryo-em
+      - drug-design
+    - name: GSK (Stevenage)
+      url: https://www.gsk.com/en-gb/
+      description: Structural biology and biophysics, including native MS and HDX-MS.
+      techniques:
+      - crystallography
+      - cryo-em
+      - mass-spec
+      - biophysics
+      - drug-design
+    - name: Immunocore (Abingdon)
+      url: https://www.immunocore.com/
+      description: T-cell receptor therapeutics; crystal structures of engineered TCRs.
+      techniques:
+      - crystallography
+      - biophysics
+    - name: Isomorphic Labs (London)
+      url: https://www.isomorphiclabs.com/
+      description: AI-driven drug discovery.
+      techniques:
+      - modelling-ai
+      - drug-design
+    - name: Nxera Pharma (Cambridge)
+      url: https://www.nxera.life/
+      description: GPCR structure-based drug design (formerly Heptares).
+      techniques:
+      - crystallography
+      - cryo-em
+      - drug-design
+    - name: OMass Therapeutics (Oxford)
+      url: https://www.omass.com/
+      description: Native mass spectrometry platform for membrane and complex-bound targets.
+      techniques:
+      - mass-spec
+      - drug-design
+  - title: Contract research and protein production
+    links:
+    - name: Charles River (Chesterford Research Park)
+      url: https://www.criver.com/products-services/discovery-services/discovery-facilities/cambridge-uk
+      description: Crystallography and fragment screening within integrated drug discovery.
+      techniques:
+      - crystallography
+      - drug-design
+    - name: Domainex (Cambridge)
+      url: https://www.domainex.co.uk/
+      description: Protein production, crystallography and medicinal chemistry services.
+      techniques:
+      - crystallography
+      - drug-design
+    - name: Evotec (Alderley Park)
+      url: https://www.evotec.com/company/about-us/evotec-worldwide-locations/alderley-park
+      description: Drug discovery with structural biology.
+      techniques:
+      - crystallography
+      - drug-design
+    - name: Sygnature Discovery (Nottingham, Alderley Park; includes Peak Proteins, Macclesfield)
+      url: https://www.sygnaturediscovery.com/scientific-solutions/protein-science-structural-biology/
+      description: Protein production, biophysics and structural biology services.
+      techniques:
+      - crystallography
+      - biophysics
+      - drug-design
 - id: suppliers
   title: Suppliers
   intro: Crystallisation kits, teaching aids, instruments and services. Listing is not an endorsement.
@@ -526,8 +641,8 @@ groups:
       url: https://www.marxperts.com/
     - name: MiTeGen
       url: https://www.mitegen.com/
-    - name: Molecular Dimensions
-      url: http://www.moleculardimensions.com/
+    - name: Molecular Dimensions (Calibre Scientific UK)
+      url: https://moleculardimensions.com/en
     - name: Oxford Cryosystems
       url: https://oxcryo.com/
     - name: P212121
@@ -540,6 +655,9 @@ groups:
       url: https://www.technologynetworks.com
     - name: Xenocs
       url: http://www.xenocs.com
+    - name: Calibre Scientific UK (Sheffield)
+      url: https://uk.calibrescientific.com/en
+      description: Protein science products; includes Molecular Dimensions, Protein Ark and BioServUK.
 - id: jobs
   title: Jobs and PhDs
   sections:
@@ -574,6 +692,24 @@ groups:
       techniques:
       - cryo-em
       description: Cryo-EM discussion list; jobs are often posted.
+    - name: 'Industry careers: Astex'
+      url: https://astx.com/our-people-and-culture/career-opportunities/
+    - name: 'Industry careers: AstraZeneca'
+      url: https://careers.astrazeneca.com/
+    - name: 'Industry careers: Domainex'
+      url: https://www.domainex.co.uk/careers
+    - name: 'Industry careers: Evotec Alderley Park'
+      url: https://careers.evotec.com/en/alderley-park
+    - name: 'Industry careers: GSK'
+      url: https://www.gsk.com/en-gb/careers/
+    - name: 'Industry careers: Immunocore'
+      url: https://www.immunocore.com/careers
+    - name: 'Industry careers: Isomorphic Labs'
+      url: https://www.isomorphiclabs.com/careers
+    - name: 'Industry careers: Nxera'
+      url: https://careers.nxera.life/
+    - name: 'Industry careers: Sygnature Discovery'
+      url: https://careers.sygnaturediscovery.com/
   - title: PhD study
     links:
     - name: FindAPhD
