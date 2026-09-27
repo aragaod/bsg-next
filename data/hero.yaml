@@ -1,7 +1,7 @@
 # Home page hero images. One is shown per day, following "schedule" in order
-# (the nightly rebuild moves to the next day's entry). Listing an image twice
-# shows it twice as often.
-schedule: [ptx3, pla2r, ptx3, toll5a]
+# (the nightly rebuild moves to the next day's entry). Listing an image more
+# than once shows it more often.
+schedule: [ptx3, pla2r, toll5a, ptx3, il33, spd2]
 
 images:
   - id: ptx3
@@ -46,3 +46,30 @@ images:
     paper: { citation: "Saucereau et al., Nature Communications 13, 5110 (2022)", doi: 10.1038/s41467-022-32690-6 }
     data: "SASBDB SASDKY8 · EMD-11982 · PDB 7B1B"
     method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018). Rendered with UCSF ChimeraX."
+
+  - id: il33
+    image: images/hero/il33.png
+    title: IL-33 held by a parasite protein
+    alt: "A parasitic worm protein (dark amber) gripping the immune alarm signal IL-33 (light amber), with blue electron density at the interface, a pink extra domain seen only by SAXS and AlphaFold, all inside a translucent violet SAXS envelope."
+    summary: A protein from a parasitic worm that blocks IL-33, an alarm signal in allergy and asthma, seen by crystallography, SAXS and AlphaFold together.
+    lab: Matthew Higgins's group, University of Oxford
+    layers:
+      - { colour: violet, technique: Bio-SAXS, where: Diamond B21, note: "The complex in solution" }
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I04, note: "2.1 Å, with electron density (blue)" }
+      - { colour: rose, technique: AlphaFold, where: validated by SAXS, note: "Extra domain not seen in the crystal" }
+    paper: { citation: "Jamwal et al., Nature Communications 15, 5226 (2024)", doi: 10.1038/s41467-024-49550-0 }
+    data: "SASBDB SASDUY6 · PDB 8Q5R"
+    method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018) and agrees with the authors' AlphaFold model deposited with SASDUY6 (correlation 0.93). The X-ray density is the PDBe 2Fo−Fc map. Rendered with UCSF ChimeraX."
+
+  - id: spd2
+    image: images/hero/spd2.png
+    title: A new protein fold in the centrosome
+    alt: "Two domains of the centrosome protein Spd-2 side by side in the same orientation: a green bundle of NMR models on the left and an amber crystal structure with blue electron density on the right, showing the same fold."
+    summary: Two domains of the centrosome scaffold protein Spd-2, one solved by NMR and one by crystallography, share a newly described fold.
+    lab: Jordan Raff's group, University of Oxford, with Susan Lea (NCI, USA, and Oxford), Mark van Breugel (MRC LMB) and Zhe Feng (Fudan University)
+    layers:
+      - { colour: green, technique: NMR, where: "Bruker 500/600 MHz", note: "ASH1 domain, ensemble of models" }
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I04-1, note: "ASH3 domain, 1.93 Å, with electron density (blue)" }
+    paper: { citation: "Hu et al., Science Advances 11, eadr5744 (2025)", doi: 10.1126/sciadv.adr5744 }
+    data: "PDB 9FU8 · BMRB 34925 · PDB 9C72"
+    method: "The two domains were oriented the same way by structural alignment (TM-align; TM-score about 0.5, the same fold). The paper does not name the NMR facility. Rendered with UCSF ChimeraX."
