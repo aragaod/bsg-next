@@ -9,5 +9,5 @@
     {{- if strings.HasPrefix $u.Path "/" }}{{ $href = strings.TrimPrefix "/" .Destination | relURL }}{{ end }}
   {{- end }}
 {{- end -}}
-<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $u.IsAbs }} rel="noopener"{{ end }}>{{ .Text }}</a>
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $u.IsAbs }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}{{ if $u.IsAbs }}<span class="sr-only"> (opens in a new tab)</span>{{ end }}</a>
 {{- /* chomp */ -}}

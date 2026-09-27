@@ -139,3 +139,16 @@ document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
   const want = new URLSearchParams(location.search).get("technique");
   if (want) document.querySelector(`[data-filter] button[data-value="${CSS.escape(want)}"]`)?.click();
 }
+
+// External links open in a new tab so visitors keep the BSG site open.
+document.querySelectorAll('a[href^="http"]').forEach((a) => {
+  if (a.host === location.host) return;
+  a.target = "_blank";
+  a.rel = (a.rel ? a.rel + " " : "") + "noopener";
+  if (!a.querySelector(".sr-only")) {
+    const s = document.createElement("span");
+    s.className = "sr-only";
+    s.textContent = " (opens in a new tab)";
+    a.append(s);
+  }
+});
