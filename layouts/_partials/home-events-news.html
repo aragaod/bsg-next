@@ -1,0 +1,50 @@
+{{- /* Upcoming events (next four from data/events.yaml) beside the latest news. */ -}}
+{{- $up := slice }}
+{{- range hugo.Data.events.events }}{{ if partial "fn/is-upcoming.html" . }}{{ $up = $up | append . }}{{ end }}{{ end }}
+{{- $dated := slice }}{{ $undated := slice }}
+{{- range $up }}{{ if .start }}{{ $dated = $dated | append . }}{{ else }}{{ $undated = $undated | append . }}{{ end }}{{ end }}
+{{- $events := first 4 ((sort $dated "start" "asc") | append $undated) }}
+<section class="mx-auto mt-16 grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+  <div aria-labelledby="home-events">
+    <div class="flex items-baseline justify-between">
+      <h2 id="home-events" class="text-2xl font-semibold">Upcoming events</h2>
+      <a href="{{ relref . "/events" }}" class="text-sm font-semibold text-brand-700 hover:underline dark:text-brand-300">Full calendar <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+      {{- range $events }}
+      <li class="flex gap-4 py-4">
+        {{- $s := "" }}{{ with .start }}{{ $s = time.AsTime . }}{{ end }}
+        <div class="w-16 shrink-0 rounded-xl bg-brand-50 py-2 text-center dark:bg-brand-950">
+          {{- if $s }}
+          <span class="block text-xs font-semibold text-brand-700 uppercase dark:text-brand-300">{{ $s | time.Format "Jan" }}</span>
+          <span class="block font-display text-2xl font-semibold text-slate-900 dark:text-white">{{ $s.Day }}</span>
+          {{- else }}
+          <span class="block px-1 pt-1 text-xs font-semibold text-brand-700 dark:text-brand-300">{{ .when | default "TBC" }}</span>
+          {{- end }}
+        </div>
+        <div>
+          <a href="{{ .url }}" class="font-semibold text-slate-900 hover:text-brand-700 hover:underline dark:text-white dark:hover:text-brand-300" rel="noopener">{{ .title }}</a>
+          <p class="text-sm text-slate-600 dark:text-slate-400">{{ .organiser }}{{ with .location }} · {{ . }}{{ end }}{{ if $s }} · {{ partial "fn/date-range.html" . }}{{ end }}</p>
+        </div>
+      </li>
+      {{- else }}
+      <li class="py-4 text-slate-600 dark:text-slate-400">No upcoming events listed.</li>
+      {{- end }}
+    </ul>
+  </div>
+  <div aria-labelledby="home-news">
+    <div class="flex items-baseline justify-between">
+      <h2 id="home-news" class="text-2xl font-semibold">Latest news</h2>
+      <a href="{{ relref . "/news" }}" class="text-sm font-semibold text-brand-700 hover:underline dark:text-brand-300">All news <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+      {{- range first 3 (where site.RegularPages "Section" "news").ByDate.Reverse }}
+      <li class="py-4">
+        <p class="text-sm text-slate-500 dark:text-slate-400"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format "2 January 2006" }}</time></p>
+        <a href="{{ .RelPermalink }}" class="font-semibold text-slate-900 hover:text-brand-700 hover:underline dark:text-white dark:hover:text-brand-300">{{ .Title }}</a>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">{{ .Summary | plainify | truncate 160 }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>

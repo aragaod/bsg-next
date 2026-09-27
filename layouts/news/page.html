@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<article class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <p class="text-sm text-slate-500 dark:text-slate-400"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format "2 January 2006" }}</time>{{ with .Params.author }} · {{ . }}{{ end }}</p>
+  {{- with .Params.image }}<img src="{{ partial "fn/file-url.html" . }}" alt="" class="mt-6 w-full max-w-3xl rounded-2xl">{{ end }}
+  <div class="prose-bsg mt-6">{{ .Content }}</div>
+</article>
+{{ end }}

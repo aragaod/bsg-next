@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Space Grotesk Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url("../fonts/space-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+}
+
+/*
+  BSG palette
+  - brand (teal): the cryo-EM map surface
+  - accent (violet): Blue John fluorite, the David Blow Poster Prize trophy
+  - ink (slate): text and dark backgrounds
+*/
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: var(--color-teal-50);
+  --color-brand-100: var(--color-teal-100);
+  --color-brand-200: var(--color-teal-200);
+  --color-brand-300: var(--color-teal-300);
+  --color-brand-400: var(--color-teal-400);
+  --color-brand-500: var(--color-teal-500);
+  --color-brand-600: var(--color-teal-600);
+  --color-brand-700: var(--color-teal-700);
+  --color-brand-800: var(--color-teal-800);
+  --color-brand-900: var(--color-teal-900);
+  --color-brand-950: var(--color-teal-950);
+
+  --color-accent-300: var(--color-violet-300);
+  --color-accent-400: var(--color-violet-400);
+  --color-accent-500: var(--color-violet-500);
+  --color-accent-600: var(--color-violet-600);
+  --color-accent-700: var(--color-violet-700);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+  body {
+    @apply bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-slate-900 dark:text-white;
+  }
+}
+
+/* Long-form Markdown content */
+@layer components {
+  .prose-bsg {
+    @apply max-w-3xl leading-7;
+  }
+  .prose-bsg h2 { @apply mt-12 mb-4 text-2xl font-semibold; }
+  .prose-bsg h3 { @apply mt-8 mb-3 text-xl font-semibold; }
+  .prose-bsg p { @apply my-4; }
+  .prose-bsg ul { @apply my-4 list-disc pl-6 space-y-1; }
+  .prose-bsg ol { @apply my-4 list-decimal pl-6 space-y-1; }
+  .prose-bsg a { @apply font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-700 dark:text-brand-300 dark:decoration-brand-700 dark:hover:decoration-brand-300; }
+  .prose-bsg blockquote { @apply my-6 border-l-4 border-brand-500 pl-4 italic text-slate-600 dark:text-slate-400; }
+}
+
+@layer components {
+  .filter-btn {
+    @apply rounded-full px-3 py-1 text-sm font-medium text-slate-700 ring-1 ring-slate-300 hover:bg-slate-100 dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800;
+  }
+  .filter-btn[aria-pressed="true"] {
+    @apply bg-brand-700 text-white ring-brand-700 hover:bg-brand-800 dark:bg-brand-500 dark:text-slate-950 dark:ring-brand-500;
+  }
+}
+
+/* Footnotes (sources) in Markdown content */
+@layer components {
+  .prose-bsg sup a { @apply no-underline; }
+  .prose-bsg .footnotes { @apply mt-12 border-t border-slate-200 pt-6 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400; }
+  .prose-bsg .footnotes hr { @apply hidden; }
+}

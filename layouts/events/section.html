@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $upcoming := slice }}
+{{- range hugo.Data.events.events }}
+  {{- if partial "fn/is-upcoming.html" . }}{{ $upcoming = $upcoming | append . }}{{ end }}
+{{- end }}
+{{- /* "start" may be missing or an empty string (as saved by the CMS). */}}
+{{- $dated := slice }}{{ $undated := slice }}
+{{- range $upcoming }}{{ if .start }}{{ $dated = $dated | append . }}{{ else }}{{ $undated = $undated | append . }}{{ end }}{{ end }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {{- range sort $dated "start" "asc" }}{{ partial "listing-card.html" . }}{{ end }}
+    {{- range $undated }}{{ partial "listing-card.html" . }}{{ end }}
+  </div>
+  {{- if not $upcoming }}<p class="mt-8 text-slate-600 dark:text-slate-400">No upcoming events listed.</p>{{ end }}
+</div>
+{{ end }}

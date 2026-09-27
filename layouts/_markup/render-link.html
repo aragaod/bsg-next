@@ -1,0 +1,13 @@
+{{- /* Resolves internal links ("/meetings/", "../about/") so they work under any baseURL; external links open normally. */ -}}
+{{- $u := urls.Parse .Destination }}
+{{- $href := .Destination }}
+{{- if and (not $u.IsAbs) $u.Path }}
+  {{- with or (.PageInner.GetPage $u.Path) (site.GetPage $u.Path) }}
+    {{- $href = .RelPermalink }}
+    {{- with $u.Fragment }}{{ $href = printf "%s#%s" $href . }}{{ end }}
+  {{- else }}
+    {{- if strings.HasPrefix $u.Path "/" }}{{ $href = strings.TrimPrefix "/" .Destination | relURL }}{{ end }}
+  {{- end }}
+{{- end -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $u.IsAbs }} rel="noopener"{{ end }}>{{ .Text }}</a>
+{{- /* chomp */ -}}

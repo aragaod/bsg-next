@@ -1,0 +1,6 @@
+{{- /* Photo (only with permission) or initials. Context: spotlight page. */ -}}
+{{- with .Params.photo }}
+<img src="{{ partial "fn/file-url.html" . }}" alt="" width="64" height="64" class="size-16 shrink-0 rounded-full object-cover">
+{{- else }}
+<span aria-hidden="true" class="grid size-16 shrink-0 place-items-center rounded-full bg-accent-300/30 text-accent-700 dark:text-accent-300">{{ partial "icon.html" (dict "name" "spotlight" "class" "size-7") }}</span>
+{{- end }}

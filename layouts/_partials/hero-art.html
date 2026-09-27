@@ -1,0 +1,35 @@
+{{/*
+  Placeholder for the hero render: a SAXS envelope containing a cryo-EM map
+  surface, containing an atomic model with a patch of density mesh.
+  To be replaced by a ChimeraX render of a real complex (PDB + EMDB + SASBDB).
+*/}}
+<svg viewBox="0 0 400 400" width="400" height="400" role="img" aria-labelledby="hero-art-title" class="{{ . }}">
+  <title id="hero-art-title">Illustration: a SAXS envelope around a cryo-EM map around an atomic model</title>
+  <defs>
+    <radialGradient id="env" cx="45%" cy="40%" r="65%">
+      <stop offset="0" stop-color="var(--color-accent-400)" stop-opacity=".35"/>
+      <stop offset="1" stop-color="var(--color-accent-600)" stop-opacity=".08"/>
+    </radialGradient>
+    <radialGradient id="map" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="var(--color-brand-300)" stop-opacity=".9"/>
+      <stop offset="1" stop-color="var(--color-brand-700)" stop-opacity=".75"/>
+    </radialGradient>
+    <pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <path d="M0 0H9M0 0V9" stroke="var(--color-sky-200)" stroke-width=".9" fill="none"/>
+    </pattern>
+    <clipPath id="mesh-clip"><path d="M218 150c26-8 52 10 50 36s-30 38-54 30-30-58 4-66z"/></clipPath>
+  </defs>
+  <!-- SAXS envelope -->
+  <path d="M200 22c92 0 170 58 176 150 6 96-64 196-170 206C98 388 22 316 24 214 26 104 104 22 200 22z" fill="url(#env)" stroke="var(--color-accent-400)" stroke-opacity=".5" stroke-dasharray="3 6"/>
+  <!-- cryo-EM map surface -->
+  <path d="M196 78c62-6 118 34 124 98 6 70-40 134-112 144-70 10-132-38-136-106-4-70 58-130 124-136z" fill="url(#map)"/>
+  <!-- atomic model: backbone ribbon -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 238c18-44 40 20 58-24s40 18 56-26 40 14 56-24" stroke="var(--color-slate-900)" stroke-opacity=".25" stroke-width="16"/>
+    <path d="M118 238c18-44 40 20 58-24s40 18 56-26 40 14 56-24" stroke="#fff" stroke-width="9"/>
+    <path d="M140 280c30 10 56-14 84 0s50-6 64-26" stroke="#fff" stroke-opacity=".85" stroke-width="6"/>
+  </g>
+  <!-- density mesh patch -->
+  <g clip-path="url(#mesh-clip)"><rect x="180" y="130" width="120" height="110" fill="url(#mesh)"/></g>
+  <path d="M218 150c26-8 52 10 50 36s-30 38-54 30-30-58 4-66z" fill="none" stroke="var(--color-sky-200)" stroke-width="1.2"/>
+</svg>

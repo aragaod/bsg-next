@@ -1,0 +1,44 @@
+{{- /*
+  Slim rotating bar above the header. Messages are built automatically from
+  the site's content plus data/announcements.yaml. Rotation is done by
+  main.js; it pauses on hover or focus and does not run for visitors who
+  prefer reduced motion (they see the first message, with arrows to move).
+*/ -}}
+{{- $msgs := slice }}
+{{- with index (partial "fn/upcoming-meetings.html" .) 0 }}
+  {{- $when := partial "fn/meeting-when.html" . }}
+  {{- $msgs = $msgs | append (dict "label" "Next meeting" "text" (printf "%s%s · %s" .Title (cond (ne .Params.city "") (printf ", %s" .Params.city) "") $when) "url" .RelPermalink) }}
+{{- end }}
+{{- with index (where site.RegularPages "Section" "structures").ByDate.Reverse 0 }}
+  {{- $msgs = $msgs | append (dict "label" "Structure of the month" "text" .Title "url" .RelPermalink) }}
+{{- end }}
+{{- with index (where site.RegularPages "Section" "news").ByDate.Reverse 0 }}
+  {{- $msgs = $msgs | append (dict "label" "News" "text" .Title "url" .RelPermalink) }}
+{{- end }}
+{{- $today := now.Format "2006-01-02" }}
+{{- range hugo.Data.announcements.announcements }}
+  {{- if or (not .until) (ge (time.AsTime .until | time.Format "2006-01-02") $today) }}
+    {{- $u := "" }}{{ with .url }}{{ $u = partial "fn/file-url.html" . }}{{ end }}
+    {{- $msgs = $msgs | append (dict "label" "Notice" "text" .text "url" $u) }}
+  {{- end }}
+{{- end }}
+{{- with $msgs }}
+<div class="bg-brand-900 text-sm text-brand-50 dark:bg-brand-950" data-rotator role="region" aria-label="Announcements">
+  <div class="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 lg:px-8">
+    <button type="button" data-rotator-prev class="hidden shrink-0 rounded p-1 text-brand-200 hover:bg-brand-800 hover:text-white sm:block" aria-label="Previous announcement">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+    </button>
+    <ul class="relative min-h-5 flex-1 overflow-hidden">
+      {{- range $i, $m := . }}
+      <li data-rotator-item class="{{ if $i }}hidden {{ end }}truncate text-center"{{ if $i }} aria-hidden="true"{{ end }}>
+        <span class="mr-2 font-semibold text-brand-300 uppercase tracking-wide text-xs">{{ .label }}</span>
+        {{- if .url }}<a href="{{ .url }}" class="font-medium hover:underline">{{ .text }}</a>{{ else }}<span class="font-medium">{{ .text }}</span>{{ end }}
+      </li>
+      {{- end }}
+    </ul>
+    <button type="button" data-rotator-next class="hidden shrink-0 rounded p-1 text-brand-200 hover:bg-brand-800 hover:text-white sm:block" aria-label="Next announcement">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
+    </button>
+  </div>
+</div>
+{{- end }}

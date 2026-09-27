@@ -1,0 +1,30 @@
+{{- /* Swipeable row of earlier structures of the month (scroll-snap; arrow buttons via main.js). */ -}}
+{{- $all := (where site.RegularPages "Section" "structures").ByDate.Reverse }}
+{{- with after 1 $all }}
+<div class="mt-8" data-carousel>
+  <div class="flex items-center justify-between">
+    <h3 class="text-sm font-semibold tracking-wide text-slate-500 uppercase dark:text-slate-400">Earlier structures</h3>
+    <div class="flex gap-2">
+      <button type="button" data-carousel-prev class="rounded-full p-2 ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-700 dark:hover:bg-slate-800" aria-label="Scroll back"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+      <button type="button" data-carousel-next class="rounded-full p-2 ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-700 dark:hover:bg-slate-800" aria-label="Scroll forward"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+    </div>
+  </div>
+  <ul data-carousel-track class="mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:thin]">
+    {{- range . }}
+    <li class="w-60 shrink-0 snap-start">
+      <a href="{{ .RelPermalink }}" class="group block h-full overflow-hidden rounded-2xl border border-slate-200 bg-white hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-brand-700">
+        {{- with .Params.image }}
+        <img src="{{ partial "fn/file-url.html" . }}" alt="" loading="lazy" width="240" height="180" class="aspect-[4/3] w-full bg-white object-contain p-3">
+        {{- else }}
+        <div aria-hidden="true" class="grid aspect-[4/3] w-full place-items-center bg-linear-to-br from-brand-50 to-violet-50 text-brand-600 dark:from-brand-950 dark:to-violet-950 dark:text-brand-400">{{ partial "logo.html" "size-14 opacity-60" }}</div>
+        {{- end }}
+        <div class="p-4">
+          <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ .Date | time.Format "January 2006" }}</p>
+          <p class="mt-1 font-semibold text-slate-900 group-hover:text-brand-700 dark:text-white dark:group-hover:text-brand-300">{{ .Title }}</p>
+        </div>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{- end }}

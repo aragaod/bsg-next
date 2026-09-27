@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $feed := hugo.Data.uk_structures }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  {{- with $feed.updated }}<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Last updated {{ time.AsTime . | time.Format "2 January 2006" }}.</p>{{ end }}
+  <div class="mt-8">{{ partial "technique-filter.html" "#latest-list" }}</div>
+  <ul id="latest-list" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    {{- range $feed.entries }}
+    <li data-tech="{{ delimit .techniques " " }}">
+      {{ partial "latest-card.html" . }}
+      {{- with .paper }}{{ if or .doi .authors }}<p class="mt-1 px-1 text-xs text-slate-500 dark:text-slate-400">{{ if .doi }}<a href="https://doi.org/{{ .doi }}" class="hover:underline" rel="noopener">{{ end }}{{ .authors }}, {{ if in (slice "To Be Published" "To be published") .journal }}in press{{ else }}{{ .journal }} {{ .year }}{{ end }}{{ if .doi }}</a>{{ end }}</p>{{ end }}{{ end }}
+    </li>
+    {{- else }}
+    <li class="text-slate-600 dark:text-slate-400">No entries yet.</li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}

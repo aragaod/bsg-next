@@ -1,0 +1,6 @@
+{{- /* Returns "venue, city" from page params or a dict, skipping empty parts. */ -}}
+{{- $parts := slice }}
+{{- with .venue }}{{ $parts = $parts | append . }}{{ end }}
+{{- with .city }}{{ if not (strings.Contains ($.venue | default "") .) }}{{ $parts = $parts | append . }}{{ end }}{{ end }}
+{{- with .location }}{{ $parts = $parts | append . }}{{ end }}
+{{- return delimit $parts ", " }}

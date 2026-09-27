@@ -1,0 +1,24 @@
+{{- /* Home page feature: the latest published structure of the month. */ -}}
+{{- with index (where site.RegularPages "Section" "structures").ByDate.Reverse 0 }}
+<section class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="som">
+  <div class="grid items-center gap-8 overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-white to-brand-50 p-6 sm:p-10 lg:grid-cols-5 dark:border-slate-800 dark:from-slate-900 dark:to-brand-950">
+    <div class="lg:col-span-3">
+      <p class="text-sm font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">Structure of the month · {{ .Date | time.Format "January 2006" }}</p>
+      <h2 id="som" class="mt-2 text-2xl font-semibold sm:text-3xl"><a href="{{ .RelPermalink }}" class="hover:text-brand-700 dark:hover:text-brand-300">{{ .Title }}</a></h2>
+      <p class="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">{{ .Params.summary }}</p>
+      <div class="mt-4">{{ partial "technique-tags.html" .Params.techniques }}</div>
+      <div class="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
+        <a href="{{ .RelPermalink }}" class="text-brand-700 hover:underline dark:text-brand-300">Read the story <span aria-hidden="true">→</span></a>
+        {{- if and .Params.molstar .Params.pdb }}<a href="{{ .RelPermalink }}#viewer" class="text-brand-700 hover:underline dark:text-brand-300">Explore in 3D</a>{{ end }}
+        <a href="{{ .Parent.RelPermalink }}" class="text-slate-600 hover:underline dark:text-slate-400">Past structures</a>
+      </div>
+    </div>
+    {{- with .Params.image }}
+    <a href="{{ $.RelPermalink }}" class="lg:col-span-2" tabindex="-1" aria-hidden="true">
+      <img src="{{ partial "fn/file-url.html" . }}" alt="" class="mx-auto w-full max-w-xs rounded-2xl bg-white p-4 shadow-sm">
+    </a>
+    {{- end }}
+  </div>
+  {{ partial "home-structures-carousel.html" . }}
+</section>
+{{- end }}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="relative isolate overflow-hidden">
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_80%_-10%,var(--color-brand-100),transparent),radial-gradient(30rem_16rem_at_10%_60%,var(--color-violet-100),transparent)] dark:bg-[radial-gradient(60rem_40rem_at_80%_-10%,color-mix(in_oklab,var(--color-brand-900)_60%,transparent),transparent),radial-gradient(30rem_16rem_at_10%_60%,color-mix(in_oklab,var(--color-violet-900)_50%,transparent),transparent)]"></div>
+  <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:px-8">
+    <div>
+      <p class="text-sm font-semibold tracking-wide text-brand-700 uppercase dark:text-brand-400">{{ hugo.Data.home.eyebrow }}</p>
+      <h1 class="mt-3 text-4xl font-semibold sm:text-6xl">{{ hugo.Data.home.heading | default site.Params.tagline }}</h1>
+      <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">{{ hugo.Data.home.intro }}</p>
+      <ul class="mt-8 flex flex-wrap gap-2" aria-label="Techniques">
+        {{- range hugo.Data.techniques }}{{ if ne .id "other" }}
+        <li class="rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-sm font-medium text-brand-800 dark:border-brand-800 dark:bg-slate-900/60 dark:text-brand-200">{{ .label }}</li>{{ end }}
+        {{- end }}
+      </ul>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="{{ relref . "/meetings" }}" class="rounded-lg bg-brand-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 dark:bg-brand-500 dark:text-slate-950 dark:hover:bg-brand-400">Upcoming meetings</a>
+        <a href="{{ relref . "/about/join" }}" class="rounded-lg px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-300 hover:bg-slate-50 dark:text-white dark:ring-slate-700 dark:hover:bg-slate-800">Join via the BCA <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    {{ partial "hero-figure.html" . }}
+  </div>
+</section>
+
+{{ partial "home-next-meeting.html" . }}
+
+{{ partial "home-structure.html" . }}
+
+{{ partial "home-latest.html" . }}
+
+{{ partial "home-events-news.html" . }}
+
+<section class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="whatwedo">
+  <h2 id="whatwedo" class="text-2xl font-semibold sm:text-3xl">What the BSG does</h2>
+  <div class="mt-8 grid gap-6 md:grid-cols-3">
+    {{- $cards := slice
+      (dict "kicker" "Every winter" "title" "Winter Meeting" "text" "A one-day meeting hosted by a different UK university each year. 2026: Leicester, date to be confirmed." "link" "/meetings")
+      (dict "kicker" "Every spring" "title" "BCA Spring Meeting sessions" "text" "BSG sessions at the BCA Spring Meeting. 2027 theme: AI in the era of large-scale structural biology." "link" "/meetings")
+      (dict "kicker" "Every September" "title" "Training" "text" "The CCP4-BCA Summer School, plus courses across cryo-EM, SAXS and computational methods." "link" "/training")
+    }}
+    {{- range $cards }}
+    <a href="{{ relref $ .link }}" class="group rounded-2xl border border-slate-200 p-6 transition hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:hover:border-brand-700">
+      <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ .kicker }}</p>
+      <h3 class="mt-2 text-lg font-semibold group-hover:text-brand-700 dark:group-hover:text-brand-300">{{ .title }}</h3>
+      <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ .text }}</p>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

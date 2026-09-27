@@ -1,0 +1,86 @@
+# BSG committee, as listed on the current site (bsg.crystallography.org.uk).
+# To be confirmed with the Secretary before the site goes public.
+#
+# Fields: name, roles (officers only), affiliation, term_start, term_end,
+#         photo (optional, path under static/, only with the person's permission),
+#         url (optional, lab or profile page)
+confirmed: false
+
+officers:
+  - name: Prof Simon Newstead
+    roles: [Chair]
+    affiliation: Oxford
+    term_start: 2026
+    term_end: 2028
+  - name: Dr Briony Yorke
+    roles: [Vice-Chair]
+    affiliation: Leeds
+    term_start: 2024
+    term_end: 2027
+  - name: Prof Mark Sanderson
+    roles: [Treasurer]
+    affiliation: Imperial
+    term_start: 2017
+    term_end: 2026
+  - name: Dr Rachael Wilkinson
+    roles: [Secretary, Council representative]
+    affiliation: Leicester
+    term_start: 2024
+    term_end: 2027
+  - name: Dr Jake Hill
+    roles: [ESCG representative]
+    affiliation: Bradford
+    term_start: 2023
+    term_end: 2026
+  - name: Dr Natalie Tatum
+    roles: [Education representative]
+    affiliation: Newcastle
+    term_start: 2024
+    term_end: 2027
+  - name: Dr David Aragao
+    roles: [Web]
+    affiliation: DLS
+    term_start: 2024
+    term_end: 2027
+
+members:
+  - name: Dr Katherine Brown
+    affiliation: Cambridge
+    term_start: 2025
+    term_end: 2028
+  - name: Dr Adam Crawshaw
+    affiliation: Diamond Light Source
+    term_start: 2025
+    term_end: 2028
+  - name: Dr Daren Fearon
+    affiliation: Diamond Light Source
+    term_start: 2025
+    term_end: 2028
+  - name: Dr Sam Horrell
+    affiliation: Diamond Light Source
+    term_start: 2022
+    term_end: 2025
+  - name: Prof Mike Hough
+    affiliation: Essex
+    term_start: 2018
+    term_end: 2027
+  - name: Kate Lewis
+    affiliation: Formulatrix
+    term_start: 2022
+    term_end: 2025
+  - name: Dr Mark Montgomery
+    affiliation: Syngenta
+    term_start: 2022
+    term_end: 2028
+  - name: Dr Claire Naylor
+    affiliation: Thermo Fisher Scientific
+    term_start: 2017
+    term_end: 2026
+  - name: Dr Mark Richards
+    affiliation: Leeds
+    term_start: 2021
+    term_end: 2026
+  - name: Simon Tanley
+    affiliation: MDL
+    term_start: 2023
+    term_end: 2026

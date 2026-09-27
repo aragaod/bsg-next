@@ -1,0 +1,199 @@
+# Training and learning page.
+#   courses:   schools and courses. Fields: title, provider, url, format
+#              (in-person | online | hybrid | self-paced), level (introductory |
+#              intermediate | advanced | all), techniques, start/end (YYYY-MM-DD)
+#              or when (free text), location, description
+#   online:    free online courses and tutorials (title, provider, url, techniques, description)
+#   textbooks / reference: books (title, authors, details, url, techniques)
+# Carried over from the old Education page and broadened beyond crystallography.
+courses:
+- title: CCP4-BCA Protein Crystallography Summer School
+  provider: CCP4 and the British Crystallographic Association
+  url: https://www.jic.ac.uk/event/ccp4-bca-protein-crystallography-summer-school-2026/
+  format: in-person
+  level: introductory
+  techniques: &id002
+  - crystallography
+  when: 'Every September (2026: 6–11 September, John Innes Centre, Norwich)'
+  location: UK
+  description: For students and researchers relatively new to crystallography. Lectures cover protein expression through to structure validation, with supervised computer tutorials and a crystal manipulation
+    and cryo-cooling workshop.
+- title: CCP4 Study Weekend
+  provider: CCP4
+  url: https://studyweekend.ccp4.ac.uk/
+  format: in-person
+  level: all
+  techniques:
+  - crystallography
+  - cryo-em
+  when: Every January
+  location: UK
+  description: Annual meeting on computational methods in macromolecular structure determination, with a different theme each year.
+- title: CCP-EM training
+  provider: CCP-EM
+  url: https://www.ccpem.ac.uk/training/
+  format: hybrid
+  level: all
+  techniques: &id001
+  - cryo-em
+  when: Courses through the year
+  description: Courses and workshops on cryo-EM data processing and model building from the UK's collaborative computational project for cryo-EM.
+- title: EMBO Practical Courses and Workshops
+  provider: EMBO
+  url: https://www.embo.org/funding/courses-workshops/
+  format: in-person
+  level: intermediate
+  techniques:
+  - crystallography
+  - cryo-em
+  - saxs
+  - imaging
+  when: Many courses each year, across Europe
+  description: Hands-on courses, including regular ones in structural biology methods; search the listings by topic.
+- title: EMBL-EBI Training
+  provider: EMBL-EBI
+  url: https://www.ebi.ac.uk/training/
+  format: hybrid
+  level: all
+  techniques:
+  - modelling-ai
+  - other
+  when: Live courses and on-demand material
+  description: Training on bioinformatics and structural data resources such as PDBe, EMDB and AlphaFold DB.
+- title: CCPBioSim training
+  provider: CCPBioSim
+  url: https://www.ccpbiosim.ac.uk/
+  format: hybrid
+  level: all
+  techniques:
+  - modelling-ai
+  when: Workshops through the year
+  description: Training in biomolecular simulation from the UK collaborative computational project.
+- title: Instruct-ERIC courses
+  provider: Instruct-ERIC
+  url: https://instruct-eric.org/
+  format: in-person
+  level: intermediate
+  techniques:
+  - crystallography
+  - cryo-em
+  - saxs
+  - imaging
+  when: Courses through the year
+  description: Training courses across structural biology techniques at Instruct centres in Europe.
+online:
+- title: Getting started in cryo-EM
+  provider: Caltech
+  url: http://cryo-em-course.caltech.edu/
+  techniques: *id001
+  description: Free video lecture course.
+- title: PDB-101
+  provider: RCSB PDB
+  url: https://pdb101.rcsb.org/
+  techniques:
+  - crystallography
+  - cryo-em
+  description: Educational resources on structural biology and the PDB.
+- title: EMBL-EBI on-demand courses
+  provider: EMBL-EBI
+  url: https://www.ebi.ac.uk/training/online/courses/
+  techniques:
+  - modelling-ai
+  - other
+- title: BioXTAS RAW documentation and tutorial
+  provider: BioXTAS RAW
+  url: https://bioxtas-raw.readthedocs.io/
+  techniques: &id003
+  - saxs
+- title: Crystallography in a Nutshell
+  provider: CSIC
+  url: https://www.xtal.iqfr.csic.es/Cristalografia/index-en.html
+  techniques: *id002
+- title: Protein Crystallography course
+  provider: Cambridge Institute for Medical Research
+  url: https://www-structmed.cimr.cam.ac.uk/course.html
+  techniques: *id002
+- title: Crystallography 101
+  provider: Bernhard Rupp
+  url: http://www.ruppweb.org
+  techniques: *id002
+- title: Bilbao Crystallographic Server
+  provider: University of the Basque Country
+  url: https://cryst.ehu.es
+  techniques: *id002
+- title: Kevin Cowtan's tutorials
+  provider: University of York
+  url: http://www.ysbl.york.ac.uk/~cowtan/applets/applets.html
+  techniques: *id002
+- title: e-Crystallography
+  provider: EPFL
+  url: https://www.epfl.ch/schools/sb/research/iphys/teaching/crystallography/
+  techniques: *id002
+- title: WolframAlpha crystallography
+  provider: Wolfram
+  url: https://www.wolframalpha.com/examples/science-and-technology/earth-sciences/geology/minerals/crystallography/
+  techniques: *id002
+textbooks:
+- title: Outline of Crystallography for Biologists
+  authors: David Blow
+  details: Oxford University Press, 2002
+  url: https://global.oup.com/academic/product/outline-of-crystallography-for-biologists-9780198510512
+  techniques: *id002
+- title: 'Crystallography Made Crystal Clear: A Guide for Users of Macromolecular Models'
+  authors: Gale Rhodes
+  details: Academic Press, 1999
+  url: https://www.sciencedirect.com/book/9780125870733/crystallography-made-crystal-clear
+  techniques: *id002
+- title: Three-Dimensional Electron Microscopy of Macromolecular Assemblies
+  authors: Joachim Frank
+  details: Oxford University Press, 2nd edition, 2006
+  techniques: *id001
+- title: Small Angle X-Ray and Neutron Scattering from Solutions of Biological Macromolecules
+  authors: Dmitri Svergun, Michel Koch, Peter Timmins and Roland May
+  details: Oxford University Press, 2013
+  techniques: *id003
+reference:
+- title: Fundamentals of Crystallography
+  authors: C. Giacovazzo, H.L. Monaco, G. Artioli, D. Viterbo, M. Milanesio, G. Gilli, G. Zanotti, G. Ferraris and M. Catti
+  details: IUCr Texts on Crystallography, Oxford University Press, 2011
+  url: http://ukcatalogue.oup.com/product/9780199573653.do
+  techniques: *id002
+- title: Protein Crystallography
+  authors: T.L. Blundell and L.N. Johnson
+  details: Academic Press, 1976
+  techniques: *id002
+- title: Macromolecular Crystallography with Synchrotron Radiation
+  authors: J.R. Helliwell
+  details: Cambridge University Press, 1992
+  url: http://www.cambridge.org/gb/academic/subjects/physics/condensed-matter-physics-nanoscience-and-mesoscopic-physics/macromolecular-crystallography-synchrotron-radiation?format=PB
+  techniques: *id002
+- title: Principles of Protein X-ray Crystallography
+  authors: J. Drenth
+  details: Springer, 2007
+  url: http://www.springer.com/life+sciences/biochemistry+%26+biophysics/book/978-0-387-33334-2
+  techniques: *id002
+- title: 'X-Ray Crystallography of Biomacromolecules: A Practical Guide'
+  authors: Albrecht Messerschmidt
+  details: Wiley, 2007
+  url: https://onlinelibrary.wiley.com/doi/book/10.1002/9783527610129
+  techniques: *id002
+- title: 'Macromolecular Crystallography: Conventional and High-Throughput Methods'
+  authors: M.R. Sanderson and J.V. Skelly
+  details: Oxford University Press, 2007
+  url: https://global.oup.com/academic/product/macromolecular-crystallography-9780198520979
+  techniques: *id002
+- title: Biomolecular Crystallography
+  authors: B. Rupp
+  details: Garland Science, 2009
+  url: https://www.routledge.com/Biomolecular-Crystallography-Principles-Practice-and-Application-to-Structural/Rupp/p/book/9780815340812
+  techniques: *id002
+- title: 'Crystals, X-rays and Proteins: Comprehensive Protein Crystallography'
+  authors: D. Sherwood and J. Cooper
+  details: Oxford University Press, 2010 and 2015 (erratum and extra material at crxp.org.uk)
+  url: http://ukcatalogue.oup.com/product/9780199559046.do
+  techniques: *id002
+- title: 'Protein Crystallography: Methods and Protocols'
+  authors: A. Wlodawer, Z. Dauter and M. Jaskolski
+  details: Springer, 2017
+  url: https://link.springer.com/book/10.1007/978-1-4939-7000-1
+  techniques: *id002

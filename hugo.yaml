@@ -1,0 +1,67 @@
+baseURL: https://biostructures.org.uk/
+locale: en-GB
+title: Biological Structures Group
+enableRobotsTXT: true
+# Page "last updated" dates (sitemap) come from git history.
+enableGitInfo: true
+disableKinds: [taxonomy, term]
+# Pages dated in the future (e.g. next months' structures) stay hidden until
+# their date; a daily scheduled build publishes them.
+buildFuture: false
+
+security:
+  exec:
+    allow: ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
+params:
+  description: >-
+    The Biological Structures Group (BSG) of the British Crystallographic
+    Association: the UK community for integrative structural biology, from
+    crystallography and cryo-EM to bio-SAXS, imaging, modelling and AI.
+  tagline: Many techniques, one community
+  # Mockup: keep search engines out until the committee approves the site.
+  noindex: true
+  bcaURL: https://crystallography.org.uk/
+
+menus:
+  main:
+    - { name: About, pageRef: /about, weight: 10 }
+    - { name: Meetings, pageRef: /meetings, weight: 20 }
+    - { name: Events, pageRef: /events, weight: 30 }
+    - { name: Training, pageRef: /training, weight: 40 }
+    - { name: Community, pageRef: /community, weight: 50 }
+    - { name: Prizes, pageRef: /prizes, weight: 60 }
+    - { name: Resources, pageRef: /resources, weight: 70 }
+    - { name: News, pageRef: /news, weight: 80 }
+
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: assets/notwatching/hugo_stats\.json
+      target: css
+    - source: (postcss|tailwind)\.config\.js
+      target: css
+
+module:
+  mounts:
+    - { source: assets, target: assets }
+    - { source: static, target: static }
+    - source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json
+      disableWatch: true
+    # Self-hosted fonts (no requests to Google Fonts: GDPR).
+    - source: node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2
+      target: static/fonts/inter-latin-wght-normal.woff2
+    - source: node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2
+      target: static/fonts/space-grotesk-latin-wght-normal.woff2
+    # Mol* 3D viewer, served from the site (loaded only when a visitor asks for it).
+    - source: node_modules/molstar/build/viewer/molstar.js
+      target: static/vendor/molstar/molstar.js
+    - source: node_modules/molstar/build/viewer/molstar.css
+      target: static/vendor/molstar/molstar.css
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

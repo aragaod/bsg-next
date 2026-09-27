@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $c := hugo.Data.committee }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  {{- if not $c.confirmed }}
+  <p class="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-100">Draft: this list is copied from the current BSG site and is being confirmed with the Secretary.</p>
+  {{- end }}
+  <div class="prose-bsg">{{ .Content }}</div>
+  {{- range slice (dict "title" "Officers" "people" $c.officers) (dict "title" "Ordinary members" "people" $c.members) }}
+  <section class="mt-10">
+    <h2 class="text-2xl font-semibold">{{ .title }}</h2>
+    <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {{- range .people }}
+      <li class="flex items-center gap-4 rounded-2xl border border-slate-200 p-4 dark:border-slate-800">
+        {{- with .photo }}
+        <img src="{{ partial "fn/file-url.html" . }}" alt="" class="size-14 rounded-full object-cover">
+        {{- else }}
+        {{- $initials := "" }}
+        {{- range last 2 (split (replaceRE `^(Prof|Dr)\.? ` "" .name) " ") }}{{ $initials = printf "%s%s" $initials (substr . 0 1) }}{{ end }}
+        <span aria-hidden="true" class="grid size-14 shrink-0 place-items-center rounded-full bg-brand-100 font-display font-semibold text-brand-800 dark:bg-brand-900 dark:text-brand-100">{{ $initials }}</span>
+        {{- end }}
+        <div>
+          {{- with .roles }}<p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ delimit . " · " }}</p>{{ end }}
+          <p class="font-medium text-slate-900 dark:text-white">{{ with .url }}<a href="{{ . }}" class="hover:underline">{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400">{{ .affiliation }} · {{ .term_start }}–{{ .term_end }}</p>
+        </div>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

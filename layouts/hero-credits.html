@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $dots := dict "violet" "bg-violet-400" "teal" "bg-teal-500" "amber" "bg-amber-500" "blue" "bg-blue-600" }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <div class="mt-12 space-y-16">
+    {{- range hugo.Data.hero.images }}
+    <section id="{{ .id }}" class="grid scroll-mt-24 items-start gap-8 lg:grid-cols-5" aria-labelledby="{{ .id }}-title">
+      <div class="lg:col-span-2">
+        {{- with resources.Get .image }}{{ $w := .Resize "720x webp q80" }}
+        <img src="{{ $w.RelPermalink }}" width="{{ $w.Width }}" height="{{ $w.Height }}" alt="" loading="lazy" class="w-full rounded-2xl bg-slate-50 p-4 dark:bg-slate-900">
+        {{- end }}
+      </div>
+      <div class="lg:col-span-3">
+        <h2 id="{{ .id }}-title" class="text-2xl font-semibold">{{ .title }}</h2>
+        <p class="mt-2 text-lg text-slate-600 dark:text-slate-300">{{ .summary }}</p>
+        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ .lab }}</p>
+        <ul class="mt-6 space-y-3">
+          {{- range .layers }}
+          <li class="flex gap-3">
+            <span aria-hidden="true" class="mt-1.5 size-3 shrink-0 rounded-full {{ index $dots .colour }}"></span>
+            <div><p class="font-semibold text-slate-900 dark:text-white">{{ .technique }} · {{ .where }}</p><p class="text-sm text-slate-600 dark:text-slate-400">{{ .note }}</p></div>
+          </li>
+          {{- end }}
+        </ul>
+        <dl class="mt-6 space-y-2 text-sm">
+          <div><dt class="inline font-semibold text-slate-900 dark:text-white">Paper: </dt><dd class="inline"><a href="https://doi.org/{{ .paper.doi }}" class="text-brand-700 hover:underline dark:text-brand-300" rel="noopener">{{ .paper.citation }}</a></dd></div>
+          <div><dt class="inline font-semibold text-slate-900 dark:text-white">Data: </dt><dd class="inline text-slate-600 dark:text-slate-400">{{ .data }}</dd></div>
+          <div><dt class="inline font-semibold text-slate-900 dark:text-white">How it was made: </dt><dd class="inline text-slate-600 dark:text-slate-400">{{ .method }}</dd></div>
+        </dl>
+      </div>
+    </section>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

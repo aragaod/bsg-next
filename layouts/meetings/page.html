@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-3 lg:px-8">
+  <div class="prose-bsg lg:col-span-2">
+    {{- with .Params.theme }}<p class="text-xl text-slate-700 italic dark:text-slate-300">{{ . }}</p>{{ end }}
+    {{ .Content }}
+  </div>
+  <aside class="h-fit rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
+    <dl class="space-y-4 text-sm">
+      <div>
+        <dt class="font-semibold text-slate-900 dark:text-white">When</dt>
+        <dd class="mt-1 text-slate-600 dark:text-slate-400">{{ partial "fn/meeting-when.html" . }}</dd>
+      </div>
+      {{- with partial "fn/place.html" .Params }}
+      <div>
+        <dt class="font-semibold text-slate-900 dark:text-white">Where</dt>
+        <dd class="mt-1 text-slate-600 dark:text-slate-400">{{ . }}</dd>
+      </div>
+      {{- end }}
+    </dl>
+    {{- if or .Params.registration .Params.programme }}
+    <div class="mt-6 flex flex-col gap-3">
+      {{- with .Params.registration }}<a href="{{ . }}" class="rounded-lg bg-brand-700 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-800 dark:bg-brand-500 dark:text-slate-950 dark:hover:bg-brand-400">Register</a>{{ end }}
+      {{- with .Params.programme }}<a href="{{ partial "fn/file-url.html" . }}" class="rounded-lg px-4 py-2.5 text-center text-sm font-semibold text-slate-900 ring-1 ring-slate-300 hover:bg-white dark:text-white dark:ring-slate-700 dark:hover:bg-slate-800">Programme</a>{{ end }}
+    </div>
+    {{- end }}
+  </aside>
+</div>
+{{ end }}

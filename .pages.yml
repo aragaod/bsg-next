@@ -1,0 +1,420 @@
+# Pages CMS configuration: the web editor at https://app.pagescms.org
+# Each entry below becomes a section in the editor with its own form.
+# Editors need a GitHub account and must be added as collaborators on the repo.
+
+settings:
+  content:
+    # Keep front matter the forms don't show (e.g. layout, cascade, weight)
+    # when an existing page is saved.
+    merge: true
+
+media:
+  - name: images
+    label: Images
+    input: static/images
+    output: /images
+    categories: [image]
+  - name: documents
+    label: Documents (programmes, PDFs)
+    input: static/archive
+    output: /archive
+    categories: [document]
+
+components:
+  techniques:
+    label: Techniques
+    type: select
+    description: Used for the technique tags and filters.
+    options:
+      multiple: true
+      values:
+        - { value: crystallography, label: Crystallography }
+        - { value: cryo-em, label: Cryo-EM & tomography }
+        - { value: saxs, label: Bio-SAXS & SANS }
+        - { value: nmr, label: NMR }
+        - { value: mass-spec, label: Mass spectrometry }
+        - { value: biophysics, label: Biophysics }
+        - { value: imaging, label: Imaging }
+        - { value: modelling-ai, label: "Modelling, simulation & AI" }
+        - { value: drug-design, label: Drug design }
+        - { value: other, label: Other methods }
+  body:
+    label: Text
+    type: rich-text
+
+content:
+  # ---------------------------------------------------------------- News
+  - name: news
+    label: News
+    type: collection
+    path: content/news
+    filename: "{fields.date}-{primary}.md"
+    exclude: [_index.md]
+    view:
+      fields: [title, date, author]
+      primary: title
+      sort: [date, title]
+      default: { sort: date, order: desc }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: author, label: Author, type: string }
+      - { name: summary, label: Summary, type: text, description: One or two sentences for lists and the home page. }
+      - { name: image, label: Image, type: image, description: Optional. Only use photos of people with their permission., options: { media: images } }
+      - { name: body, component: body }
+
+  # ------------------------------------------------------------ Meetings
+  - name: meetings
+    label: Meetings
+    type: collection
+    path: content/meetings
+    filename: "{fields.year}-{fields.kind}.md"
+    exclude: [_index.md]
+    view:
+      fields: [title, year, kind, city]
+      primary: title
+      sort: [year, title]
+      default: { sort: year, order: desc }
+    fields:
+      - { name: title, label: Title, type: string, required: true, description: 'e.g. "BSG Winter Meeting 2027"' }
+      - name: kind
+        label: Meeting
+        type: select
+        required: true
+        options:
+          values:
+            - { value: winter, label: BSG Winter Meeting }
+            - { value: spring, label: BSG sessions at the BCA Spring Meeting }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: start, label: Start date, type: date, description: Leave empty until confirmed. The home page countdown starts as soon as this is set. }
+      - { name: end, label: End date, type: date, description: Only for meetings longer than one day. }
+      - { name: when, label: Expected timing, type: string, description: 'Shown while the date is not confirmed, e.g. "December 2027".' }
+      - { name: city, label: City, type: string }
+      - { name: venue, label: Venue, type: string }
+      - { name: theme, label: Theme, type: string }
+      - { name: programme, label: Programme (PDF), type: file, options: { media: documents } }
+      - { name: registration, label: Registration link, type: string }
+      - { name: body, component: body }
+
+  # ------------------------------------------------ Structure of the month
+  - name: structures
+    label: Structure of the month
+    type: collection
+    path: content/structures
+    filename: "{fields.date}-{primary}.md"
+    exclude: [_index.md]
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date]
+      default: { sort: date, order: desc }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Month, type: date, required: true, description: Use the 1st of the month. Entries stay hidden until this date. }
+      - { name: summary, label: One-line summary, type: string, description: Shown on cards and the home page. }
+      - { name: image, label: Image, type: image, options: { media: images } }
+      - { name: image_alt, label: Image description (for screen readers), type: string }
+      - { name: image_credit, label: Image credit, type: string, description: 'e.g. "Image: RCSB PDB, entry 1BMF."' }
+      - { name: techniques, component: techniques }
+      - { name: lab, label: Lab, type: string }
+      - name: papers
+        label: Papers
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: citation, label: Citation, type: string, description: 'e.g. "Smith et al., Nature 500, 1–5 (2013)"' }
+          - { name: doi, label: DOI, type: string, description: 'Just the DOI, e.g. 10.1038/370621a0' }
+      - name: links
+        label: Other links
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: url, label: URL, type: string }
+      - { name: pdb, label: PDB IDs, type: string, list: true, description: The first one is shown in the 3D viewer. }
+      - { name: emdb, label: EMDB IDs, type: string, list: true, description: 'e.g. EMD-3741' }
+      - { name: sasbdb, label: SASBDB IDs, type: string, list: true, description: 'e.g. SASDWL2' }
+      - { name: molstar, label: Show the interactive 3D viewer, type: boolean, default: true }
+      - { name: body, label: Story (about 100 words), type: rich-text }
+
+  # ----------------------------------------------------------- Community
+  - name: community
+    label: Community
+    type: group
+    items:
+      - name: spotlights
+        label: Member spotlights
+        type: collection
+        path: content/community/spotlights
+        filename: "{primary}.md"
+        exclude: [_index.md]
+        view:
+          fields: [title, role, date]
+          primary: title
+        fields:
+          - { name: title, label: Name, type: string, required: true }
+          - { name: date, label: Date, type: date }
+          - { name: role, label: Role, type: string }
+          - { name: institution, label: Institution, type: string }
+          - { name: techniques, component: techniques }
+          - { name: photo, label: Photo, type: image, description: Only with the person's permission., options: { media: images } }
+          - { name: summary, label: Summary, type: text }
+          - name: questions
+            label: Questions and answers
+            type: object
+            list: true
+            fields:
+              - { name: q, label: Question, type: string }
+              - { name: a, label: Answer, type: text }
+          - { name: body, component: body }
+      - name: podcast
+        label: Podcast episodes
+        type: collection
+        path: content/community/podcast
+        filename: "{primary}.md"
+        exclude: [_index.md]
+        view:
+          fields: [title, episode, date]
+          primary: title
+          default: { sort: date, order: desc }
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - { name: episode, label: Episode number, type: number }
+          - { name: duration, label: Duration, type: string, description: 'e.g. "35 min"' }
+          - { name: guests, label: Guests, type: string, list: true }
+          - { name: audio, label: Audio file URL (MP3), type: string }
+          - name: links
+            label: Podcast app links
+            type: object
+            fields:
+              - { name: spotify, label: Spotify, type: string }
+              - { name: apple, label: Apple Podcasts, type: string }
+              - { name: youtube, label: YouTube, type: string }
+          - { name: summary, label: Summary, type: text }
+          - { name: body, label: Show notes, type: rich-text }
+
+  # ----------------------------------------------------------- Pages
+  - name: pages
+    label: Pages
+    type: group
+    items:
+      - { name: page-about, label: About, type: file, path: content/about/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-committee, label: Committee (intro text), type: file, path: content/about/committee.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-history, label: History, type: file, path: content/about/history.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-join, label: Join, type: file, path: content/about/join.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-community, label: Community (overview), type: file, path: content/community/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-chat, label: Community chat, type: file, path: content/community/chat.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string, description: 'e.g. "Pilot proposal"; leave empty to hide' }, { name: body, component: body }] }
+      - { name: page-mentoring, label: Mentoring, type: file, path: content/community/mentoring.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: status, label: Status badge, type: string }, { name: body, component: body }] }
+      - { name: page-meetings, label: Meetings (intro text), type: file, path: content/meetings/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-training, label: Training (intro text), type: file, path: content/training/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+      - { name: page-resources, label: Resources (intro text), type: file, path: content/resources/_index.md, fields: [{ name: title, label: Title, type: string }, { name: description, label: Description, type: text }, { name: body, component: body }] }
+
+  # ------------------------------------------------------------- Lists
+  - name: lists
+    label: Lists
+    type: group
+    items:
+      - name: home
+        label: Home page text
+        type: file
+        path: data/home.yaml
+        format: yaml
+        fields:
+          - { name: eyebrow, label: Small heading above the title, type: string }
+          - { name: heading, label: Title, type: string, required: true }
+          - { name: intro, label: Introduction, type: text, description: One or two sentences naming the techniques the BSG covers. }
+
+      - name: techniques
+        label: Technique tags
+        description: The tags shown on the home page and used to filter events, training, resources and structures. Changing an ID breaks existing tags; changing a label is safe.
+        type: file
+        path: data/techniques.yaml
+        format: yaml
+        list: true
+        fields:
+          - { name: id, label: ID (lower case, no spaces), type: string, required: true }
+          - { name: label, label: Label, type: string, required: true }
+
+      - name: announcements
+        label: Announcements bar
+        type: file
+        path: data/announcements.yaml
+        format: yaml
+        fields:
+          - name: announcements
+            label: Extra messages
+            description: The next meeting, structure of the month and latest news are added automatically.
+            type: object
+            list: true
+            fields:
+              - { name: text, label: Message, type: string, required: true }
+              - { name: url, label: Link, type: string, description: 'A page on this site (e.g. /prizes/) or a full URL' }
+              - { name: until, label: Show until, type: date }
+
+      - name: events
+        label: Events calendar
+        type: file
+        path: data/events.yaml
+        format: yaml
+        fields:
+          - name: events
+            label: Events
+            description: Conferences and courses run by other organisations. Past events are hidden automatically.
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: organiser, label: Organiser, type: string, required: true }
+              - { name: url, label: Link, type: string, required: true }
+              - { name: start, label: Start date, type: date }
+              - { name: end, label: End date, type: date }
+              - { name: when, label: Timing if not dated, type: string, description: 'e.g. "January 2027"' }
+              - { name: location, label: Location, type: string }
+              - { name: techniques, component: techniques }
+              - { name: description, label: Description, type: text }
+
+      - name: training
+        label: Training
+        type: file
+        path: data/training.yaml
+        format: yaml
+        fields:
+          - name: courses
+            label: Schools and courses
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: provider, label: Provider, type: string }
+              - { name: url, label: Link, type: string }
+              - name: format
+                label: Format
+                type: select
+                options: { values: [in-person, online, hybrid, self-paced] }
+              - name: level
+                label: Level
+                type: select
+                options: { values: [introductory, intermediate, advanced, all] }
+              - { name: techniques, component: techniques }
+              - { name: start, label: Start date, type: date }
+              - { name: end, label: End date, type: date }
+              - { name: when, label: Timing if not dated, type: string }
+              - { name: location, label: Location, type: string }
+              - { name: description, label: Description, type: text }
+          - name: online
+            label: Learn online
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: provider, label: Provider, type: string }
+              - { name: url, label: Link, type: string }
+              - { name: techniques, component: techniques }
+              - { name: description, label: Description, type: string }
+          - name: textbooks
+            label: Introductory textbooks
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: authors, label: Authors, type: string }
+              - { name: details, label: Publisher and year, type: string }
+              - { name: url, label: Link, type: string }
+              - { name: techniques, component: techniques }
+          - name: reference
+            label: Reference works
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: authors, label: Authors, type: string }
+              - { name: details, label: Publisher and year, type: string }
+              - { name: url, label: Link, type: string }
+              - { name: techniques, component: techniques }
+
+      - name: committee
+        label: Committee
+        type: file
+        path: data/committee.yaml
+        format: yaml
+        fields:
+          - { name: confirmed, label: List confirmed by the Secretary, type: boolean, description: Removes the "draft" notice on the Committee page. }
+          - name: officers
+            label: Officers
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.name}" } }
+            fields:
+              - { name: name, label: Name, type: string, required: true }
+              - { name: roles, label: Roles, type: string, list: true }
+              - { name: affiliation, label: Affiliation, type: string }
+              - { name: term_start, label: Term start (year), type: number }
+              - { name: term_end, label: Term end (year), type: number }
+              - { name: photo, label: Photo, type: image, description: Only with the person's permission., options: { media: images } }
+              - { name: url, label: Profile link, type: string }
+          - name: members
+            label: Ordinary members
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.name}" } }
+            fields:
+              - { name: name, label: Name, type: string, required: true }
+              - { name: affiliation, label: Affiliation, type: string }
+              - { name: term_start, label: Term start (year), type: number }
+              - { name: term_end, label: Term end (year), type: number }
+              - { name: photo, label: Photo, type: image, description: Only with the person's permission., options: { media: images } }
+              - { name: url, label: Profile link, type: string }
+
+      - name: prizes
+        label: Prizes
+        type: file
+        path: data/prizes.yaml
+        format: yaml
+        list: true
+        fields:
+          - { name: id, label: ID (used in links), type: string, readonly: true }
+          - { name: name, label: Prize name, type: string, required: true }
+          - { name: summary, label: Summary, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: nominations, label: Nominations text, type: text }
+          - { name: sponsor, label: Sponsor, type: string }
+          - { name: history, label: History document, type: file, options: { media: documents } }
+          - name: winners
+            label: Winners
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.year} {fields.name}" } }
+            fields:
+              - { name: year, label: Year, type: number, required: true }
+              - { name: name, label: Name, type: string, required: true }
+              - { name: affiliation, label: Affiliation, type: string }
+              - { name: title, label: Poster or talk title, type: string }
+
+      - name: resources
+        label: Resources (links)
+        type: file
+        path: data/resources.yaml
+        format: yaml
+        fields:
+          - name: groups
+            label: Groups
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: id, label: ID (used in links), type: string }
+              - { name: title, label: Title, type: string, required: true }
+              - { name: intro, label: Introduction, type: text }
+              - name: sections
+                label: Sections
+                type: object
+                list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+                fields:
+                  - { name: title, label: Section title, type: string }
+                  - name: links
+                    label: Links
+                    type: object
+                    list: { collapsible: { collapsed: true, summary: "{fields.name}" } }
+                    fields:
+                      - { name: name, label: Name, type: string, required: true }
+                      - { name: url, label: URL, type: string, required: true }
+                      - { name: description, label: Description, type: string }
+                      - { name: techniques, component: techniques }

@@ -1,0 +1,8 @@
+# Extra messages for the rotating bar at the top of every page.
+# The bar also shows, automatically: the next BSG meeting, the structure of
+# the month and the latest news post. Messages disappear after their "until" date.
+#
+# Fields: text (required), url (optional), until (YYYY-MM-DD, optional)
+announcements:
+  - text: "Nominations for the BSG Early Career Prize are welcome at any time"
+    url: /prizes/#early-career

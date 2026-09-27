@@ -1,0 +1,14 @@
+{{- /*
+  Returns true if an item (dict or page params with start/end/year) has not
+  finished yet. Items without a start date count as upcoming while their
+  year is this year or later, or when they have no year at all.
+*/ -}}
+{{- $upcoming := true }}
+{{- $today := now.Format "2006-01-02" }}
+{{- with .start }}
+  {{- $last := time.AsTime (or $.end .) }}
+  {{- $upcoming = ge ($last.Format "2006-01-02") $today }}
+{{- else }}
+  {{- with .year }}{{ $upcoming = ge (int .) now.Year }}{{ end }}
+{{- end }}
+{{- return $upcoming }}

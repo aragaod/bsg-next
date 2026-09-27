@@ -1,0 +1,29 @@
+<footer class="mt-24 border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
+    <div>
+      <div class="flex items-center gap-2.5 text-brand-700 dark:text-brand-400">
+        {{ partial "logo.html" "size-8" }}
+        <span class="font-display font-semibold text-slate-900 dark:text-white">Biological Structures Group</span>
+      </div>
+      <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">
+        A special interest group of the <a class="font-medium text-brand-700 hover:underline dark:text-brand-300" href="{{ site.Params.bcaURL }}">British Crystallographic Association</a>.
+      </p>
+    </div>
+    <nav aria-label="Footer" class="md:col-span-2">
+      <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-4">
+        {{- range site.Menus.main }}
+        <li><a href="{{ .URL }}" class="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">{{ .Name }}</a></li>
+        {{- end }}
+        {{- range slice "/structures" "/latest" }}{{ with site.GetPage . }}
+        <li><a href="{{ .RelPermalink }}" class="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">{{ .LinkTitle }}</a></li>
+        {{- end }}{{ end }}
+      </ul>
+    </nav>
+  </div>
+  <div class="border-t border-slate-200 dark:border-slate-800">
+    <p class="mx-auto max-w-7xl px-4 py-5 text-xs text-slate-500 sm:px-6 lg:px-8 dark:text-slate-500">
+      &copy; {{ now.Year }} Biological Structures Group, British Crystallographic Association.
+      {{- if site.Params.noindex }} <strong class="font-semibold text-accent-600 dark:text-accent-400">Draft mockup for committee review — not the official BSG site.</strong>{{ end }}
+    </p>
+  </div>
+</footer>

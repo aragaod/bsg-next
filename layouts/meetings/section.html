@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $upcoming := slice }}
+{{- $past := slice }}
+{{- range sort .RegularPages "Params.year" "desc" }}
+  {{- if partial "fn/is-upcoming.html" .Params }}{{ $upcoming = $upcoming | append . }}{{ else }}{{ $past = $past | append . }}{{ end }}
+{{- end }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+
+  <section aria-labelledby="upcoming" class="mt-10">
+    <h2 id="upcoming" class="text-2xl font-semibold">Upcoming</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      {{- range sort $upcoming "Params.year" "asc" }}
+      <a href="{{ .RelPermalink }}" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:hover:border-brand-700">
+        <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ if eq .Params.kind "winter" }}Winter Meeting{{ else }}BCA Spring Meeting{{ end }}</p>
+        <h3 class="mt-2 text-lg font-semibold group-hover:text-brand-700 dark:group-hover:text-brand-300">{{ .Title }}</h3>
+        <p class="mt-2 text-sm font-medium text-slate-900 dark:text-white">{{ partial "fn/meeting-when.html" . }}{{ with .Params.city }} · {{ . }}{{ end }}</p>
+        {{- with .Params.theme }}<p class="mt-2 text-sm text-slate-600 italic dark:text-slate-400">{{ . }}</p>{{ end }}
+      </a>
+      {{- else }}
+      <p class="text-slate-600 dark:text-slate-400">No meetings announced yet.</p>
+      {{- end }}
+    </div>
+  </section>
+
+  <section aria-labelledby="archive" class="mt-16">
+    <h2 id="archive" class="text-2xl font-semibold">Archive</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-400">Past BSG meetings, with programmes where we have them.</p>
+    <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-slate-50 text-xs tracking-wide text-slate-500 uppercase dark:bg-slate-900 dark:text-slate-400">
+          <tr>
+            <th scope="col" class="px-4 py-3">Year</th>
+            <th scope="col" class="px-4 py-3">Meeting</th>
+            <th scope="col" class="px-4 py-3">Where</th>
+            <th scope="col" class="px-4 py-3">Theme</th>
+            <th scope="col" class="px-4 py-3"><span class="sr-only">Programme</span></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+          {{- range $past }}
+          <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/60">
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-slate-900 dark:text-white">{{ .Params.year }}</td>
+            <td class="px-4 py-3 whitespace-nowrap"><a href="{{ .RelPermalink }}" class="text-brand-700 hover:underline dark:text-brand-300">{{ if eq .Params.kind "winter" }}Winter{{ else }}Spring{{ end }}</a></td>
+            <td class="px-4 py-3">{{ partial "fn/place.html" .Params }}</td>
+            <td class="px-4 py-3 text-slate-600 italic dark:text-slate-400">{{ .Params.theme }}</td>
+            <td class="px-4 py-3 whitespace-nowrap">{{ with .Params.programme }}<a href="{{ partial "fn/file-url.html" . }}" class="font-medium text-brand-700 hover:underline dark:text-brand-300">Programme</a>{{ end }}</td>
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+{{ end }}

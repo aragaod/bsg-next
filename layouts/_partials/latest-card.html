@@ -1,0 +1,13 @@
+{{- /* Card for one entry of the weekly UK structures feed (data/uk_structures.json). */ -}}
+<a href="{{ .url }}" rel="noopener" class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-brand-700">
+  {{- if .image }}
+  <img src="{{ partial "fn/file-url.html" .image }}" alt="" loading="lazy" width="240" height="180" class="aspect-[4/3] w-full bg-white object-contain p-3">
+  {{- else }}
+  <div aria-hidden="true" class="grid aspect-[4/3] w-full place-items-center bg-linear-to-br from-brand-50 to-violet-50 font-display text-2xl font-semibold text-brand-700 dark:from-brand-950 dark:to-violet-950 dark:text-brand-300">{{ .method }}</div>
+  {{- end }}
+  <div class="flex flex-1 flex-col p-4">
+    <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ .db }} {{ .id }} · {{ .method }}{{ with .resolution }} · {{ . }} Å{{ end }}</p>
+    <p class="mt-1 line-clamp-3 text-sm font-semibold text-slate-900 group-hover:text-brand-700 dark:text-white dark:group-hover:text-brand-300">{{ .title }}</p>
+    <p class="mt-auto pt-3 text-xs text-slate-500 dark:text-slate-400">Released {{ time.AsTime .released | time.Format "2 Jan 2006" }}{{ with .reasons }} · {{ delimit . ", " }}{{ end }}</p>
+  </div>
+</a>

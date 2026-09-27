@@ -1,0 +1,22 @@
+{{- /* Home page strip: the newest entries from the weekly UK structures feed. */ -}}
+{{- $feed := hugo.Data.uk_structures }}
+{{- with first 12 ($feed.entries | default slice) }}
+<section class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="latest" data-carousel>
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <h2 id="latest" class="text-2xl font-semibold">New from UK science and facilities</h2>
+      <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Released in the PDB and SASBDB in recent weeks. Updated automatically every week.</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="{{ relref $ "/latest" }}" class="mr-2 text-sm font-semibold text-brand-700 hover:underline dark:text-brand-300">See all <span aria-hidden="true">→</span></a>
+      <button type="button" data-carousel-prev class="rounded-full p-2 ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-700 dark:hover:bg-slate-800" aria-label="Scroll back"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+      <button type="button" data-carousel-next class="rounded-full p-2 ring-1 ring-slate-300 hover:bg-slate-100 dark:ring-slate-700 dark:hover:bg-slate-800" aria-label="Scroll forward"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+    </div>
+  </div>
+  <ul data-carousel-track class="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:thin]">
+    {{- range . }}
+    <li class="w-60 shrink-0 snap-start">{{ partial "latest-card.html" . }}</li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <div class="mt-4 space-y-16">
+    {{- range hugo.Data.prizes }}
+    <section id="{{ .id }}" aria-labelledby="{{ .id }}-title" class="grid gap-8 lg:grid-cols-5">
+      <div class="lg:col-span-2">
+        <h2 id="{{ .id }}-title" class="text-2xl font-semibold">{{ .name }}</h2>
+        <p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{{ .description }}</p>
+        {{- with .nominations }}<p class="mt-4 rounded-xl bg-brand-50 p-4 text-sm text-brand-900 dark:bg-brand-950 dark:text-brand-100">{{ . }}</p>{{ end }}
+        {{- with .history }}<p class="mt-4 text-sm"><a href="{{ partial "fn/file-url.html" . }}" class="font-medium text-brand-700 hover:underline dark:text-brand-300">History of the prize and the Blue John trophy (PDF)</a></p>{{ end }}
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-sm font-semibold tracking-wide text-slate-500 uppercase dark:text-slate-400">Past winners</h3>
+        <ol class="mt-4 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+          {{- range .winners }}
+          <li class="flex gap-4 py-3">
+            <span class="w-12 shrink-0 font-display font-semibold text-accent-600 dark:text-accent-400">{{ .year }}</span>
+            <div>
+              <p class="font-medium text-slate-900 dark:text-white">{{ .name }}{{ with .affiliation }} <span class="font-normal text-slate-500 dark:text-slate-400">· {{ . }}</span>{{ end }}</p>
+              {{- with .title }}<p class="mt-0.5 text-sm text-slate-600 italic dark:text-slate-400">{{ . }}</p>{{ end }}
+            </div>
+          </li>
+          {{- end }}
+        </ol>
+      </div>
+    </section>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

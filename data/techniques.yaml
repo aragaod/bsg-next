@@ -1,0 +1,20 @@
+- id: crystallography
+  label: Crystallography
+- id: cryo-em
+  label: Cryo-EM & tomography
+- id: saxs
+  label: Bio-SAXS & SANS
+- id: nmr
+  label: NMR
+- id: mass-spec
+  label: Mass spectrometry
+- id: biophysics
+  label: Biophysics
+- id: imaging
+  label: Imaging
+- id: modelling-ai
+  label: Modelling, simulation & AI
+- id: drug-design
+  label: Drug design
+- id: other
+  label: Other methods

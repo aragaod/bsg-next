@@ -1,0 +1,44 @@
+{{- /* Next BSG meeting with a live countdown (main.js). Switches automatically: Winter Meeting → Spring Meeting → next Winter Meeting. */ -}}
+{{- $up := partial "fn/upcoming-meetings.html" . }}
+{{- with index $up 0 }}
+{{- $kind := cond (eq .Params.kind "winter") "BSG Winter Meeting" "BSG sessions at the BCA Spring Meeting" }}
+<section class="mx-auto -mt-6 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="next-meeting">
+  <div class="grid items-center gap-8 rounded-3xl bg-slate-900 p-6 text-white shadow-xl sm:p-10 lg:grid-cols-5 dark:bg-slate-900 dark:ring-1 dark:ring-slate-800">
+    <div class="lg:col-span-3">
+      <p class="text-sm font-semibold tracking-wide text-brand-300 uppercase">Next meeting · {{ $kind }}</p>
+      <h2 id="next-meeting" class="mt-2 text-2xl font-semibold text-white sm:text-3xl"><a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a></h2>
+      <p class="mt-3 text-slate-300">
+        {{ partial "fn/meeting-when.html" . }}{{ with partial "fn/place.html" .Params }} · {{ . }}{{ end }}
+      </p>
+      {{- with .Params.theme }}<p class="mt-2 text-lg text-white italic">{{ . }}</p>{{ end }}
+      <div class="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
+        <a href="{{ .RelPermalink }}" class="rounded-lg bg-brand-400 px-4 py-2 text-slate-950 hover:bg-brand-300">Meeting details</a>
+        {{- with .Params.registration }}<a href="{{ . }}" class="rounded-lg px-4 py-2 ring-1 ring-white/30 hover:bg-white/10">Register</a>{{ end }}
+      </div>
+      {{- with index $up 1 }}
+      <p class="mt-6 text-sm text-slate-400">Then: <a href="{{ .RelPermalink }}" class="text-slate-200 hover:underline">{{ .Title }}</a> · {{ partial "fn/meeting-when.html" . }}</p>
+      {{- end }}
+    </div>
+    <div class="lg:col-span-2">
+      {{- with .Params.start }}
+      {{- $s := time.AsTime . }}
+      {{- $e := time.AsTime (or $.Params.end .) }}
+      <div data-countdown="{{ $s.Format "2006-01-02" }}" data-countdown-end="{{ $e.Format "2006-01-02" }}" class="grid grid-cols-3 gap-3 text-center" aria-live="off">
+        {{- range slice (dict "u" "days" "l" "days") (dict "u" "hours" "l" "hours") (dict "u" "minutes" "l" "minutes") }}
+        <div class="rounded-2xl bg-white/5 px-2 py-4 ring-1 ring-white/10">
+          <span data-unit="{{ .u }}" class="block font-display text-4xl font-semibold tabular-nums sm:text-5xl">–</span>
+          <span class="mt-1 block text-xs tracking-wide text-slate-400 uppercase">{{ .l }}</span>
+        </div>
+        {{- end }}
+        <p data-countdown-now hidden class="col-span-3 rounded-2xl bg-brand-400 px-4 py-6 font-display text-2xl font-semibold text-slate-950">Happening now</p>
+      </div>
+      {{- else }}
+      <div class="rounded-2xl bg-white/5 px-6 py-8 text-center ring-1 ring-white/10">
+        <p class="font-display text-2xl font-semibold">Date to be confirmed</p>
+        <p class="mt-2 text-sm text-slate-400">A live countdown appears here as soon as the date is announced.</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

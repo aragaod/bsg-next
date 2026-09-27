@@ -1,0 +1,11 @@
+{{- /*
+  Date text for a meeting page. Uses start/end when set; otherwise the
+  optional "when" field (e.g. "December 2026") plus "date to be confirmed";
+  otherwise just "date to be confirmed" (or the year, for past meetings).
+  Context: the meeting page.
+*/ -}}
+{{- $p := .Params }}
+{{- $tbc := "Date to be confirmed" }}
+{{- if not (partial "fn/is-upcoming.html" $p) }}{{ $tbc = string $p.year }}{{ end }}
+{{- with $p.when }}{{ $tbc = printf "%s, date to be confirmed" . }}{{ end }}
+{{- return partial "fn/date-range.html" (dict "start" $p.start "end" $p.end "tbc" $tbc) }}

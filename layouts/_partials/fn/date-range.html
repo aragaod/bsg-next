@@ -1,0 +1,26 @@
+{{- /*
+  Returns a human-readable date or date range.
+  Context: dict with optional "start", "end" (dates or YYYY-MM-DD strings),
+  "when" (free text used when start is empty) and "tbc" (fallback text).
+  Examples: "23–28 August 2027", "30 March – 1 April 2026", "January 2027".
+*/ -}}
+{{- $out := .tbc | default "Date to be confirmed" }}
+{{- with .start }}
+  {{- $s := time.AsTime . }}
+  {{- $out = $s | time.Format "2 January 2006" }}
+  {{- with $.end }}
+    {{- $e := time.AsTime . }}
+    {{- if ne ($s.Format "2006-01-02") ($e.Format "2006-01-02") }}
+      {{- if and (eq $s.Year $e.Year) (eq $s.Month $e.Month) }}
+        {{- $out = printf "%d–%s" $s.Day ($e | time.Format "2 January 2006") }}
+      {{- else if eq $s.Year $e.Year }}
+        {{- $out = printf "%s – %s" ($s | time.Format "2 January") ($e | time.Format "2 January 2006") }}
+      {{- else }}
+        {{- $out = printf "%s – %s" ($s | time.Format "2 January 2006") ($e | time.Format "2 January 2006") }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- with .when }}{{ $out = . }}{{ end }}
+{{- end }}
+{{- return $out }}

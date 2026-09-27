@@ -1,0 +1,22 @@
+{{- /*
+  Page description for search results and link previews. Uses, in order:
+  the description field, the summary field, a generated line for meetings,
+  the start of the page text, and finally the site description.
+*/ -}}
+{{- $d := "" }}
+{{- if .Description }}
+  {{- $d = .Description }}
+{{- else if .Params.summary }}
+  {{- $d = .Params.summary }}
+{{- else if and .IsPage (eq .Section "meetings") }}
+  {{- $d = .Title }}
+  {{- with partial "fn/place.html" .Params }}{{ $d = printf "%s, %s" $d . }}{{ end }}
+  {{- if or .Params.start (partial "fn/is-upcoming.html" .Params) }}{{ $d = printf "%s, %s" $d (partial "fn/meeting-when.html" .) }}{{ end }}
+  {{- $d = printf "%s." $d }}
+  {{- with .Params.theme }}{{ $d = printf "%s Theme: %s." $d . }}{{ end }}
+  {{- $d = printf "%s A meeting of the Biological Structures Group of the British Crystallographic Association." $d }}
+{{- else if .Plain }}
+  {{- $d = .Plain | truncate 160 }}
+{{- end }}
+{{- $d = $d | default site.Params.description | plainify | strings.TrimSpace }}
+{{- return $d }}

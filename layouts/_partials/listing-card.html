@@ -1,0 +1,14 @@
+{{- /* Card for an external event or course from a data file. Context: the item. */ -}}
+<article class="flex flex-col rounded-2xl border border-slate-200 p-6 dark:border-slate-800">
+  <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ or .organiser .provider }}</p>
+  <h3 class="mt-2 text-lg font-semibold"><a href="{{ .url }}" class="hover:text-brand-700 dark:hover:text-brand-300" rel="noopener">{{ .title }} <span aria-hidden="true" class="text-slate-400">↗</span></a></h3>
+  <p class="mt-2 text-sm font-medium text-slate-900 dark:text-white">
+    {{ partial "fn/date-range.html" . }}{{ with .location }} · {{ . }}{{ end }}
+  </p>
+  {{- $meta := slice }}
+  {{- with .format }}{{ $meta = $meta | append (replace . "-" " ") }}{{ end }}
+  {{- with .level }}{{ $meta = $meta | append . }}{{ end }}
+  {{- with $meta }}<p class="mt-1 text-xs text-slate-500 capitalize dark:text-slate-400">{{ delimit . " · " }}</p>{{ end }}
+  {{- with .description }}<p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ . }}</p>{{ end }}
+  <div class="mt-auto pt-4">{{ partial "technique-tags.html" .techniques }}</div>
+</article>

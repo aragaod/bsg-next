@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="grid gap-10 lg:grid-cols-5">
+    <div class="lg:col-span-3">
+      {{- with .Params.image }}
+      <figure class="mb-8">
+        <img src="{{ partial "fn/file-url.html" . }}" alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" class="mx-auto w-full max-w-lg rounded-2xl bg-white">
+        {{- with $.Params.image_credit }}<figcaption class="mt-2 text-xs text-slate-500">{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{- end }}
+      <p class="text-sm text-slate-500 dark:text-slate-400">{{ .Date | time.Format "January 2006" }}</p>
+      <div class="prose-bsg mt-2 text-lg">{{ .Content }}</div>
+    </div>
+    <aside class="h-fit space-y-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm lg:col-span-2 dark:border-slate-800 dark:bg-slate-900">
+      {{ partial "technique-tags.html" .Params.techniques }}
+      {{- with .Params.lab }}<div><p class="font-semibold text-slate-900 dark:text-white">Lab</p><p class="mt-1 text-slate-600 dark:text-slate-400">{{ . }}</p></div>{{ end }}
+      {{- with .Params.papers }}
+      <div>
+        <p class="font-semibold text-slate-900 dark:text-white">{{ if gt (len .) 1 }}Papers{{ else }}Paper{{ end }}</p>
+        <ul class="mt-1 space-y-2 text-slate-600 dark:text-slate-400">
+          {{- range . }}
+          <li>{{ with .doi }}<a href="https://doi.org/{{ . }}" class="text-brand-700 hover:underline dark:text-brand-300" rel="noopener">{{ end }}{{ .title }}{{ with .doi }}</a>{{ end }}{{ with .citation }}<br><span class="text-slate-500">{{ . }}</span>{{ end }}</li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+      {{- $db := slice
+        (dict "name" "PDB" "ids" .Params.pdb "url" "https://www.ebi.ac.uk/pdbe/entry/pdb/%s")
+        (dict "name" "EMDB" "ids" .Params.emdb "url" "https://www.ebi.ac.uk/emdb/%s")
+        (dict "name" "SASBDB" "ids" .Params.sasbdb "url" "https://www.sasbdb.org/data/%s/") }}
+      {{- range $db }}{{ if .ids }}
+      <div>
+        <p class="font-semibold text-slate-900 dark:text-white">{{ .name }}</p>
+        <p class="mt-1 flex flex-wrap gap-2">{{ $url := .url }}{{ range .ids }}<a href="{{ printf $url (lower .) }}" class="rounded bg-white px-2 py-0.5 font-mono text-xs text-brand-800 ring-1 ring-slate-200 hover:ring-brand-400 dark:bg-slate-950 dark:text-brand-200 dark:ring-slate-700" rel="noopener">{{ . }}</a>{{ end }}</p>
+      </div>
+      {{- end }}{{ end }}
+      {{- with .Params.links }}
+      <div>
+        <p class="font-semibold text-slate-900 dark:text-white">More</p>
+        <ul class="mt-1 space-y-1">{{ range . }}<li><a href="{{ .url }}" class="text-brand-700 hover:underline dark:text-brand-300" rel="noopener">{{ .label }}</a></li>{{ end }}</ul>
+      </div>
+      {{- end }}
+    </aside>
+  </div>
+  {{- if .Params.molstar }}{{ partial "molstar-viewer.html" . }}{{ end }}
+</div>
+{{ end }}

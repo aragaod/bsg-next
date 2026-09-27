@@ -1,0 +1,46 @@
+name: Update UK structures feed
+
+# Weekly: collect newly released UK structures from the PDB and SASBDB into
+# data/uk_structures.json, commit the change, then rebuild the site.
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Mondays 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit the updated feed
+  actions: write    # start the deploy workflow
+
+concurrency:
+  group: uk-structures
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Update feed
+        run: python3 scripts/uk_structures.py
+      - name: Commit if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/uk_structures.json data/sasbdb_seen.json
+            git commit -m "Update UK structures feed ($(date -u +%F))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rebuild site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

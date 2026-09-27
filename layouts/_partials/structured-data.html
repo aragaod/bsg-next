@@ -1,0 +1,45 @@
+{{- /*
+  schema.org structured data (JSON-LD) so search engines understand the
+  group and its meetings; meetings with a confirmed date can appear in
+  search results as events.
+*/ -}}
+{{- $bca := dict "@type" "Organization" "name" "British Crystallographic Association" "url" site.Params.bcaURL }}
+{{- $org := dict
+  "@type" "Organization"
+  "@id" (printf "%s#organization" site.Home.Permalink)
+  "name" site.Title
+  "alternateName" "BSG"
+  "url" site.Home.Permalink
+  "logo" ("favicon-512.png" | absURL)
+  "description" site.Params.description
+  "parentOrganization" $bca
+}}
+{{- if .IsHome }}
+  {{- $site := dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink "inLanguage" "en-GB" "publisher" (dict "@id" (index $org "@id")) }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $org $site) | jsonify | safeJS }}</script>
+{{- else if and .IsPage (eq .Section "meetings") .Params.start }}
+  {{- $s := time.AsTime .Params.start }}
+  {{- $e := time.AsTime (or .Params.end .Params.start) }}
+  {{- $event := dict
+    "@context" "https://schema.org"
+    "@type" "Event"
+    "name" .Title
+    "startDate" ($s.Format "2006-01-02")
+    "endDate" ($e.Format "2006-01-02")
+    "eventStatus" "https://schema.org/EventScheduled"
+    "eventAttendanceMode" (cond (eq .Params.city "Online") "https://schema.org/OnlineEventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode")
+    "description" (partial "fn/description.html" .)
+    "url" .Permalink
+    "organizer" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink)
+  }}
+  {{- if eq .Params.city "Online" }}
+    {{- $event = merge $event (dict "location" (dict "@type" "VirtualLocation" "url" .Permalink)) }}
+  {{- else }}
+    {{- $event = merge $event (dict "location" (dict "@type" "Place" "name" (.Params.venue | default .Params.city) "address" (dict "@type" "PostalAddress" "addressLocality" .Params.city "addressCountry" "GB"))) }}
+  {{- end }}
+<script type="application/ld+json">{{ $event | jsonify | safeJS }}</script>
+{{- else if and .IsPage (in (slice "news" "structures") .Section) }}
+  {{- $a := dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "datePublished" (.Date.Format "2006-01-02") "description" (partial "fn/description.html" .) "url" .Permalink "publisher" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) }}
+  {{- with .Params.image }}{{ $a = merge $a (dict "image" (strings.TrimPrefix "/" . | absURL)) }}{{ end }}
+<script type="application/ld+json">{{ $a | jsonify | safeJS }}</script>
+{{- end }}

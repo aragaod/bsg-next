@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+{{- $t := hugo.Data.training }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <div class="mt-4">{{ partial "technique-filter.html" "#training-list" }}</div>
+  <div id="training-list" class="space-y-16">
+    <section data-filter-group aria-labelledby="courses">
+      <h2 id="courses" class="text-2xl font-semibold">Schools and courses</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {{- range $t.courses }}<div data-tech="{{ delimit (.techniques | default slice) " " }}" class="flex">{{ partial "listing-card.html" . }}</div>{{ end }}
+      </div>
+    </section>
+    <section data-filter-group aria-labelledby="online">
+      <h2 id="online" class="text-2xl font-semibold">Learn online</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-400">Free courses, tutorials and resources.</p>
+      <ul class="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+        {{- range $t.online }}
+        <li data-tech="{{ delimit (.techniques | default slice) " " }}">
+          <a href="{{ .url }}" class="font-medium text-slate-900 hover:text-brand-700 hover:underline dark:text-white dark:hover:text-brand-300" rel="noopener">{{ .title }}</a>
+          <p class="text-sm text-slate-600 dark:text-slate-400">{{ .provider }}{{ with .description }} · {{ . }}{{ end }}</p>
+        </li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- range slice (dict "id" "textbooks" "title" "Introductory textbooks" "items" $t.textbooks) (dict "id" "reference" "title" "Reference works" "items" $t.reference) }}
+    <section data-filter-group aria-labelledby="{{ .id }}">
+      <h2 id="{{ .id }}" class="text-2xl font-semibold">{{ .title }}</h2>
+      <ul class="mt-6 grid gap-x-8 gap-y-4 md:grid-cols-2">
+        {{- range .items }}
+        <li data-tech="{{ delimit (.techniques | default slice) " " }}">
+          <p class="font-medium text-slate-900 dark:text-white">{{ with .url }}<a href="{{ . }}" class="hover:text-brand-700 hover:underline dark:hover:text-brand-300" rel="noopener">{{ end }}{{ .title }}{{ with .url }}</a>{{ end }}</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400">{{ .authors }} · {{ .details }}</p>
+        </li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

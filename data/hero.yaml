@@ -1,0 +1,48 @@
+# Home page hero images. One is shown per day, following "schedule" in order
+# (the nightly rebuild moves to the next day's entry). Listing an image twice
+# shows it twice as often.
+schedule: [ptx3, pla2r, ptx3, toll5a]
+
+images:
+  - id: ptx3
+    image: images/hero/ptx3.png
+    inset: images/hero/ptx3-whole.png
+    title: Pentraxin-3 (PTX3)
+    alt: "Pentraxin-3 shown three ways: a translucent violet SAXS envelope around a teal cryo-EM surface, with a window revealing the amber crystal structure of one domain and its blue electron density."
+    summary: An innate-immunity protein that helps build the extracellular matrix, seen at three scales.
+    lab: Tony Day's group, University of Manchester
+    layers:
+      - { colour: violet, technique: Bio-SAXS, where: Diamond B21, note: "Whole protein; the arms are an AlphaFold model validated against the SAXS data" }
+      - { colour: teal, technique: Cryo-EM, where: eBIC, note: "Central core, 3.3 Å" }
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I04-1, note: "One domain at 2.4 Å, with electron density (blue)" }
+    paper: { citation: "Shah et al., Matrix Biology 136, 52–68 (2025)", doi: 10.1016/j.matbio.2025.01.002 }
+    data: "SASBDB SASDVA6 · EMD-19717 · PDB 8S50 · PDB 8PVQ"
+    method: "The SAXS envelope is a low-resolution map of the authors' SAXS-validated model (SASDVA6). The X-ray density is the PDBe 2Fo−Fc map. Rendered with UCSF ChimeraX."
+
+  - id: pla2r
+    image: images/hero/pla2r.png
+    title: Phospholipase A2 receptor (PLA2R)
+    alt: "PLA2R shown two ways: a translucent violet SAXS envelope around a teal cryo-EM surface, with a window revealing the amber atomic model of its cysteine-rich domain."
+    summary: The kidney protein targeted by autoantibodies in membranous nephropathy; the window shows the domain carrying the dominant epitope.
+    lab: Rachel Lennon's group, University of Manchester
+    layers:
+      - { colour: violet, technique: Bio-SAXS, where: Diamond B21, note: "Compact form at pH 6.2" }
+      - { colour: teal, technique: Cryo-EM, where: eBIC, note: "3.4 Å" }
+      - { colour: amber, technique: Atomic model, where: from the cryo-EM map, note: "Cysteine-rich domain" }
+    paper: { citation: "Fresquet et al., PNAS 119, e2202209119 (2022)", doi: 10.1073/pnas.2202209119 }
+    data: "SASBDB SASDNQ3 · EMD-14077 · PDB 7QSR"
+    method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018). Rendered with UCSF ChimeraX."
+
+  - id: toll5a
+    image: images/hero/toll5a.png
+    title: Toll5A receptor with Spätzle
+    alt: "The mosquito Toll5A–Spätzle complex: a translucent violet SAXS envelope around a teal cryo-EM surface of two curved receptors, with a window revealing the amber Spätzle ligand."
+    summary: A mosquito immune receptor pair bound to its signal protein, from the insect that carries dengue and Zika.
+    lab: Monique Gangloff's group, University of Cambridge
+    layers:
+      - { colour: violet, technique: Bio-SAXS, where: Diamond B21, note: "The complex in solution" }
+      - { colour: teal, technique: Cryo-EM, where: eBIC, note: "4.2 Å" }
+      - { colour: amber, technique: Atomic model, where: from the cryo-EM map, note: "Spätzle ligand" }
+    paper: { citation: "Saucereau et al., Nature Communications 13, 5110 (2022)", doi: 10.1038/s41467-022-32690-6 }
+    data: "SASBDB SASDKY8 · EMD-11982 · PDB 7B1B"
+    method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018). Rendered with UCSF ChimeraX."

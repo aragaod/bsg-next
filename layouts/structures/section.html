@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <ul class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {{- range .Pages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:hover:border-brand-700">
+        {{- with .Params.image }}
+        <img src="{{ partial "fn/file-url.html" . }}" alt="" loading="lazy" class="aspect-[4/3] w-full bg-white object-contain p-4">
+        {{- else }}
+        <div aria-hidden="true" class="grid aspect-[4/3] w-full place-items-center bg-linear-to-br from-brand-50 to-violet-50 text-brand-600 dark:from-brand-950 dark:to-violet-950 dark:text-brand-400">{{ partial "logo.html" "size-20 opacity-60" }}</div>
+        {{- end }}
+        <div class="flex flex-1 flex-col p-6">
+        <p class="text-xs font-semibold tracking-wide text-accent-600 uppercase dark:text-accent-400">{{ .Date | time.Format "January 2006" }}</p>
+        <h2 class="mt-2 text-lg font-semibold">{{ .Title }}</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ .Summary | plainify }}</p>
+        <div class="mt-auto pt-4">{{ partial "technique-tags.html" .Params.techniques }}</div>
+        </div>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}

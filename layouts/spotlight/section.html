@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <div class="prose-bsg">{{ .Content }}</div>
+  <ul class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {{- range .Pages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="group flex h-full flex-col rounded-2xl border border-slate-200 p-6 hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:hover:border-brand-700">
+        <div class="flex items-center gap-4">
+          {{ partial "spotlight-avatar.html" . }}
+          <div>
+            <h2 class="font-semibold group-hover:text-brand-700 dark:group-hover:text-brand-300">{{ .Title }}</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400">{{ .Params.role }}{{ with .Params.institution }} · {{ . }}{{ end }}</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ .Params.summary }}</p>
+        <div class="mt-auto pt-4">{{ partial "technique-tags.html" .Params.techniques }}</div>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}

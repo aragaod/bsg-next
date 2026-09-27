@@ -1,0 +1,15 @@
+{{- /*
+  The stylesheet keeps a stable URL (css/main.css) with a version query,
+  rather than a fingerprinted file name: GitHub Pages lets browsers cache
+  HTML for 10 minutes, and a cached page must still find its stylesheet
+  after a new deploy.
+*/ -}}
+{{- with (templates.Defer (dict "key" "global")) }}
+  {{- with resources.Get "css/main.css" }}
+    {{- $opts := dict "minify" (not hugo.IsDevelopment) }}
+    {{- with . | css.TailwindCSS $opts }}
+      {{- $v := substr (. | fingerprint "sha256").Data.Integrity 7 12 }}
+<link rel="stylesheet" href="{{ .RelPermalink }}?v={{ $v | urlquery }}">
+    {{- end }}
+  {{- end }}
+{{- end }}

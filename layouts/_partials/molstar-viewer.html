@@ -1,0 +1,23 @@
+{{- /*
+  Interactive 3D viewer (Mol*), loaded only when the visitor clicks, so the
+  page stays light and no structure data is fetched until then. The viewer
+  code is served from this site; coordinates come from PDBe (EMBL-EBI).
+  Context: the structure page.
+*/ -}}
+{{- with .Params.pdb }}
+{{- $id := index . 0 }}
+<section id="viewer" class="mt-12 scroll-mt-24" aria-labelledby="viewer-title">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 id="viewer-title" class="text-2xl font-semibold">Explore in 3D</h2>
+    <p class="text-sm text-slate-500 dark:text-slate-400">PDB {{ $id }} · drag to rotate, scroll to zoom</p>
+  </div>
+  <div data-molstar="{{ lower $id }}" data-molstar-js="{{ "vendor/molstar/molstar.js" | relURL }}" data-molstar-css="{{ "vendor/molstar/molstar.css" | relURL }}"
+       class="relative mt-4 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 sm:aspect-[16/9] dark:border-slate-800">
+    <button type="button" data-molstar-load class="absolute inset-0 grid place-items-center text-white">
+      {{- with $.Params.image }}<img src="{{ partial "fn/file-url.html" . }}" alt="" class="absolute inset-0 size-full object-contain p-8 opacity-40">{{ end }}
+      <span class="relative rounded-xl bg-brand-500 px-5 py-3 font-semibold text-slate-950 shadow-lg hover:bg-brand-400">Load interactive 3D viewer</span>
+    </button>
+  </div>
+  <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Viewer: <a href="https://molstar.org/" class="underline" rel="noopener">Mol*</a>. Loading it fetches the structure from <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/{{ lower $id }}" class="underline" rel="noopener">PDBe</a>.</p>
+</section>
+{{- end }}

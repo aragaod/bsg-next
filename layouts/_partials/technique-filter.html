@@ -1,0 +1,14 @@
+{{- /*
+  Technique filter buttons. Context: CSS selector of the element to filter.
+  Items inside it carry data-tech="id id"; groups carry data-filter-group.
+  Hidden until JavaScript runs, so without JS everything is simply shown.
+*/ -}}
+<div data-filter="{{ . }}" hidden class="sticky top-16 z-30 -mx-4 mb-8 border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur sm:mx-0 sm:rounded-xl sm:border dark:border-slate-800 dark:bg-slate-950/90">
+  <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter by technique">
+    <span class="mr-1 text-sm font-medium text-slate-500 dark:text-slate-400">Show:</span>
+    <button type="button" data-value="all" aria-pressed="true" class="filter-btn">All</button>
+    {{- range hugo.Data.techniques }}{{ if ne .id "other" }}
+    <button type="button" data-value="{{ .id }}" aria-pressed="false" class="filter-btn">{{ .label }}</button>
+    {{- end }}{{ end }}
+  </div>
+</div>

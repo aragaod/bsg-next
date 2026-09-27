@@ -1,0 +1,47 @@
+# BSG prizes and past winners, from the current site.
+# Wording of the Early Career Prize is still under discussion by the committee
+# (it currently emphasises crystallography).
+
+- id: early-career
+  name: BSG Early Career Prize
+  summary: For an early-career researcher who has had an impact in structural biology.
+  description: >-
+    The BSG awards a prize to someone who has had an impact in the field of
+    structural biology (with an emphasis on crystallography) and has recently
+    obtained a personal fellowship, a lectureship or equivalent. The award is
+    presented at the BCA Spring Meeting, where the recipient gives a prize
+    lecture.
+  nominations: Nominations are welcome at any time; please send them to the BSG Secretary.
+  winners:
+    - { year: 2025, name: Dr Daren Fearon, affiliation: DLS }
+    - { year: 2024, name: Dr Lindsay Baker, affiliation: Oxford }
+    - { year: 2023, name: Dr Tiago Costa, affiliation: Imperial }
+    - { year: 2022, name: Dr Andrea Thorn, affiliation: Hamburg }
+    - { year: 2020, name: Dr Briony Yorke, affiliation: Bradford }
+    - { year: 2019, name: Dr Paul Elliott, affiliation: Oxford }
+    - { year: 2018, name: Dr Vidya Darbari, affiliation: QMUL }
+    - { year: 2017, name: Dr Atlanta Cook, affiliation: Edinburgh }
+    - { year: 2016, name: Dr Matt Gold, affiliation: UCL }
+    - { year: 2015, name: Dr Simon Newstead, affiliation: Oxford }
+    - { year: 2014, name: Dr Simon Kolstoe, affiliation: Portsmouth }
+
+- id: david-blow
+  name: BSG David Blow Poster Prize
+  summary: For the best poster at the BCA Spring Meeting. Sponsored by PDBe.
+  description: >-
+    Awarded annually to the best poster presented at the BCA Spring Meeting.
+    The trophy is a piece of Blue John on an oak plinth, both donated by
+    Peter Harrison, owner of the Treak Cliff Cavern at Castleton.
+  history: /archive/bluejohn.pdf
+  sponsor: PDBe
+  winners:
+    - { year: 2026, name: C. Hunter, affiliation: Durham, title: "Studying biomolecular interactions with the Dianthus screening platform." }
+    - { year: 2025, name: L. Williams, affiliation: Essex, title: "Damage before destruction? X-ray induced changes in single pulse serial femtosecond crystallography." }
+    - { year: 2024, name: A. Silale, affiliation: Newcastle, title: "Structural basis of iron piracy by a prominent human gut symbiont." }
+    - { year: 2023, name: J. Hill, affiliation: Bradford, title: "UV related cataract formation: insights from serial synchrotron crystallography." }
+    - { year: 2022, name: S. Inaba-Inoue, affiliation: Imperial College, title: "Molecular mechanism of antimicrobial peptide transporter SbmA." }
+    - { year: 2019, name: A. Cowan, affiliation: Melbourne, title: "The first crystal structures of BAK in complex with lipid offer novel insights into oligomerisation and membrane permeabilisation." }
+    - { year: 2018, name: E.A. Blackburn, affiliation: Edinburgh, title: "The long way round - Swapping species and ligands to initiate crystallisation of new protein:macrocycle complexes." }
+    - { year: 2017, name: A. A. Bin Abd Aziz, affiliation: Sheffield, title: "Structural studies on deamidase toxins." }
+    - { year: 2016, name: J. Wilson, affiliation: Sheffield, title: "Structural and functional studies into the tripartite pore forming toxin AHL from pathogenic Aeromonas hydrophila." }
+    - { year: 2015, name: G. Mercaldi, affiliation: "São Paulo", title: "Glucose-6-phosphate Dehydrogenase: Where are uncompetitive inhibitors are binding?" }

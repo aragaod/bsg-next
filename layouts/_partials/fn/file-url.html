@@ -1,0 +1,4 @@
+{{- /* Returns a usable URL for a site file path ("/archive/x.pdf" or "archive/x.pdf") or passes full URLs through. */ -}}
+{{- $u := . }}
+{{- if not (strings.HasPrefix $u "http") }}{{ $u = strings.TrimPrefix "/" $u | relURL }}{{ end }}
+{{- return $u }}

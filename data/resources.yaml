@@ -1,0 +1,586 @@
+# Resources page: links grouped into groups > sections > links.
+# Each link: name, url, optional description, optional techniques (ids from
+# data/techniques.yaml; links without techniques show under every filter).
+# Carried over from the old "Useful links" page and broadened by technique.
+# Notes: Diamond pages block automated link checks, so the eBIC and B21 URLs
+# should be checked by hand. Removed as dead (Sep 2026): BMSC Washington
+# tutorials and Raster3D (server unreachable).
+# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB).
+groups:
+- id: facilities
+  title: Facilities
+  intro: Where to collect data. Most offer peer-reviewed access for academic users.
+  sections:
+  - title: UK facilities
+    links:
+    - name: Diamond Light Source
+      url: https://www.diamond.ac.uk
+      description: 'The UK''s synchrotron: macromolecular crystallography, SAXS, imaging and cryo-EM.'
+      techniques:
+      - crystallography
+      - saxs
+      - imaging
+      - cryo-em
+    - name: eBIC, the Electron Bio-Imaging Centre at Diamond
+      url: https://www.diamond.ac.uk/Instruments/Biological-Cryo-Imaging/eBIC.html
+      description: National facility for cryo-EM and cryo-electron tomography.
+      techniques:
+      - cryo-em
+      - imaging
+    - name: B21 bio-SAXS beamline, Diamond
+      url: https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/B21.html
+      description: Solution scattering, including size-exclusion chromatography SAXS.
+      techniques: &id003
+      - saxs
+    - name: ISIS Neutron and Muon Source
+      url: https://www.isis.stfc.ac.uk/
+      description: Neutron scattering, including small-angle neutron scattering.
+      techniques:
+      - saxs
+      - other
+    - name: Rosalind Franklin Institute
+      url: https://www.rfi.ac.uk/
+      description: New imaging and structural biology technologies.
+      techniques:
+      - imaging
+      - cryo-em
+    - name: Instruct-ERIC
+      url: https://instruct-eric.org/
+      description: European research infrastructure for structural biology, with funded access to facilities across Europe.
+      techniques:
+      - crystallography
+      - cryo-em
+      - saxs
+      - imaging
+  - title: European facilities
+    links:
+    - name: ESRF
+      url: http://www.esrf.fr
+      description: European Synchrotron Radiation Facility, Grenoble.
+      techniques:
+      - crystallography
+      - saxs
+      - cryo-em
+    - name: EMBL Hamburg
+      url: http://www.embl-hamburg.de
+      description: Beamlines at PETRA III, including bio-SAXS.
+      techniques:
+      - crystallography
+      - saxs
+    - name: ILL
+      url: http://www.ill.fr
+      description: Institut Laue-Langevin, neutron source, Grenoble.
+      techniques:
+      - other
+    - name: ILL Deuteration Laboratory (D-Lab)
+      url: https://www.ill.eu/users/support-labs-infrastructure/deuteration-laboratory/
+      techniques:
+      - other
+    - name: Elettra
+      url: http://www.elettra.trieste.it/
+      description: Synchrotron, Trieste.
+      techniques: &id001
+      - crystallography
+    - name: MAX IV
+      url: https://www.maxiv.lu.se/
+      description: Synchrotron, Lund.
+      techniques:
+      - crystallography
+      - saxs
+    - name: SOLEIL
+      url: https://www.synchrotron-soleil.fr/en
+      description: Synchrotron, Paris-Saclay.
+      techniques:
+      - crystallography
+      - saxs
+    - name: Swiss Light Source (PSI)
+      url: https://www.psi.ch/en
+      description: Synchrotron at the Paul Scherrer Institute.
+      techniques: *id001
+  - title: Worldwide
+    links:
+    - name: Lightsources.org
+      url: https://lightsources.org/
+      description: News and information from the world's synchrotron and free-electron laser facilities.
+    - name: Light sources of the world
+      url: https://lightsources.org/lightsources-of-the-world/
+      description: Directory of synchrotrons and FELs, with links to their user programmes.
+    - name: ARBRE-MOBIEU
+      url: https://arbre-mobieu.eu/
+      techniques:
+      - biophysics
+      description: 'European network for molecular biophysics: training and access to biophysics facilities.'
+- id: software
+  title: Software
+  intro: Programs and servers, grouped by technique.
+  sections:
+  - title: 'Crystallography: data processing'
+    links:
+    - name: DIALS
+      url: http://dials.github.io/
+      techniques: *id001
+    - name: MOSFLM
+      url: https://www.mrc-lmb.cam.ac.uk/mosflm/imosflm/ver740/introduction.html
+      techniques: *id001
+    - name: HKL
+      url: http://www.hkl-xray.com/
+      techniques: *id001
+    - name: XDS
+      url: https://xds.mr.mpg.de/
+      techniques: *id001
+  - title: 'Crystallography: structure solution, refinement and model building'
+    links:
+    - name: CCP4
+      url: http://www.ccp4.ac.uk
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: PHENIX
+      url: http://www.phenix-online.org/
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: CNS
+      url: http://cns-online.org/v1.3/
+      techniques: *id001
+    - name: SHARP
+      url: http://www.globalphasing.com/sharp/
+      techniques: *id001
+    - name: SHELX
+      url: http://shelx.uni-goettingen.de/
+      techniques: *id001
+    - name: ARP/wARP
+      url: https://cloud.ccp4.ac.uk/manuals/html-taskref/doc.task.ArpWarp.html
+      techniques: *id001
+    - name: MAID
+      url: https://jonbcooper.github.io/cxp/maid.html
+      techniques: *id001
+    - name: SIMBAD
+      url: https://simbad.readthedocs.io/en/latest/server.html
+      description: Sequence-independent molecular replacement.
+      techniques: *id001
+    - name: SAUC
+      url: https://sauc.lbl.gov
+      description: Search the PDB for structures with similar unit cells.
+      techniques: *id001
+    - name: ContaMiner
+      url: https://strube.cbrc.kaust.edu.sa/contaminer/submit/
+      description: Identify crystallisation contaminants.
+      techniques: *id001
+    - name: Coordinate transformation tool
+      url: http://ic50.org/fractorth/
+      description: Convert between fractional and orthogonal coordinates online.
+      techniques: *id001
+    - name: Convert CIF to PDB online
+      url: http://ic50.org/ciftopdb
+      techniques: *id001
+    - name: General crystallographic calculator
+      url: http://ic50.org/gencrycal/
+      techniques: *id001
+  - title: Cryo-EM and tomography
+    links:
+    - name: CCP-EM
+      url: https://www.ccpem.ac.uk/
+      description: UK collaborative computational project for cryo-EM.
+      techniques: &id002
+      - cryo-em
+    - name: RELION
+      url: https://relion.readthedocs.io/
+      techniques: *id002
+    - name: cryoSPARC
+      url: https://cryosparc.com/
+      techniques: *id002
+    - name: Warp
+      url: https://www.warpem.com/
+      techniques:
+      - cryo-em
+      - imaging
+    - name: IMOD
+      url: https://bio3d.colorado.edu/imod/
+      description: Tomographic reconstruction and modelling.
+      techniques:
+      - cryo-em
+      - imaging
+  - title: Bio-SAXS
+    links:
+    - name: ATSAS
+      url: https://www.embl-hamburg.de/biosaxs/software.html
+      description: SAXS analysis suite from EMBL Hamburg.
+      techniques: *id003
+    - name: ATSAS online
+      url: https://www.embl-hamburg.de/biosaxs/atsas-online/
+      techniques: *id003
+    - name: BioXTAS RAW
+      url: https://bioxtas-raw.readthedocs.io/
+      techniques: *id003
+  - title: Imaging
+    links:
+    - name: Fiji (ImageJ)
+      url: https://fiji.sc/
+      techniques: &id006
+      - imaging
+  - title: NMR
+    links:
+    - name: CCPN
+      url: https://ccpn.ac.uk/
+      techniques:
+      - nmr
+      description: 'UK collaborative computational project for NMR: software for assignment and analysis.'
+    - name: NMRbox
+      url: https://nmrbox.nmrhub.org/
+      techniques:
+      - nmr
+      description: Cloud platform with ready-installed biomolecular NMR software.
+  - title: Mass spectrometry
+    links:
+    - name: PRIDE
+      url: https://www.ebi.ac.uk/pride/
+      techniques:
+      - mass-spec
+      description: Proteomics and mass spectrometry data repository at EMBL-EBI.
+  - title: Simulation
+    links:
+    - name: GROMACS
+      url: https://www.gromacs.org/
+      techniques:
+      - modelling-ai
+      description: Molecular dynamics simulation package.
+    - name: AMBER
+      url: https://www.ambermd.org/
+      techniques:
+      - modelling-ai
+    - name: CHARMM-GUI
+      url: https://www.charmm-gui.org/
+      techniques:
+      - modelling-ai
+      description: Web tool for setting up simulations, including membrane systems.
+  - title: Modelling, prediction and docking
+    links:
+    - name: AlphaFold Server
+      url: https://alphafoldserver.com
+      techniques: &id004
+      - modelling-ai
+    - name: ColabFold
+      url: https://github.com/sokrypton/ColabFold
+      techniques: *id004
+    - name: SWISS-MODEL
+      url: https://swissmodel.expasy.org/
+      techniques: *id004
+    - name: ExPASy
+      url: http://www.expasy.ch
+      techniques: *id004
+    - name: Modeller
+      url: http://salilab.org/modeller/
+      techniques: *id004
+    - name: Rosetta
+      url: https://www.rosettacommons.org/
+      techniques:
+      - modelling-ai
+      - drug-design
+    - name: Threader (UCL Bioinformatics)
+      url: http://bioinf.cs.ucl.ac.uk/
+      techniques: *id004
+    - name: HADDOCK
+      url: https://wenmr.science.uu.nl/haddock2.4/
+      techniques:
+      - modelling-ai
+      - drug-design
+    - name: SwissDock
+      url: https://www.swissdock.ch/
+      techniques: &id005
+      - drug-design
+    - name: CCPBioSim
+      url: https://www.ccpbiosim.ac.uk/
+      description: UK collaborative computational project for biomolecular simulation.
+      techniques: *id004
+  - title: Molecular graphics
+    links:
+    - name: Coot
+      url: http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: CCP4MG
+      url: https://www.ccp4.ac.uk/MG/
+    - name: PyMOL
+      url: http://www.pymol.org/
+    - name: ChimeraX
+      url: https://www.cgl.ucsf.edu/chimerax/
+      techniques:
+      - crystallography
+      - cryo-em
+      - saxs
+    - name: ISOLDE
+      url: https://tristanic.github.io/isolde/
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: Mol*
+      url: https://molstar.org/
+      description: Web-based viewer used by the PDB.
+    - name: CueMol
+      url: http://www.cuemol.org/en/
+    - name: BIOVIA Discovery Studio Visualizer
+      url: https://www.3ds.com/products-services/biovia/products/molecular-modeling-simulation/biovia-discovery-studio/visualization/
+    - name: Mini map aide
+      url: https://minimapai.de/
+      techniques: *id001
+    - name: Very simple protein space group viewer
+      url: https://ic50.org/vspsgv.html
+      techniques: *id001
+    - name: Space group viewer (stereo)
+      url: https://ic50.org/stereo.html
+      techniques: *id001
+    - name: Crystallify 3D space group viewer
+      url: https://crystallify.com
+      techniques: *id001
+    - name: Symotter 3D space group viewer
+      url: https://spacegroups.symotter.org/
+      techniques: *id001
+  - title: Figures, movies and other tools
+    links:
+    - name: Jalview and other Dundee tools
+      url: http://www.compbio.dundee.ac.uk/software.html
+      description: Coloured sequence alignments.
+    - name: LigPlot+
+      url: https://www.ebi.ac.uk/thornton-srv/software/LigPlus/
+      techniques: *id005
+    - name: ImageMagick
+      url: http://www.imagemagick.org/
+    - name: GIMP
+      url: http://www.gimp.org/
+    - name: gnuplot
+      url: http://www.gnuplot.info/
+    - name: Vim
+      url: http://www.vim.org/
+    - name: Dose-response curves and enzyme kinetics
+      url: http://ic50.org.uk/
+      techniques: *id005
+    - name: Dose-response curves (alternative site)
+      url: http://ic50.org
+      techniques: *id005
+    - name: Michaelis–Menten Plotly tool
+      url: http://ic50.org/kmvmaxly/
+- id: databases
+  title: Databases and deposition
+  sections:
+  - title: ''
+    links:
+    - name: wwPDB
+      url: https://www.wwpdb.org/
+      description: 'Worldwide Protein Data Bank: deposition of structures.'
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: PDBe
+      url: https://www.ebi.ac.uk/pdbe/
+      description: Protein Data Bank in Europe, at EMBL-EBI, Hinxton.
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: RCSB PDB
+      url: https://www.rcsb.org/
+      techniques:
+      - crystallography
+      - cryo-em
+    - name: PDBe-KB
+      url: https://www.ebi.ac.uk/pdbe/pdbe-kb/
+      description: Knowledge base linking structures to function.
+    - name: EMDB
+      url: https://www.ebi.ac.uk/emdb/
+      description: 'Electron Microscopy Data Bank: maps.'
+      techniques: *id002
+    - name: EMPIAR
+      url: https://www.ebi.ac.uk/empiar/
+      description: Raw electron microscopy image data.
+      techniques:
+      - cryo-em
+      - imaging
+    - name: BMRB
+      url: https://bmrb.io/
+      techniques:
+      - nmr
+      description: Biological Magnetic Resonance Data Bank.
+    - name: SASBDB
+      url: https://www.sasbdb.org/
+      description: Small Angle Scattering Biological Data Bank.
+      techniques: *id003
+    - name: PDB-IHM
+      url: https://pdb-ihm.org/
+      description: Integrative and hybrid structural models.
+      techniques:
+      - saxs
+      - modelling-ai
+    - name: AlphaFold Protein Structure Database
+      url: https://alphafold.ebi.ac.uk/
+      techniques: *id004
+    - name: UniProt
+      url: https://www.uniprot.org/
+    - name: BioImage Archive
+      url: https://www.ebi.ac.uk/bioimage-archive/
+      techniques: *id006
+    - name: Crystallography Open Database
+      url: http://crystallography.net/cod/
+      techniques: *id001
+    - name: EMBL-EBI
+      url: http://www.ebi.ac.uk
+      description: European Bioinformatics Institute.
+- id: uk-groups
+  title: UK structural biology groups
+  intro: Carried over from the previous site, which listed protein crystallography groups. Suggestions for cryo-EM, SAXS, imaging and computational groups are welcome.
+  sections:
+  - title: ''
+    links:
+    - name: Bath
+      url: https://www.bath.ac.uk/departments/department-of-life-sciences/
+    - name: Birmingham
+      url: https://www.birmingham.ac.uk/research/centres-institutes/structural-and-molecular-cell-biology
+    - name: Bristol
+      url: http://www.bris.ac.uk/biochemistry/research/biomolecular-structure-and-mechanism/
+    - name: 'Cambridge: MRC Laboratory of Molecular Biology'
+      url: https://mrclmb.ac.uk/divisions/structural-studies/
+    - name: 'Cambridge: Cambridge Institute for Medical Research'
+      url: http://www.cimr.cam.ac.uk/
+    - name: 'Cambridge: Biochemistry'
+      url: https://www.bioc.cam.ac.uk
+    - name: Cardiff
+      url: https://www.cardiff.ac.uk/biosciences
+    - name: Dundee
+      url: https://wcair.dundee.ac.uk/
+    - name: Durham
+      url: https://www.dur.ac.uk/directory/profile/?id=5500
+    - name: Edinburgh
+      url: http://richardson.bio.ed.ac.uk/
+    - name: Exeter
+      url: https://www.exeter.ac.uk/research/institutes/livingsystems/
+    - name: Glasgow
+      url: https://www.gla.ac.uk/schools/chemistry/staff/adrianlapthorn/
+    - name: Keele
+      url: https://www.keele.ac.uk/research/ourresearch/lifesciences/biosciences/molecularstructureandsignalling/
+    - name: Leicester
+      url: https://le.ac.uk/liscb
+    - name: 'Leeds: Astbury Centre'
+      url: https://astbury.leeds.ac.uk/
+    - name: Liverpool
+      url: https://www.liverpool.ac.uk/people/samar-hasnain
+    - name: 'London: Birkbeck/UCL'
+      url: https://www.ucl.ac.uk/biosciences/structural-and-molecular-biology
+    - name: 'London: Francis Crick Institute'
+      url: https://www.crick.ac.uk/research/platforms-and-facilities/structural-biology
+    - name: 'London: Institute of Cancer Research'
+      url: https://www.icr.ac.uk/our-research/research-divisions/division-of-structural-biology
+    - name: 'London: Imperial College'
+      url: https://www.imperial.ac.uk/centre-for-structural-biology/
+    - name: 'London: King''s College'
+      url: https://www.kcl.ac.uk/randall/research/molecular-biophysics
+    - name: 'London: Queen Mary'
+      url: https://www.qmul.ac.uk/sbbs/research/research-centres/structural-biology/
+    - name: Manchester
+      url: https://www.scieng.manchester.ac.uk/tomorrowlabs/manchester-protein-structure-facility/
+    - name: Newcastle
+      url: https://nusbf.ncl.ac.uk/
+    - name: 'Norwich: John Innes Centre'
+      url: https://www.jic.ac.uk/research-impact/technology-research-platforms/structural-biology/
+    - name: 'Norwich: UEA'
+      url: https://www.uea.ac.uk/groups-and-centres/centre-for-molecular-and-structural-biochemistry
+    - name: Nottingham
+      url: http://nottingham.ac.uk/research/groups/structural-biology/index.aspx
+    - name: 'Oxford: Biochemistry'
+      url: https://www.bioch.ox.ac.uk/structural-biology-and-molecular-biophysics
+    - name: 'Oxford: Structural Biology (STRUBI)'
+      url: http://www.strubi.ox.ac.uk/
+    - name: Portsmouth
+      url: https://www.port.ac.uk/research/research-centres-and-groups/biophysics-and-molecular-genetics-research-group
+    - name: Reading
+      url: https://www.reading.ac.uk/biomedical-sciences/staff/kim-watson
+    - name: Sheffield
+      url: https://www.sheffield.ac.uk/biosciences/research/themes/structural-biology
+    - name: Southampton
+      url: https://www.southampton.ac.uk/biosci/research/groups/molecular-and-cellular-biosciences.page
+    - name: St Andrews
+      url: https://bsrc.st-andrews.ac.uk/
+    - name: Sussex
+      url: http://www.sussex.ac.uk/lifesci/pearllab/
+    - name: Warwick
+      url: https://warwick.ac.uk/fac/sci/lifesci/research/crystallography
+    - name: 'York: York Structural Biology Laboratory'
+      url: http://www.york.ac.uk/chemistry/research/ysbl/
+- id: suppliers
+  title: Suppliers
+  intro: Crystallisation kits, teaching aids, instruments and services. Listing is not an endorsement.
+  sections:
+  - title: ''
+    links:
+    - name: Bruker
+      url: http://www.bruker.com/
+    - name: Hampton Research
+      url: http://www.hamptonresearch.com/
+    - name: Jena Bioscience
+      url: http://www.jenabioscience.com/
+    - name: Luminorum
+      url: http://www.luminorum.com
+    - name: marXperts
+      url: https://www.marxperts.com/
+    - name: MiTeGen
+      url: https://www.mitegen.com/
+    - name: Molecular Dimensions
+      url: http://www.moleculardimensions.com/
+    - name: Oxford Cryosystems
+      url: https://oxcryo.com/
+    - name: P212121
+      url: http://store.p212121.com
+    - name: Qiagen
+      url: https://www.qiagen.com
+    - name: Rigaku
+      url: https://www.rigaku.com/products/crystallography
+    - name: Technology Networks
+      url: https://www.technologynetworks.com
+    - name: Xenocs
+      url: http://www.xenocs.com
+- id: jobs
+  title: Jobs and PhDs
+  sections:
+  - title: Jobs
+    links:
+    - name: jobs.ac.uk
+      url: http://www.jobs.ac.uk/
+      description: UK academic and research jobs.
+    - name: Nature Careers
+      url: https://www.nature.com/naturecareers
+    - name: EURAXESS
+      url: https://euraxess.ec.europa.eu/jobs/search
+      description: Research jobs across Europe.
+    - name: EMBL jobs
+      url: https://www.embl.org/jobs/
+    - name: MRC Laboratory of Molecular Biology careers
+      url: https://mrclmb.ac.uk/careers-and-people/
+    - name: Rosalind Franklin Institute careers
+      url: https://www.rfi.ac.uk/careers/
+    - name: STFC careers (including ISIS)
+      url: https://www.stfc.ac.uk/about-us/careers/
+    - name: CCP4BB mailing list
+      url: https://www.jiscmail.ac.uk/ccp4bb
+      techniques:
+      - crystallography
+      description: Crystallography discussion list; jobs are often posted.
+    - name: 3DEM mailing list
+      url: https://mail.ncmir.ucsd.edu/mailman/listinfo/3dem
+      techniques:
+      - cryo-em
+      description: Cryo-EM discussion list; jobs are often posted.
+  - title: PhD study
+    links:
+    - name: FindAPhD
+      url: https://www.findaphd.com/
+      description: Search for funded PhD projects, e.g. "structural biology".
+    - name: DiscoverPhDs
+      url: https://www.discoverphds.com/
+    - name: 'Prospects: PhD study'
+      url: https://www.prospects.ac.uk/postgraduate-study/phd-study
+      description: Guide to applying for and funding a PhD in the UK.
+    - name: 'UKRI: developing people and skills'
+      url: https://www.ukri.org/what-we-do/developing-people-and-skills/
+      description: UK research council studentships, mostly through doctoral training partnerships.
+    - name: EMBL International PhD Programme
+      url: https://www.embl.org/about/info/embl-international-phd-programme/
+  intro: Where structural biology jobs and PhD projects are advertised. Many labs also post openings on the CCP4BB and 3DEM mailing lists.

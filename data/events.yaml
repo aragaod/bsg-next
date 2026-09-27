@@ -1,0 +1,29 @@
+# Events calendar: conferences, schools and workshops run by other societies
+# and facilities. BSG's own meetings live in content/meetings/ instead.
+#
+# Fields:
+#   title       required
+#   organiser   required, e.g. "ECA", "CCP4", "Diamond Light Source"
+#   url         required, link to the host's page
+#   start, end  dates as YYYY-MM-DD; leave start empty if not yet announced
+#   when        free text shown when start is empty, e.g. "January 2027"
+#   location    city and country, or "Online"
+#   techniques  list of technique ids from data/techniques.yaml
+#   description optional, one or two sentences
+
+events:
+  - title: CCP4 Study Weekend 2027
+    organiser: CCP4
+    url: https://studyweekend.ccp4.ac.uk/
+    when: January 2027
+    location: UK
+    techniques: [crystallography, cryo-em]
+    description: CCP4's annual study weekend on computational methods in macromolecular structure determination.
+
+  - title: 36th European Crystallographic Meeting (ECM36)
+    organiser: European Crystallographic Association
+    url: https://ecm36.ecanews.org/
+    start: 2027-08-23
+    end: 2027-08-28
+    location: Prague, Czech Republic
+    techniques: [crystallography]

@@ -1,0 +1,17 @@
+{{- /*
+  Returns upcoming BSG meetings, soonest first. Meetings without a confirmed
+  date are placed by their usual season (Winter Meeting: December; Spring
+  Meeting: April), so the home page moves from the Winter Meeting to the
+  Spring Meeting and back as each one passes.
+*/ -}}
+{{- $list := slice }}
+{{- range where site.RegularPages "Section" "meetings" }}
+  {{- if partial "fn/is-upcoming.html" .Params }}
+    {{- $key := "" }}
+    {{- with .Params.start }}{{ $key = (time.AsTime .).Format "2006-01-02" }}{{ else }}{{ $key = printf "%v-%s" .Params.year (cond (eq .Params.kind "winter") "12-01" "04-01") }}{{ end }}
+    {{- $list = $list | append (dict "key" $key "page" .) }}
+  {{- end }}
+{{- end }}
+{{- $out := slice }}
+{{- range sort $list "key" "asc" }}{{ $out = $out | append .page }}{{ end }}
+{{- return $out }}
