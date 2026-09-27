@@ -127,3 +127,15 @@ document.querySelectorAll("[data-molstar]").forEach((box) => {
     }
   });
 });
+
+// Light/dark toggle: remembers the visitor's choice.
+document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
+  const dark = document.documentElement.classList.toggle("dark");
+  try { localStorage.setItem("bsg-theme", dark ? "dark" : "light"); } catch (e) {}
+});
+
+// Technique filter preset from the URL, e.g. /resources/?technique=nmr
+{
+  const want = new URLSearchParams(location.search).get("technique");
+  if (want) document.querySelector(`[data-filter] button[data-value="${CSS.escape(want)}"]`)?.click();
+}

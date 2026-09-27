@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
+/* Dark mode follows the visitor's system setting unless they choose
+   otherwise with the header button (stored in localStorage). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
   font-family: "Inter Variable";
   font-style: normal;

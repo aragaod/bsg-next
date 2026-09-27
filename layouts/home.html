@@ -6,9 +6,9 @@
       <p class="text-sm font-semibold tracking-wide text-brand-700 uppercase dark:text-brand-400">{{ hugo.Data.home.eyebrow }}</p>
       <h1 class="mt-3 text-4xl font-semibold sm:text-6xl">{{ hugo.Data.home.heading | default site.Params.tagline }}</h1>
       <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">{{ hugo.Data.home.intro }}</p>
-      <ul class="mt-8 flex flex-wrap gap-2" aria-label="Techniques">
+      <ul class="mt-8 flex flex-wrap gap-2" aria-label="Techniques (links to resources for each)">
         {{- range hugo.Data.techniques }}{{ if ne .id "other" }}
-        <li class="rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-sm font-medium text-brand-800 dark:border-brand-800 dark:bg-slate-900/60 dark:text-brand-200">{{ .label }}</li>{{ end }}
+        <li><a href="{{ relref $ "/resources" }}?technique={{ .id }}" title="Resources for {{ .label }}" class="block rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-sm font-medium text-brand-800 hover:border-brand-500 hover:bg-brand-50 dark:border-brand-800 dark:bg-slate-900/60 dark:text-brand-200 dark:hover:border-brand-500 dark:hover:bg-brand-950">{{ .label }}</a></li>{{ end }}
         {{- end }}
       </ul>
       <div class="mt-10 flex flex-wrap gap-4">

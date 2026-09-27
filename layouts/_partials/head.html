@@ -1,4 +1,14 @@
 <meta charset="utf-8">
+<script>
+  // Apply the saved or system colour scheme before the page paints.
+  (function () {
+    try {
+      var t = localStorage.getItem("bsg-theme");
+      var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", dark);
+    } catch (e) {}
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{- $title := cond .IsHome (printf "%s — %s" site.Title site.Params.tagline) (printf "%s · %s" .Title site.Title) }}
 {{- $desc := partial "fn/description.html" . }}

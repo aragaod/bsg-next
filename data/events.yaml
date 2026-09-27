@@ -10,20 +10,95 @@
 #   location    city and country, or "Online"
 #   techniques  list of technique ids from data/techniques.yaml
 #   description optional, one or two sentences
-
 events:
-  - title: CCP4 Study Weekend 2027
-    organiser: CCP4
-    url: https://studyweekend.ccp4.ac.uk/
-    when: January 2027
-    location: UK
-    techniques: [crystallography, cryo-em]
-    description: CCP4's annual study weekend on computational methods in macromolecular structure determination.
-
-  - title: 36th European Crystallographic Meeting (ECM36)
-    organiser: European Crystallographic Association
-    url: https://ecm36.ecanews.org/
-    start: 2027-08-23
-    end: 2027-08-28
-    location: Prague, Czech Republic
-    techniques: [crystallography]
+- title: Biophysical Society 71st Annual Meeting (BPS2027)
+  organiser: Biophysical Society
+  url: https://www.biophysics.org/2027meeting
+  start: '2027-02-20'
+  end: '2027-02-24'
+  location: Philadelphia, USA
+  techniques:
+  - biophysics
+  - cryo-em
+  - modelling-ai
+- title: ISCB UK 2027
+  organiser: International Society for Computational Biology
+  url: https://www.iscb.org/uk2027/home
+  start: '2027-04-20'
+  end: '2027-04-22'
+  location: Glasgow, UK
+  techniques:
+  - modelling-ai
+  description: Computational biology conference with a structural, molecular and systems biology theme.
+- title: CCP-EM Spring Symposium 2027
+  organiser: CCP-EM
+  url: https://www.ccpem.ac.uk/symposium/
+  start: '2027-04-21'
+  end: '2027-04-23'
+  location: Nottingham, UK and online
+  techniques:
+  - cryo-em
+  description: The UK's annual cryo-EM methods symposium. Registration opens January 2027.
+- title: '97th Harden Conference: Protein Kinases and Pseudokinases'
+  organiser: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/events-calendar/97th-harden-conference-protein-kinases-and-pseudokinases-the-next-generation/
+  start: '2027-05-24'
+  end: '2027-05-27'
+  location: Liverpool, UK
+  techniques:
+  - drug-design
+  - biophysics
+- title: 'Gordon Research Conference: Three Dimensional Electron Microscopy'
+  organiser: Gordon Research Conferences
+  url: https://www.grc.org/three-dimensional-electron-microscopy-conference/2027/
+  start: '2027-06-20'
+  end: '2027-06-25'
+  location: Newry, Maine, USA
+  techniques:
+  - cryo-em
+- title: FEBS Congress 2027
+  organiser: Federation of European Biochemical Societies
+  url: https://febscongress.org/
+  start: '2027-07-03'
+  end: '2027-07-07'
+  location: Riga, Latvia
+  techniques:
+  - biophysics
+- title: The Protein Society 41st Annual Symposium
+  organiser: The Protein Society
+  url: https://www.proteinsociety.org/meetings
+  start: '2027-07-09'
+  end: '2027-07-12'
+  location: San Francisco, USA
+  techniques:
+  - biophysics
+  - crystallography
+  - cryo-em
+  - nmr
+- title: 36th European Crystallographic Meeting (ECM36)
+  organiser: European Crystallographic Association
+  url: https://ecm36.ecanews.org/
+  start: 2027-08-23
+  end: 2027-08-28
+  location: Prague, Czech Republic
+  techniques:
+  - crystallography
+- title: CCP4 Study Weekend 2027
+  organiser: CCP4
+  url: https://studyweekend.ccp4.ac.uk/
+  when: January 2027
+  location: UK
+  techniques:
+  - crystallography
+  - cryo-em
+  description: CCP4's annual study weekend on computational methods in macromolecular structure determination.
+- title: Lorne Conference on Protein Structure and Function 2027
+  organiser: Lorne Proteins
+  url: https://www.lorneproteins.org/
+  when: February 2027
+  location: Lorne, Australia
+  techniques:
+  - crystallography
+  - cryo-em
+  - biophysics
+  description: Long-running international conference on protein structure and function.

@@ -9,6 +9,14 @@
 {{- range $upcoming }}{{ if .start }}{{ $dated = $dated | append . }}{{ else }}{{ $undated = $undated | append . }}{{ end }}{{ end }}
 <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
   <div class="prose-bsg">{{ .Content }}</div>
+  {{- with .OutputFormats.Get "calendar" }}
+  <div class="mt-6 flex flex-wrap items-center gap-3 rounded-xl bg-brand-50 p-4 text-sm dark:bg-brand-950">
+    <span class="font-semibold text-brand-900 dark:text-brand-100">Add these events to your calendar:</span>
+    <a href="{{ replace .Permalink "https://" "webcal://" | safeURL }}" class="rounded-lg bg-brand-700 px-3 py-1.5 font-semibold text-white hover:bg-brand-800 dark:bg-brand-500 dark:text-slate-950">Subscribe</a>
+    <a href="{{ .RelPermalink }}" class="font-medium text-brand-800 underline dark:text-brand-200">Download .ics</a>
+    <span class="text-brand-800/80 dark:text-brand-200/80">Includes BSG meetings; updates automatically.</span>
+  </div>
+  {{- end }}
   <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {{- range sort $dated "start" "asc" }}{{ partial "listing-card.html" . }}{{ end }}
     {{- range $undated }}{{ partial "listing-card.html" . }}{{ end }}

@@ -425,6 +425,9 @@ groups:
     - name: EMBL-EBI
       url: http://www.ebi.ac.uk
       description: European Bioinformatics Institute.
+    - name: Zenodo
+      url: https://zenodo.org/
+      description: General-purpose open repository (CERN) for datasets, raw data, software and documents, with a DOI for each deposit.
 - id: uk-groups
   title: UK structural biology groups
   intro: Carried over from the previous site, which listed protein crystallography groups. Suggestions for cryo-EM, SAXS, imaging and computational groups are welcome.
