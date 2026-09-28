@@ -1,7 +1,7 @@
 ---
 title: "Resources"
-description: "Facilities, software, databases and UK groups for structural biology, organised by technique."
 aliases: ["/useful.html"]
+description: "Facilities, software, databases, societies, industry, funding and jobs for structural biology in the UK, organised by technique."
 ---
 
-Useful links for crystallography, cryo-EM, bio-SAXS, imaging, modelling and drug design. Suggestions for additions are welcome through the committee.
+Useful links across crystallography, cryo-EM, NMR, bio-SAXS, structural mass spectrometry, biophysical characterisation, imaging, modelling and drug design, plus societies, companies, funders and jobs. Suggestions for additions are welcome through the committee.
