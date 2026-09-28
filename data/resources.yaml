@@ -21,6 +21,27 @@ groups:
       - saxs
       - imaging
       - cryo-em
+    - name: Macromolecular crystallography beamlines, Diamond
+      url: https://www.diamond.ac.uk/Instruments/Mx.html
+      techniques:
+      - crystallography
+      description: 'The MX village: all of Diamond''s crystallography beamlines, including in situ (VMXi), long-wavelength and microfocus.'
+    - name: XChem fragment screening, Diamond
+      url: https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html
+      techniques:
+      - crystallography
+      - drug-design
+      description: 'Crystallographic fragment screening: soaking, harvesting, data collection and analysis of up to 1000 compounds in a week.'
+    - name: B23 circular dichroism beamline, Diamond
+      url: https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/B23.html
+      techniques:
+      - biophysics
+      description: Synchrotron CD for protein folding, secondary structure and interactions.
+    - name: B24 cryo soft X-ray tomography, Diamond
+      url: https://www.diamond.ac.uk/Instruments/Biological-Cryo-Imaging/B24.html
+      techniques:
+      - imaging
+      description: 3D imaging of whole frozen cells (25–40 nm), with correlative cryo light microscopy.
     - name: eBIC, the Electron Bio-Imaging Centre at Diamond
       url: https://www.diamond.ac.uk/Instruments/Biological-Cryo-Imaging/eBIC.html
       description: National facility for cryo-EM and cryo-electron tomography.
