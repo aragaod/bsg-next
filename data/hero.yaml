@@ -1,7 +1,7 @@
 # Home page hero images. One is shown per day, following "schedule" in order
 # (the nightly rebuild moves to the next day's entry). Listing an image more
 # than once shows it more often.
-schedule: [ptx3, kras, pla2r, ptx3, snar, toll5a, ptx3, il33, spd2]
+schedule: [ptx3, pla2r, spd2, toll5a, ptx3, snar, bgal, il33, ptx3, kras, pla2r, spd2, ptx3, toll5a, snar, bgal, ptx3, il33, kras, pla2r, ptx3, spd2, toll5a, snar, ptx3, bgal, il33, kras]
 
 images:
   - id: ptx3
@@ -33,6 +33,19 @@ images:
     data: "SASBDB SASDNQ3 · EMD-14077 · PDB 7QSR"
     method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018). Rendered with UCSF ChimeraX."
 
+  - id: spd2
+    image: images/hero/spd2.png
+    title: A new protein fold in the centrosome
+    alt: "Two domains of the centrosome protein Spd-2 side by side in the same orientation: a green bundle of NMR models on the left and an amber crystal structure with blue electron density on the right, showing the same fold."
+    summary: Two domains of the centrosome scaffold protein Spd-2, one solved by NMR and one by crystallography, share a newly described fold.
+    lab: Jordan Raff's group, University of Oxford, with Susan Lea (NCI, USA, and Oxford), Mark van Breugel (MRC LMB) and Zhe Feng (Fudan University)
+    layers:
+      - { colour: green, technique: NMR, where: "Bruker 500/600 MHz", note: "ASH1 domain, ensemble of models" }
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I04-1, note: "ASH3 domain, 1.93 Å, with electron density (blue)" }
+    paper: { citation: "Hu et al., Science Advances 11, eadr5744 (2025)", doi: 10.1126/sciadv.adr5744 }
+    data: "PDB 9FU8 · BMRB 34925 · PDB 9C72"
+    method: "The two domains were oriented the same way by structural alignment (TM-align; TM-score about 0.5, the same fold). The paper does not name the NMR facility. Rendered with UCSF ChimeraX."
+
   - id: toll5a
     image: images/hero/toll5a.png
     title: Toll5A receptor with Spätzle
@@ -47,6 +60,30 @@ images:
     data: "SASBDB SASDKY8 · EMD-11982 · PDB 7B1B"
     method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018). Rendered with UCSF ChimeraX."
 
+  - id: snar
+    image: images/hero/snar.png
+    title: An enzyme evolved for pharmaceutical chemistry
+    alt: "An amber designed enzyme with a pale surface, and the bound substrate in the active site shown inside blue electron density."
+    summary: A designed enzyme, improved by directed evolution, that performs a key pharmaceutical reaction with precise control of the product's handedness.
+    lab: Anthony Green's group, Manchester Institute of Biotechnology
+    layers:
+      - { colour: amber, technique: X-ray crystallography, where: Diamond I03, note: "1.7 Å, substrate in electron density (blue)" }
+      - { colour: green, technique: Molecular dynamics and docking, where: "GROMACS, AutoDock Vina", note: "Showed how Arg124 holds the substrate in a reactive position" }
+    paper: { citation: "Lister et al., Nature 639, 375–381 (2025)", doi: 10.1038/s41586-025-08611-0 }
+    data: "PDB 9FUG · 9FUL · 9FUO"
+    method: "Crystal structure with the 2Fo−Fc density (PDBe) around the bound substrate. The enzyme was improved by directed evolution and characterised by kinetics and protein mass spectrometry; docking (AutoDock Vina) and molecular dynamics (GROMACS 2018, AMBER14 force field) were performed at the Manchester Institute of Biotechnology. The simulations are described in the paper, not shown in the image. Rendered with UCSF ChimeraX."
+  - id: bgal
+    image: images/hero/bgal.png
+    title: A protein that flew through a mass spectrometer
+    alt: "Two cryo-EM maps of the enzyme beta-galactosidase side by side in the same orientation: teal, frozen from solution, and orange, after selection in a mass spectrometer and soft landing on a cold grid. They have the same overall shape."
+    summary: The enzyme β-galactosidase keeps its structure after passing through a mass spectrometer, answering a long-standing question for native mass spectrometry.
+    lab: Stephan Rauschenbach's and Carol Robinson's groups, University of Oxford
+    layers:
+      - { colour: orange, technique: Native mass spectrometry + cryo-EM, where: "Orbitrap UHMR, soft landing", note: "Mass-selected in the gas phase, then imaged, 2.6 Å" }
+      - { colour: teal, technique: Cryo-EM, where: from solution, note: "Conventional sample (Bartesaghi et al., Structure 2018)" }
+    paper: { citation: "Esser et al., Science Advances 10, eadl4628 (2024)", doi: 10.1126/sciadv.adl4628 }
+    data: "EMD-18244 · PDB 8Q7Y · EMD-7770 · PDB 6CVM"
+    method: "Both maps filtered identically (Gaussian, 2 Å) and drawn to enclose the same volume, after aligning them by map-to-map fitting (correlation 0.90). The gas-phase structure is slightly more compact, as the paper reports. Rendered with UCSF ChimeraX."
   - id: il33
     image: images/hero/il33.png
     title: IL-33 held by a parasite protein
@@ -61,19 +98,6 @@ images:
     data: "SASBDB SASDUY6 · PDB 8Q5R"
     method: "The SAXS envelope was computed from the SASBDB data with DENSS (Grant, Nature Methods 2018) and agrees with the authors' AlphaFold model deposited with SASDUY6 (correlation 0.93). The X-ray density is the PDBe 2Fo−Fc map. Rendered with UCSF ChimeraX."
 
-  - id: spd2
-    image: images/hero/spd2.png
-    title: A new protein fold in the centrosome
-    alt: "Two domains of the centrosome protein Spd-2 side by side in the same orientation: a green bundle of NMR models on the left and an amber crystal structure with blue electron density on the right, showing the same fold."
-    summary: Two domains of the centrosome scaffold protein Spd-2, one solved by NMR and one by crystallography, share a newly described fold.
-    lab: Jordan Raff's group, University of Oxford, with Susan Lea (NCI, USA, and Oxford), Mark van Breugel (MRC LMB) and Zhe Feng (Fudan University)
-    layers:
-      - { colour: green, technique: NMR, where: "Bruker 500/600 MHz", note: "ASH1 domain, ensemble of models" }
-      - { colour: amber, technique: X-ray crystallography, where: Diamond I04-1, note: "ASH3 domain, 1.93 Å, with electron density (blue)" }
-    paper: { citation: "Hu et al., Science Advances 11, eadr5744 (2025)", doi: 10.1126/sciadv.adr5744 }
-    data: "PDB 9FU8 · BMRB 34925 · PDB 9C72"
-    method: "The two domains were oriented the same way by structural alignment (TM-align; TM-score about 0.5, the same fold). The paper does not name the NMR facility. Rendered with UCSF ChimeraX."
-
   - id: kras
     image: images/hero/kras.png
     title: A degrader drug for cancer-causing KRAS
@@ -87,15 +111,3 @@ images:
     data: "PDB 8QVU · EMD-18657 · PDB 8QU8"
     method: "The crystal structure was superposed on the cryo-EM model through VHL; the cryo-EM surface is cut away around it. The X-ray density is the PDBe 2Fo−Fc map. Rendered with UCSF ChimeraX."
 
-  - id: snar
-    image: images/hero/snar.png
-    title: An enzyme evolved for pharmaceutical chemistry
-    alt: "An amber designed enzyme with a pale surface, and the bound substrate in the active site shown inside blue electron density."
-    summary: A designed enzyme, improved by directed evolution, that performs a key pharmaceutical reaction with precise control of the product's handedness.
-    lab: Anthony Green's group, Manchester Institute of Biotechnology
-    layers:
-      - { colour: amber, technique: X-ray crystallography, where: Diamond I03, note: "1.7 Å, substrate in electron density (blue)" }
-      - { colour: green, technique: Molecular dynamics and docking, where: "GROMACS, AutoDock Vina", note: "Showed how Arg124 holds the substrate in a reactive position" }
-    paper: { citation: "Lister et al., Nature 639, 375–381 (2025)", doi: 10.1038/s41586-025-08611-0 }
-    data: "PDB 9FUG · 9FUL · 9FUO"
-    method: "Crystal structure with the 2Fo−Fc density (PDBe) around the bound substrate. The enzyme was improved by directed evolution and characterised by kinetics and protein mass spectrometry; docking (AutoDock Vina) and molecular dynamics (GROMACS 2018, AMBER14 force field) were performed at the Manchester Institute of Biotechnology. The simulations are described in the paper, not shown in the image. Rendered with UCSF ChimeraX."

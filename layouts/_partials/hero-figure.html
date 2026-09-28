@@ -7,7 +7,7 @@
 {{- $day := div now.Unix 86400 }}
 {{- $id := index $h.schedule (mod $day (len $h.schedule)) }}
 {{- $img := index (where $h.images "id" $id) 0 }}
-{{- $dots := dict "violet" "bg-violet-400" "teal" "bg-teal-500" "amber" "bg-amber-500" "blue" "bg-blue-600" "rose" "bg-pink-400" "green" "bg-lime-600" }}
+{{- $dots := dict "violet" "bg-violet-400" "teal" "bg-teal-500" "amber" "bg-amber-500" "blue" "bg-blue-600" "rose" "bg-pink-400" "green" "bg-lime-600" "orange" "bg-orange-500" }}
 {{- with $img }}
 <figure class="relative mx-auto w-full max-w-xl">
   <div class="relative">

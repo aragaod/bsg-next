@@ -294,7 +294,7 @@ content:
             description: One image per day, in this order, repeating. List an image more than once to show it more often.
             type: select
             list: true
-            options: { values: [ptx3, pla2r, toll5a, il33, spd2, kras, snar] }
+            options: { values: [ptx3, pla2r, toll5a, il33, spd2, kras, snar, bgal] }
           - name: images
             label: Images and credits
             description: New images need to be rendered and added by the web team.
@@ -313,7 +313,7 @@ content:
                 type: object
                 list: true
                 fields:
-                  - { name: colour, label: Colour, type: select, options: { values: [violet, teal, amber, blue, rose, green] } }
+                  - { name: colour, label: Colour, type: select, options: { values: [violet, teal, amber, blue, rose, green, orange] } }
                   - { name: technique, label: Technique, type: string }
                   - { name: where, label: Where, type: string }
                   - { name: note, label: Note, type: string }
