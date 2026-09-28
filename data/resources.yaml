@@ -755,6 +755,74 @@ groups:
     - name: Calibre Scientific UK (Sheffield)
       url: https://uk.calibrescientific.com/en
       description: Protein science products; includes Molecular Dimensions, Protein Ark and BioServUK.
+- id: funding
+  title: Funding
+  intro: Funders that support structural biology research in the UK. Check each scheme's eligibility; many also fund fellowships and equipment.
+  sections:
+  - title: UK research councils (UKRI)
+    links:
+    - name: UKRI funding finder
+      url: https://www.ukri.org/opportunity/
+      description: Search all open UKRI opportunities.
+    - name: BBSRC
+      url: https://www.ukri.org/councils/bbsrc/
+      description: 'Biotechnology and Biological Sciences Research Council: the main funder of bioscience research.'
+    - name: MRC
+      url: https://www.ukri.org/councils/mrc/
+      description: Medical Research Council.
+    - name: EPSRC
+      url: https://www.ukri.org/councils/epsrc/
+      description: Engineering and Physical Sciences Research Council, including methods and instrumentation.
+    - name: STFC
+      url: https://www.ukri.org/councils/stfc/
+      description: Science and Technology Facilities Council, which runs the UK's large facilities.
+  - title: Charities and foundations
+    links:
+    - name: Wellcome
+      url: https://wellcome.org/research-funding
+      description: Discovery research, fellowships and awards.
+    - name: Cancer Research UK
+      url: https://www.cancerresearchuk.org/for-researchers
+    - name: British Heart Foundation
+      url: https://www.bhf.org.uk/for-professionals/information-for-researchers
+    - name: Leverhulme Trust
+      url: https://www.leverhulme.ac.uk/
+    - name: Royal Society
+      url: https://royalsociety.org/grants/
+      description: Fellowships and research grants, including the University Research Fellowship.
+    - name: LifeArc
+      url: https://www.lifearc.org/
+      description: Translational medical research.
+    - name: Versus Arthritis
+      url: https://www.arthritis-uk.org/our-research/
+    - name: Biochemical Society grants and bursaries
+      url: https://www.biochemistry.org/grants-and-awards/grants-and-bursaries/
+      description: Travel grants and bursaries for members.
+  - title: Europe and international
+    links:
+    - name: European Research Council (ERC)
+      url: https://erc.europa.eu/
+      description: The UK has been associated to Horizon Europe since January 2024, so UK-based researchers can apply.
+    - name: Marie Skłodowska-Curie Actions
+      url: https://marie-sklodowska-curie-actions.ec.europa.eu/
+      description: Fellowships and doctoral networks.
+    - name: UK Research Office (UKRO)
+      url: https://www.ukro.ac.uk/
+      description: Guidance for UK researchers applying to EU programmes.
+    - name: EMBO funding
+      url: https://www.embo.org/funding/
+      description: Postdoctoral fellowships, scientific exchange grants, courses and workshops.
+    - name: Human Frontier Science Program (HFSP)
+      url: https://www.hfsp.org/
+      description: International, interdisciplinary fellowships and grants.
+  - title: Access to facilities (free at the point of use)
+    links:
+    - name: 'Diamond Light Source: apply for beamtime'
+      url: https://www.diamond.ac.uk/Users/Apply-for-Beamtime.html
+      description: Peer-reviewed access to beamlines and eBIC.
+    - name: Instruct-ERIC
+      url: https://instruct-eric.org/
+      description: Funded access to structural biology infrastructure across Europe.
 - id: jobs
   title: Jobs and PhDs
   sections:
