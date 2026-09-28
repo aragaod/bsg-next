@@ -5,7 +5,7 @@
 # Notes: Diamond pages block automated link checks, so the eBIC and B21 URLs
 # should be checked by hand. Removed as dead (Sep 2026): BMSC Washington
 # tutorials and Raster3D (server unreachable).
-# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB), AstraZeneca, Charles River.
+# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB), AstraZeneca, Charles River, UCL (checked by hand where noted).
 groups:
 - id: facilities
   title: Facilities
@@ -30,7 +30,7 @@ groups:
     - name: B21 bio-SAXS beamline, Diamond
       url: https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/B21.html
       description: Solution scattering, including size-exclusion chromatography SAXS.
-      techniques: &id004
+      techniques: &id005
       - saxs
     - name: ISIS Neutron and Muon Source
       url: https://www.isis.stfc.ac.uk/
@@ -74,6 +74,34 @@ groups:
       description: Network of UK NMR facilities, including access to high-field instruments.
       techniques:
       - nmr
+  - title: UK biophysical characterisation
+    links:
+    - name: Biomolecular Analysis Core Facility, Manchester
+      url: https://www.bmh.manchester.ac.uk/research/platforms/biomolecular-analysis/
+      techniques: &id002
+      - biophysics
+      description: SPR, MST and ITC for interactions; light scattering and analytical ultracentrifugation for mass and oligomerisation.
+    - name: ISMB Protein Crystallography and Biophysics Centre (BiophysX), UCL/Birkbeck
+      url: https://www.ucl.ac.uk/biosciences/research/research-facilities/ismb-protein-crystallography-and-biophysics-centre-biophysx
+      techniques:
+      - biophysics
+      - crystallography
+      description: ITC, DSC and analytical ultracentrifugation.
+    - name: 'Research Complex at Harwell: biophysical instruments'
+      url: https://www.rc-harwell.ac.uk/biophysical-instruments/
+      techniques: *id002
+      description: AUC, SPR, ITC and more, on the Harwell campus.
+    - name: BSRC facilities, St Andrews
+      url: https://bsrc.st-andrews.ac.uk/facilities/
+      techniques: *id002
+      description: Biophysics suite including SPR and ITC.
+    - name: British Biophysical Society
+      url: https://britishbiophysics.org/
+      techniques: *id002
+      description: 'UK society for biophysics: meetings and early-career support.'
+    - name: European Biophysical Societies' Association (EBSA)
+      url: https://ebsa.org/
+      techniques: *id002
   - title: European facilities
     links:
     - name: ESRF
@@ -101,7 +129,7 @@ groups:
     - name: Elettra
       url: http://www.elettra.trieste.it/
       description: Synchrotron, Trieste.
-      techniques: &id002
+      techniques: &id003
       - crystallography
     - name: MAX IV
       url: https://www.maxiv.lu.se/
@@ -118,7 +146,7 @@ groups:
     - name: Swiss Light Source (PSI)
       url: https://www.psi.ch/en
       description: Synchrotron at the Paul Scherrer Institute.
-      techniques: *id002
+      techniques: *id003
   - title: Worldwide
     links:
     - name: Lightsources.org
@@ -140,16 +168,16 @@ groups:
     links:
     - name: DIALS
       url: http://dials.github.io/
-      techniques: *id002
+      techniques: *id003
     - name: MOSFLM
       url: https://www.mrc-lmb.cam.ac.uk/mosflm/imosflm/ver740/introduction.html
-      techniques: *id002
+      techniques: *id003
     - name: HKL
       url: http://www.hkl-xray.com/
-      techniques: *id002
+      techniques: *id003
     - name: XDS
       url: https://xds.mr.mpg.de/
-      techniques: *id002
+      techniques: *id003
   - title: 'Crystallography: structure solution, refinement and model building'
     links:
     - name: CCP4
@@ -164,54 +192,54 @@ groups:
       - cryo-em
     - name: CNS
       url: http://cns-online.org/v1.3/
-      techniques: *id002
+      techniques: *id003
     - name: SHARP
       url: http://www.globalphasing.com/sharp/
-      techniques: *id002
+      techniques: *id003
     - name: SHELX
       url: http://shelx.uni-goettingen.de/
-      techniques: *id002
+      techniques: *id003
     - name: ARP/wARP
       url: https://cloud.ccp4.ac.uk/manuals/html-taskref/doc.task.ArpWarp.html
-      techniques: *id002
+      techniques: *id003
     - name: MAID
       url: https://jonbcooper.github.io/cxp/maid.html
-      techniques: *id002
+      techniques: *id003
     - name: SIMBAD
       url: https://simbad.readthedocs.io/en/latest/server.html
       description: Sequence-independent molecular replacement.
-      techniques: *id002
+      techniques: *id003
     - name: SAUC
       url: https://sauc.lbl.gov
       description: Search the PDB for structures with similar unit cells.
-      techniques: *id002
+      techniques: *id003
     - name: ContaMiner
       url: https://strube.cbrc.kaust.edu.sa/contaminer/submit/
       description: Identify crystallisation contaminants.
-      techniques: *id002
+      techniques: *id003
     - name: Coordinate transformation tool
       url: http://ic50.org/fractorth/
       description: Convert between fractional and orthogonal coordinates online.
-      techniques: *id002
+      techniques: *id003
     - name: Convert CIF to PDB online
       url: http://ic50.org/ciftopdb
-      techniques: *id002
+      techniques: *id003
     - name: General crystallographic calculator
       url: http://ic50.org/gencrycal/
-      techniques: *id002
+      techniques: *id003
   - title: Cryo-EM and tomography
     links:
     - name: CCP-EM
       url: https://www.ccpem.ac.uk/
       description: UK collaborative computational project for cryo-EM.
-      techniques: &id003
+      techniques: &id004
       - cryo-em
     - name: RELION
       url: https://relion.readthedocs.io/
-      techniques: *id003
+      techniques: *id004
     - name: cryoSPARC
       url: https://cryosparc.com/
-      techniques: *id003
+      techniques: *id004
     - name: Warp
       url: https://www.warpem.com/
       techniques:
@@ -228,18 +256,18 @@ groups:
     - name: ATSAS
       url: https://www.embl-hamburg.de/biosaxs/software.html
       description: SAXS analysis suite from EMBL Hamburg.
-      techniques: *id004
+      techniques: *id005
     - name: ATSAS online
       url: https://www.embl-hamburg.de/biosaxs/atsas-online/
-      techniques: *id004
+      techniques: *id005
     - name: BioXTAS RAW
       url: https://bioxtas-raw.readthedocs.io/
-      techniques: *id004
+      techniques: *id005
   - title: Imaging
     links:
     - name: Fiji (ImageJ)
       url: https://fiji.sc/
-      techniques: &id007
+      techniques: &id008
       - imaging
   - title: NMR
     links:
@@ -284,24 +312,30 @@ groups:
       techniques:
       - modelling-ai
       description: Web tool for setting up simulations, including membrane systems.
+  - title: Biophysics
+    links:
+    - name: SEDFIT and SEDPHAT
+      url: https://sedfitsedphat.github.io/
+      techniques: *id002
+      description: Analysis of analytical ultracentrifugation and other biophysical data.
   - title: Modelling, prediction and docking
     links:
     - name: AlphaFold Server
       url: https://alphafoldserver.com
-      techniques: &id005
+      techniques: &id006
       - modelling-ai
     - name: ColabFold
       url: https://github.com/sokrypton/ColabFold
-      techniques: *id005
+      techniques: *id006
     - name: SWISS-MODEL
       url: https://swissmodel.expasy.org/
-      techniques: *id005
+      techniques: *id006
     - name: ExPASy
       url: http://www.expasy.ch
-      techniques: *id005
+      techniques: *id006
     - name: Modeller
       url: http://salilab.org/modeller/
-      techniques: *id005
+      techniques: *id006
     - name: Rosetta
       url: https://www.rosettacommons.org/
       techniques:
@@ -309,7 +343,7 @@ groups:
       - drug-design
     - name: Threader (UCL Bioinformatics)
       url: http://bioinf.cs.ucl.ac.uk/
-      techniques: *id005
+      techniques: *id006
     - name: HADDOCK
       url: https://wenmr.science.uu.nl/haddock2.4/
       techniques:
@@ -317,12 +351,12 @@ groups:
       - drug-design
     - name: SwissDock
       url: https://www.swissdock.ch/
-      techniques: &id006
+      techniques: &id007
       - drug-design
     - name: CCPBioSim
       url: https://www.ccpbiosim.ac.uk/
       description: UK collaborative computational project for biomolecular simulation.
-      techniques: *id005
+      techniques: *id006
   - title: Molecular graphics
     links:
     - name: Coot
@@ -354,19 +388,19 @@ groups:
       url: https://www.3ds.com/products-services/biovia/products/molecular-modeling-simulation/biovia-discovery-studio/visualization/
     - name: Mini map aide
       url: https://minimapai.de/
-      techniques: *id002
+      techniques: *id003
     - name: Very simple protein space group viewer
       url: https://ic50.org/vspsgv.html
-      techniques: *id002
+      techniques: *id003
     - name: Space group viewer (stereo)
       url: https://ic50.org/stereo.html
-      techniques: *id002
+      techniques: *id003
     - name: Crystallify 3D space group viewer
       url: https://crystallify.com
-      techniques: *id002
+      techniques: *id003
     - name: Symotter 3D space group viewer
       url: https://spacegroups.symotter.org/
-      techniques: *id002
+      techniques: *id003
   - title: Figures, movies and other tools
     links:
     - name: Jalview and other Dundee tools
@@ -374,7 +408,7 @@ groups:
       description: Coloured sequence alignments.
     - name: LigPlot+
       url: https://www.ebi.ac.uk/thornton-srv/software/LigPlus/
-      techniques: *id006
+      techniques: *id007
     - name: ImageMagick
       url: http://www.imagemagick.org/
     - name: GIMP
@@ -385,10 +419,10 @@ groups:
       url: http://www.vim.org/
     - name: Dose-response curves and enzyme kinetics
       url: http://ic50.org.uk/
-      techniques: *id006
+      techniques: *id007
     - name: Dose-response curves (alternative site)
       url: http://ic50.org
-      techniques: *id006
+      techniques: *id007
     - name: Michaelis–Menten Plotly tool
       url: http://ic50.org/kmvmaxly/
 - id: databases
@@ -419,7 +453,7 @@ groups:
     - name: EMDB
       url: https://www.ebi.ac.uk/emdb/
       description: 'Electron Microscopy Data Bank: maps.'
-      techniques: *id003
+      techniques: *id004
     - name: EMPIAR
       url: https://www.ebi.ac.uk/empiar/
       description: Raw electron microscopy image data.
@@ -434,7 +468,7 @@ groups:
     - name: SASBDB
       url: https://www.sasbdb.org/
       description: Small Angle Scattering Biological Data Bank.
-      techniques: *id004
+      techniques: *id005
     - name: PDB-IHM
       url: https://pdb-ihm.org/
       description: Integrative and hybrid structural models.
@@ -447,15 +481,15 @@ groups:
       techniques: *id001
     - name: AlphaFold Protein Structure Database
       url: https://alphafold.ebi.ac.uk/
-      techniques: *id005
+      techniques: *id006
     - name: UniProt
       url: https://www.uniprot.org/
     - name: BioImage Archive
       url: https://www.ebi.ac.uk/bioimage-archive/
-      techniques: *id007
+      techniques: *id008
     - name: Crystallography Open Database
       url: http://crystallography.net/cod/
-      techniques: *id002
+      techniques: *id003
     - name: EMBL-EBI
       url: http://www.ebi.ac.uk
       description: European Bioinformatics Institute.
