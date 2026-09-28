@@ -25,7 +25,7 @@ groups:
       url: https://www.diamond.ac.uk/Instruments/Mx.html
       techniques:
       - crystallography
-      description: 'The MX village: all of Diamond''s crystallography beamlines, including in situ (VMXi), long-wavelength and microfocus.'
+      description: Seven macromolecular crystallography beamlines covering room temperature to cryo, low to high energy (tunable and fixed), fully unattended high-throughput to hands-on specialist experiments, and beams from large to micro- and nanofocus.
     - name: XChem fragment screening, Diamond
       url: https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html
       techniques:
