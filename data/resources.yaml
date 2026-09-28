@@ -598,6 +598,14 @@ groups:
       - drug-design
   - title: Contract research and protein production
     links:
+    - name: Diamond Light Source Industrial Liaison (Harwell)
+      url: https://www.diamond.ac.uk/industry.html
+      techniques:
+      - crystallography
+      - cryo-em
+      - saxs
+      - imaging
+      description: Industrial access to Diamond's facilities and services.
     - name: Charles River (Chesterford Research Park)
       url: https://www.criver.com/products-services/discovery-services/discovery-facilities/cambridge-uk
       description: Crystallography and fragment screening within integrated drug discovery.
