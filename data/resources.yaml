@@ -32,6 +32,14 @@ groups:
       - crystallography
       - drug-design
       description: 'Crystallographic fragment screening: soaking, harvesting, data collection and analysis of up to 1000 compounds in a week.'
+    - name: Membrane Protein Laboratory (MPL), Diamond
+      url: https://www.diamond.ac.uk/Instruments/Mx/MPL.html
+      techniques:
+      - crystallography
+      - cryo-em
+      - saxs
+      description: 'Research and training facility for membrane protein structures at the Research Complex at Harwell: high-throughput cloning, expression and purification, sample preparation for integrative
+        structural biology. Open to users worldwide; an Instruct-ERIC centre.'
     - name: B23 circular dichroism beamline, Diamond
       url: https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/B23.html
       techniques:
