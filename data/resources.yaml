@@ -5,7 +5,7 @@
 # Notes: Diamond pages block automated link checks, so the eBIC and B21 URLs
 # should be checked by hand. Removed as dead (Sep 2026): BMSC Washington
 # tutorials and Raster3D (server unreachable).
-# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB), AstraZeneca, Charles River, UCL (checked by hand where noted).
+# Also unverifiable by script (they block bots): FindAPhD, JISCMail (CCP4BB), AstraZeneca, Charles River, UCL, RSC, IoP, IUCr (bot-blocked; checked by hand).
 groups:
 - id: facilities
   title: Facilities
@@ -95,13 +95,6 @@ groups:
       url: https://bsrc.st-andrews.ac.uk/facilities/
       techniques: *id002
       description: Biophysics suite including SPR and ITC.
-    - name: British Biophysical Society
-      url: https://britishbiophysics.org/
-      techniques: *id002
-      description: 'UK society for biophysics: meetings and early-career support.'
-    - name: European Biophysical Societies' Association (EBSA)
-      url: https://ebsa.org/
-      techniques: *id002
   - title: European facilities
     links:
     - name: ESRF
@@ -576,6 +569,68 @@ groups:
       url: https://warwick.ac.uk/fac/sci/lifesci/research/crystallography
     - name: 'York: York Structural Biology Laboratory'
       url: http://www.york.ac.uk/chemistry/research/ysbl/
+- id: societies
+  title: Societies
+  intro: Learned societies and networks close to the BSG's community.
+  sections:
+  - title: Our parent society and crystallography
+    links:
+    - name: British Crystallographic Association (BCA)
+      url: https://www.crystallography.org.uk/
+      description: The BSG is a special interest group of the BCA.
+    - name: International Union of Crystallography (IUCr)
+      url: https://www.iucr.org/
+      techniques:
+      - crystallography
+    - name: European Crystallographic Association (ECA)
+      url: https://ecanews.org/
+      techniques:
+      - crystallography
+    - name: American Crystallographic Association (ACA)
+      url: https://www.amercrystalassn.org/
+      techniques:
+      - crystallography
+  - title: Biosciences and chemistry
+    links:
+    - name: Biochemical Society
+      url: https://www.biochemistry.org/
+    - name: Royal Society of Biology
+      url: https://www.rsb.org.uk/
+    - name: Royal Society of Chemistry
+      url: https://www.rsc.org/
+    - name: Institute of Physics
+      url: https://www.iop.org/
+    - name: Microbiology Society
+      url: https://www.microbiologysociety.org/
+    - name: The Protein Society
+      url: https://www.proteinsociety.org/
+    - name: EMBO
+      url: https://www.embo.org/
+      description: 'European life-sciences organisation: courses, workshops and fellowships.'
+  - title: Techniques
+    links:
+    - name: British Biophysical Society
+      url: https://britishbiophysics.org/
+      description: 'UK society for biophysics: meetings and early-career support.'
+      techniques:
+      - biophysics
+    - name: European Biophysical Societies' Association (EBSA)
+      url: https://ebsa.org/
+      techniques:
+      - biophysics
+    - name: British Mass Spectrometry Society (BMSS)
+      url: https://www.bmss.org.uk/
+      techniques:
+      - mass-spec
+    - name: British Society for Proteome Research (BSPR)
+      url: https://www.bspr.org/
+      techniques:
+      - mass-spec
+    - name: Royal Microscopical Society
+      url: https://www.rms.org.uk/
+      techniques:
+      - cryo-em
+      - imaging
 - id: industry
   title: Industry
   intro: 'UK companies doing structural biology, or producing proteins for it: drug discovery, biotech and contract research. Listing is not an endorsement. Suggestions welcome.'
