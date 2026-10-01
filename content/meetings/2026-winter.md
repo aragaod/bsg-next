@@ -38,7 +38,7 @@ Poster prizes will be awarded at the end of the day.
 | 12:15 | Rebecca Beveridge (University of Strathclyde): *Ion mobility mass spectrometry insights into dynamic protein complexes and conformations* |
 | 12:45 | Lunch and poster session |
 | **14:00** | **Session 2** |
-| 14:00 | Sarah Rouse (Imperial College London) |
+| 14:00 | Sarah Rouse (Imperial College London): *Modulation of GPCRs by cardiolipin* |
 | 14:30 | Short talk selected from posters |
 | 14:50 | Cyril Dominguez (University of Leicester): *Structure and dynamics of the RNA-binding protein Sam68* |
 | 15:20 | Coffee |
