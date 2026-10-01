@@ -152,3 +152,11 @@ document.querySelectorAll('a[href^="http"]').forEach((a) => {
     a.append(s);
   }
 });
+
+// Email links are assembled here so the address is not in the page source.
+document.querySelectorAll("a[data-email-user]").forEach((a) => {
+  const addr = `${a.dataset.emailUser}@${a.dataset.emailDomain}`;
+  const subject = a.dataset.emailSubject ? `?subject=${encodeURIComponent(a.dataset.emailSubject)}` : "";
+  a.href = `mailto:${addr}${subject}`;
+  a.title = addr;
+});

@@ -22,5 +22,12 @@
     {{- range $undated }}{{ partial "listing-card.html" . }}{{ end }}
   </div>
   {{- if not $upcoming }}<p class="mt-8 text-slate-600 dark:text-slate-400">No upcoming events listed.</p>{{ end }}
+  {{- with site.Params.eventsEmail }}
+  <p class="mt-10 text-sm text-slate-600 dark:text-slate-400">
+    Know of a conference, school or workshop that should be here?
+    <a data-email-user="{{ .user }}" data-email-domain="{{ .domain }}" data-email-subject="Event suggestion for the BSG website" class="font-semibold text-brand-700 underline hover:text-brand-800 dark:text-brand-300">Suggest an event</a><noscript> by emailing {{ .user }} at {{ .domain }}</noscript>
+    with its name, dates, place and link.
+  </p>
+  {{- end }}
 </div>
 {{ end }}

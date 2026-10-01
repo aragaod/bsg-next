@@ -53,6 +53,7 @@ Every save is recorded with your name. Mistakes can always be undone, so don't w
 ### Common tasks
 
 - **Post news:** News → Add an entry → title, date, a one-sentence summary and the text.
+- **Schedule or retire a news post:** a post with a future **Date** stays hidden until that day. Posts stay on the site permanently unless you set **Remove after**, which takes the post down on that date (for short-lived notices such as a deadline reminder).
 - **Announce the Winter Meeting date:** Meetings → the meeting → set **Start date** (and **Registration link** when ready). The home page countdown starts straight away.
 - **Add a meeting programme or poster:** Meetings → the meeting → **Programme** (PDF), **Poster** (image), or **Attachments** for anything else (abstract book, travel info).
 - **Attach a PDF to a news post:** News → the post → **Attachments** → link text (e.g. "Poster (PDF)") and upload the file.

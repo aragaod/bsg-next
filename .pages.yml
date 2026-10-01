@@ -58,6 +58,7 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
+      - { name: expiryDate, label: Remove after, type: date, description: 'Optional. Leave empty to keep the post permanently (the usual choice, so News keeps a record). If set, the post disappears from the site on this date (the site rebuilds every night).' }
       - { name: author, label: Author, type: string }
       - { name: summary, label: Summary, type: text, description: One or two sentences for lists and the home page. }
       - { name: image, label: Image, type: image, description: Optional. Only use photos of people with their permission., options: { media: images } }
