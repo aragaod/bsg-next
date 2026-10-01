@@ -7,7 +7,7 @@ end:
 when: ""
 city: "Leicester"
 venue: "Henry Wellcome Building, Leicester Institute of Structural and Chemical Biology, University of Leicester"
-theme: "Capturing Protein Motion: Structural Biology of Dynamic and Disordered Proteins"
+theme: "Capturing Proteins in Motion: Structural Biology of Dynamic and Disordered Proteins"
 programme: "/archive/programmes/BSG_winter_26.pdf"
 registration: "https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=161036&eventID=388"
 poster: "/images/meetings/bsg-winter-2026-poster.jpg"

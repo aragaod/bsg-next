@@ -25,7 +25,8 @@ params:
   # Event suggestions go to the web officer. The address is assembled by
   # JavaScript so it never appears whole in the page source (fewer spam bots).
   # It should be a forwarding alias on the site's domain, not a personal address.
-  eventsEmail: { user: web, domain: biostructures.org.uk }
+  # The link stays hidden until this is uncommented.
+  # eventsEmail: { user: web, domain: biostructures.org.uk }
 
 menus:
   main:
