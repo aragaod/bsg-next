@@ -6,17 +6,27 @@ start: 2026-12-11
 end:
 when: ""
 city: "Leicester"
-venue: "Leicester Institute of Structural and Chemical Biology, University of Leicester"
+venue: "Henry Wellcome Building, Leicester Institute of Structural and Chemical Biology, University of Leicester"
 theme: "Capturing Protein Motion: Structural Biology of Dynamic and Disordered Proteins"
-programme: ""
-registration: ""
+programme: "/archive/programmes/BSG_winter_26.pdf"
+registration: "https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=161036&eventID=388"
+poster: "/images/meetings/bsg-winter-2026-poster.jpg"
 ---
 
 A one-day meeting on how structural biologists study proteins that move, from NMR and ion mobility mass spectrometry to cryo-EM and crystallography. Organised by Prof. Simon Newstead (University of Oxford) and Dr Rachael Wilkinson (University of Leicester).
 
-## Preliminary programme
+## Registration
 
-*Subject to change. Registration details will follow.*
+**[Registration is open](https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=161036&eventID=388)**: £80, including refreshments, lunch, and drinks at the evening poster session. Places are limited to 120.
+
+- **20 November 2026, 17:00:** deadline for abstracts for short talks selected from posters
+- **26 November 2026, 17:00:** registration closes
+
+Poster prizes will be awarded at the end of the day.
+
+## Programme
+
+*Subject to change.*
 
 | Time | |
 |---|---|
@@ -28,7 +38,7 @@ A one-day meeting on how structural biologists study proteins that move, from NM
 | 12:15 | Rebecca Beveridge (University of Strathclyde): *Ion mobility mass spectrometry insights into dynamic protein complexes and conformations* |
 | 12:45 | Lunch and poster session |
 | **14:00** | **Session 2** |
-| 14:00 | Invited speaker to be confirmed |
+| 14:00 | Sarah Rouse (Imperial College London) |
 | 14:30 | Short talk selected from posters |
 | 14:50 | Cyril Dominguez (University of Leicester): *Structure and dynamics of the RNA-binding protein Sam68* |
 | 15:20 | Coffee |
@@ -37,3 +47,7 @@ A one-day meeting on how structural biologists study proteins that move, from NM
 | 16:25 | **Keynote lecture:** Prof. Matthew Higgins (University of Oxford): *Structural dynamics of host–parasite interactions in malaria* |
 | 17:00 | Drinks, posters and prizes |
 | 18:15 | Close |
+
+## Sponsors
+
+With thanks to the Kavli Institute for Nanoscience Discovery, Constant Systems, Beckman Coulter, Thermo Fisher Scientific and Cortex Organics.
