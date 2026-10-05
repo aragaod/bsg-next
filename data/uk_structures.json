@@ -1,6 +1,384 @@
 {
- "updated": "2026-09-28",
+ "updated": "2026-10-05",
  "entries": [
+  {
+   "id": "9TMK",
+   "db": "PDB",
+   "title": "Structure of CYLD CAP-Gly2 bound to Listeria effector protein InlC",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tmk",
+   "image": "images/latest/9tmk.jpeg",
+   "resolution": 1.8,
+   "paper": {
+    "title": "To Be Published",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "10.1038/s41467-026-77063-5",
+    "authors": "Ammendolia, D.A. … Brumell, J.H."
+   }
+  },
+  {
+   "id": "9SP8",
+   "db": "PDB",
+   "title": "Cryo-EM structure of the Arabidopsis thaliana CAT4 transporter in the outward-open L-ornithine bound state",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sp8",
+   "image": "images/latest/9sp8.jpeg",
+   "resolution": 3.32,
+   "emdb": [
+    "EMD-55065"
+   ],
+   "paper": {
+    "title": "Structural basis for pH-responsive amino acid transport via SLC7A4",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-70956-5",
+    "authors": "Kolokouris, D. … Newstead, S."
+   }
+  },
+  {
+   "id": "9SN2",
+   "db": "PDB",
+   "title": "Cryo-EM reconstruction of the RUVBL1-RUVBL2-CCDC103 (R2C) complex",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sn2",
+   "image": "images/latest/9sn2.jpeg",
+   "resolution": 3.2,
+   "emdb": [
+    "EMD-55046"
+   ],
+   "paper": {
+    "title": "CCDC103-mediated assembly of the R2C complex links RUVBL1-RUVBL2 to Primary Ciliary Dyskinesia",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Munoz-Hernandez, H. … Pal, M."
+   }
+  },
+  {
+   "id": "8QKP",
+   "db": "PDB",
+   "title": "Asymmetric structure of Satellite Tobacco Necrosis Virus-Like Particle with PS2/3 gRNA",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/8qkp",
+   "image": "images/latest/8qkp.jpeg",
+   "resolution": 5.26,
+   "emdb": [
+    "EMD-18469"
+   ],
+   "paper": {
+    "title": "Visualizing Viral RNA Packaging Signals in Action",
+    "journal": "J Mol Biol",
+    "year": 2024,
+    "doi": "10.1016/j.jmb.2024.168765",
+    "authors": "Wroblewski, E. … Stockley, P.G."
+   }
+  },
+  {
+   "id": "34HX",
+   "db": "PDB",
+   "title": "The 1.8 angstrom crystal structure of Yersinia pestis CO92 trehalose-6-phosphate hydrolase (TreC)",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/34hx",
+   "image": "images/latest/34hx.jpeg",
+   "resolution": 1.8,
+   "paper": {
+    "title": "The 1.8 angstrom crystal structure of Yersinia pestis CO92 trehalose-6-phosphate hydrolase (TreC)",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Carew, T. … Lee, S."
+   }
+  },
+  {
+   "id": "33SK",
+   "db": "PDB",
+   "title": "Apo PDZ domain from mouse SHANK3 (570-664)",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/33sk",
+   "image": "images/latest/33sk.jpeg",
+   "resolution": 1.26,
+   "paper": {
+    "title": "An internal PDZ-binding motif in Densin-180 promotes activity-dependent SHANK scaffold remodelling",
+    "journal": "Biorxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.07.07.736929",
+    "authors": "Otani, Y. … Goult, B.T."
+   }
+  },
+  {
+   "id": "32UN",
+   "db": "PDB",
+   "title": "Structure of ZNFX1 in the post-ATP hydrolysis state",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/32un",
+   "image": "images/latest/32un.jpeg",
+   "resolution": 3.2,
+   "emdb": [
+    "EMD-59182"
+   ],
+   "paper": {
+    "title": "ZNFX1, an immunoregulatory RNA helicase and E3 ubiquitin ligase, assembles into pleiomorphic polymers",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Naydenova, K. … Randow, F."
+   }
+  },
+  {
+   "id": "32UM",
+   "db": "PDB",
+   "title": "Structure of ZNFX1 bound to RNA",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/32um",
+   "image": "images/latest/32um.jpeg",
+   "resolution": 3.1,
+   "emdb": [
+    "EMD-59181"
+   ],
+   "paper": {
+    "title": "ZNFX1, an immunoregulatory RNA helicase and E3 ubiquitin ligase, assembles into pleiomorphic polymers",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Naydenova, K. … Randow, F."
+   }
+  },
+  {
+   "id": "32UL",
+   "db": "PDB",
+   "title": "Structure of ZNFX1 in the ATP-bound, pre-ATP hydrolysis state",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/32ul",
+   "image": "images/latest/32ul.jpeg",
+   "resolution": 3.3,
+   "emdb": [
+    "EMD-59180"
+   ],
+   "paper": {
+    "title": "ZNFX1, an immunoregulatory RNA helicase and E3 ubiquitin ligase, assembles into pleiomorphic polymers",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Naydenova, K. … Randow, F."
+   }
+  },
+  {
+   "id": "30SH",
+   "db": "PDB",
+   "title": "Homotaurine ABC transporter substrate binding protein HtaA from C. jiansuensis in complex with homotaurine",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/30sh",
+   "image": "images/latest/30sh.jpeg",
+   "resolution": 1.8,
+   "paper": {
+    "title": "A Bacterial Pathway for Homotaurine Catabolism via Sulfopropanoate",
+    "journal": "J.Am.Chem.Soc.",
+    "year": 2026,
+    "doi": "10.1021/jacs.6c10662",
+    "authors": "Pallasdies, L. … Williams, S.J."
+   }
+  },
+  {
+   "id": "30PV",
+   "db": "PDB",
+   "title": "TxGH116 complex with a beta-d-Arabinofuranose-configured cyclitol aziridine",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/30pv",
+   "image": "images/latest/30pv.jpeg",
+   "resolution": 1.75,
+   "paper": {
+    "title": "Beta-D-Arabinofuranose-configured cyclitol aziridines as selective, brain-penetrant covalent GBA2 inhibitors",
+    "journal": "To Be Published",
+    "year": 2026,
+    "doi": "10.1021/jacs.6c09754",
+    "authors": "Lammers, R.F. … Artola, M."
+   }
+  },
+  {
+   "id": "29KN",
+   "db": "PDB",
+   "title": "Composite cryo-EM map of the human DNAAF19-RUVBL1/2-DPCD complex",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/29kn",
+   "image": "images/latest/29kn.jpeg",
+   "resolution": 3.37,
+   "emdb": [
+    "EMD-57241"
+   ],
+   "paper": {
+    "title": "DNAAF19-RUVBL1/2 complex recruits multiple adaptors to promote dynein arm assembly",
+    "journal": "Proc.Natl.Acad.Sci.USA",
+    "year": 2026,
+    "doi": "10.1073/pnas.2612755123",
+    "authors": "de Almeida Gomes, M. … Ochi, T."
+   }
+  },
+  {
+   "id": "28ME",
+   "db": "PDB",
+   "title": "Connexin 26 from L Paradoxa in GDN detergent - hemichannel focussed conformation 2",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28me",
+   "image": "images/latest/28me.jpeg",
+   "resolution": 2.9,
+   "emdb": [
+    "EMD-56609"
+   ],
+   "paper": {
+    "title": "Structure of Connexin 26 from L Paradoxa",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Brotherton, D.H. … Cameron, A.D."
+   }
+  },
+  {
+   "id": "28MC",
+   "db": "PDB",
+   "title": "Connexin 26 from L Paradoxa in GDN detergent - hemichannel focussed conformation 1",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mc",
+   "image": "images/latest/28mc.jpeg",
+   "resolution": 2.7,
+   "emdb": [
+    "EMD-56608"
+   ],
+   "paper": {
+    "title": "Structure of Connexin 26 from L Paradoxa",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Brotherton, D.H. … Cameron, A.D."
+   }
+  },
+  {
+   "id": "10VM",
+   "db": "PDB",
+   "title": "Structure of human MAIT A-F7 TCR in complex with miniaturized MR1-5-OP-RU",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-09-30",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/10vm",
+   "image": "images/latest/10vm.jpeg",
+   "resolution": 3.08,
+   "emdb": [
+    "EMD-75491"
+   ],
+   "paper": {
+    "title": "A miniaturized MR1 metabolite display system with native-like protein features",
+    "journal": "Elife",
+    "year": 2026,
+    "doi": "10.7554/elife.111511.1",
+    "authors": "Rotsides, P. … Sgourakis, N.G."
+   }
+  },
   {
    "id": "9WW8",
    "db": "PDB",
