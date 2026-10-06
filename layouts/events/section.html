@@ -10,11 +10,23 @@
 <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
   <div class="prose-bsg">{{ .Content }}</div>
   {{- with .OutputFormats.Get "calendar" }}
-  <div class="mt-6 flex flex-wrap items-center gap-3 rounded-xl bg-brand-50 p-4 text-sm dark:bg-brand-950">
-    <span class="font-semibold text-brand-900 dark:text-brand-100">Add these events to your calendar:</span>
-    <a href="{{ replace .Permalink "https://" "webcal://" | safeURL }}" class="rounded-lg bg-brand-700 px-3 py-1.5 font-semibold text-white hover:bg-brand-800 dark:bg-brand-500 dark:text-slate-950">Subscribe</a>
-    <a href="{{ .RelPermalink }}" class="font-medium text-brand-800 underline dark:text-brand-200">Download .ics</a>
-    <span class="text-brand-800/80 dark:text-brand-200/80">Includes BSG meetings; updates automatically.</span>
+  {{- /* Subscriptions stay up to date; each app needs its own kind of link. */}}
+  {{- /* Hugo gives the calendar format a webcal:// permalink; web apps need https://. */}}
+  {{- $feed := replace .Permalink "webcal://" "https://" }}
+  {{- $webcal := replace $feed "https://" "webcal://" }}
+  {{- $q := printf "url=%s&name=%s" (urlquery $feed) (replace (urlquery "BSG and structural biology events") "+" "%20") }}
+  {{- $btn := "rounded-lg bg-white px-3 py-1.5 font-semibold text-brand-800 ring-1 ring-brand-200 hover:bg-brand-100 dark:bg-slate-900 dark:text-brand-200 dark:ring-brand-800 dark:hover:bg-brand-900" }}
+  <div class="mt-6 rounded-xl bg-brand-50 p-4 text-sm dark:bg-brand-950">
+    <p class="font-semibold text-brand-900 dark:text-brand-100">Subscribe to these events in your calendar</p>
+    <p class="mt-1 text-brand-800/80 dark:text-brand-200/80">Includes BSG meetings. A subscription updates automatically when events are added or changed.</p>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <a href="{{ printf "https://outlook.office.com/calendar/0/addfromweb?%s" $q | safeURL }}" class="{{ $btn }}">Outlook (work or university)</a>
+      <a href="{{ printf "https://outlook.live.com/calendar/0/addfromweb?%s" $q | safeURL }}" class="{{ $btn }}">Outlook.com</a>
+      <a href="{{ printf "https://calendar.google.com/calendar/r?cid=%s" (urlquery $webcal) | safeURL }}" class="{{ $btn }}">Google Calendar</a>
+      <a href="{{ $webcal | safeURL }}" class="{{ $btn }}">Apple Calendar</a>
+      <button type="button" data-copy="{{ $feed }}" class="{{ $btn }}">Copy feed link</button>
+    </div>
+    <p class="mt-3 text-brand-800/80 dark:text-brand-200/80">Other apps: add a calendar “from the internet” or “by URL” and paste the feed link. Or <a href="{{ .RelPermalink }}" class="font-medium underline">download a one-off .ics file</a> (it will not update).</p>
   </div>
   {{- end }}
   <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

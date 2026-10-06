@@ -1,0 +1,5 @@
+{{- /*
+  Folds one iCalendar content line (RFC 5545 asks for at most 75 octets):
+  chunks of 60 characters joined by CRLF and a space. Context: the line.
+*/ -}}
+{{- return delimit (findRE `(?s).{1,60}` .) "\r\n " }}

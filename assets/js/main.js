@@ -160,3 +160,14 @@ document.querySelectorAll("a[data-email-user]").forEach((a) => {
   a.href = `mailto:${addr}${subject}`;
   a.title = addr;
 });
+
+// Copy buttons, e.g. the calendar feed link on the Events page.
+document.querySelectorAll("button[data-copy]").forEach((b) => {
+  const label = b.textContent;
+  b.addEventListener("click", () => {
+    navigator.clipboard.writeText(b.dataset.copy).then(
+      () => { b.textContent = "Link copied"; setTimeout(() => { b.textContent = label; }, 2000); },
+      () => { window.prompt("Copy this link:", b.dataset.copy); },
+    );
+  });
+});

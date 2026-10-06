@@ -16,10 +16,10 @@
 BEGIN:VCALENDAR{{ "\r\n" }}VERSION:2.0{{ "\r\n" }}PRODID:-//Biological Structures Group//Events//EN{{ "\r\n" }}CALSCALE:GREGORIAN{{ "\r\n" }}METHOD:PUBLISH{{ "\r\n" }}X-WR-CALNAME:BSG and structural biology events{{ "\r\n" }}X-WR-TIMEZONE:Europe/London{{ "\r\n" }}
 {{- range $items }}
 {{- $s := time.AsTime .start }}{{ $e := (time.AsTime .end).AddDate 0 0 1 -}}
-BEGIN:VEVENT{{ "\r\n" }}UID:{{ .uid }}{{ "\r\n" }}DTSTAMP:{{ now.UTC.Format "20060102T150405Z" }}{{ "\r\n" }}DTSTART;VALUE=DATE:{{ $s.Format "20060102" }}{{ "\r\n" }}DTEND;VALUE=DATE:{{ $e.Format "20060102" }}{{ "\r\n" }}SUMMARY:{{ replace (replace (replace .title "\\" "\\\\") "," "\\,") ";" "\\;" }}{{ "\r\n" }}
-{{- with .location }}LOCATION:{{ replace (replace . "," "\\,") ";" "\\;" }}{{ "\r\n" }}{{ end -}}
-URL:{{ .url }}{{ "\r\n" }}
-{{- with .desc }}DESCRIPTION:{{ replace (replace (. | plainify | strings.TrimSpace) "," "\\,") ";" "\\;" }}{{ "\r\n" }}{{ end -}}
+BEGIN:VEVENT{{ "\r\n" }}{{ partial "fn/ics-fold.html" (printf "UID:%s" .uid) }}{{ "\r\n" }}DTSTAMP:{{ now.UTC.Format "20060102T150405Z" }}{{ "\r\n" }}DTSTART;VALUE=DATE:{{ $s.Format "20060102" }}{{ "\r\n" }}DTEND;VALUE=DATE:{{ $e.Format "20060102" }}{{ "\r\n" }}{{ partial "fn/ics-fold.html" (printf "SUMMARY:%s" (replace (replace (replace .title "\\" "\\\\") "," "\\,") ";" "\\;")) }}{{ "\r\n" }}
+{{- with .location }}{{ partial "fn/ics-fold.html" (printf "LOCATION:%s" (replace (replace . "," "\\,") ";" "\\;")) }}{{ "\r\n" }}{{ end -}}
+{{ partial "fn/ics-fold.html" (printf "URL:%s" .url) }}{{ "\r\n" }}
+{{- with .desc }}{{ partial "fn/ics-fold.html" (printf "DESCRIPTION:%s" (replace (replace (. | plainify | strings.TrimSpace) "," "\\,") ";" "\\;")) }}{{ "\r\n" }}{{ end -}}
 END:VEVENT{{ "\r\n" }}
 {{- end -}}
-END:VCALENDAR{{ "\r\n" }}
+END:VCALENDAR{{ "\r\n" -}}
