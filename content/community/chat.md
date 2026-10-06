@@ -2,7 +2,8 @@
 title: "Community chat"
 description: "A proposed online space where structural biologists can ask questions, share news and find collaborators."
 status: "Pilot proposal"
-draft: false
+# Hidden until the committee approves it.
+draft: true
 weight: 20
 icon: chat
 ---

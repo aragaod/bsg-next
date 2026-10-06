@@ -19,8 +19,8 @@ params:
     Association: the UK community for integrative structural biology, from
     crystallography and cryo-EM to bio-SAXS, imaging, modelling and AI.
   tagline: Many techniques, one community
-  # Mockup: keep search engines out until the committee approves the site.
-  noindex: true
+  # true keeps search engines out (sitemap hidden, robots Disallow, draft notice).
+  noindex: false
   bcaURL: https://crystallography.org.uk/
   # Event suggestions go to the web officer. The address is assembled by
   # JavaScript so it never appears whole in the page source (fewer spam bots).

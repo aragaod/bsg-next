@@ -2,7 +2,8 @@
 title: "Mentoring"
 description: "Proposed ways for early-career researchers to get advice, make connections and gain experience across structural biology."
 status: "Proposal"
-draft: false
+# Hidden until the committee approves it.
+draft: true
 weight: 30
 icon: mentoring
 ---

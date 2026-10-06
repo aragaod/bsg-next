@@ -2,6 +2,7 @@
 title: "Example spotlight"
 date: 2026-09-01
 example: true
+draft: true
 role: "PhD student"
 institution: "A UK university"
 techniques: [cryo-em, modelling-ai]
