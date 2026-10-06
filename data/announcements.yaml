@@ -6,6 +6,9 @@
 announcements:
   - text: "Nominations for the BSG Early Career Prize are welcome at any time"
     url: /prizes/#early-career
+  - text: "CCP4 Northern Structural Biology Meeting, Newcastle, 11–13 November: free, register by 30 October"
+    url: /news/2026-09-09-ccp4-northern-meeting/
+    until: 2026-10-30
   - text: "Winter Meeting 2026 registration is open: short-talk abstracts by 20 November"
     url: https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=161036&eventID=388
     until: 2026-11-20
