@@ -65,7 +65,7 @@ Built in: a title and description on every page (from the `description` or `summ
 
 ## Going live (approved October 2026)
 
-1. In `hugo.yaml`, set `params.noindex: false`. This lets search engines in, adds the sitemap to `robots.txt`, and removes the "draft mockup" footer notice.
+1. Done (6 October 2026): `params.noindex: false` in `hugo.yaml` lets search engines in, adds the sitemap to `robots.txt` and removes the "draft mockup" footer notice.
 2. Add the site to [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters), verified by a DNS TXT record, and submit `https://biostructures.org.uk/sitemap.xml`.
 3. Replace the old site's pages with `handover/old-site-stub/`.
 4. Ask the BCA and partner sites to link to the new address (see the link-sharing plan in the project brief).
