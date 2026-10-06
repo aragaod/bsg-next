@@ -22,6 +22,18 @@
     {{- range $undated }}{{ partial "listing-card.html" . }}{{ end }}
   </div>
   {{- if not $upcoming }}<p class="mt-8 text-slate-600 dark:text-slate-400">No upcoming events listed.</p>{{ end }}
+  {{- /* Events that ended in the last year, newest first. */}}
+  {{- $cutoff := (now.AddDate -1 0 0).Format "2006-01-02" }}
+  {{- $recent := slice }}
+  {{- range hugo.Data.events.events }}
+    {{- if and .start (not (partial "fn/is-upcoming.html" .)) (ge ((time.AsTime (or .end .start)).Format "2006-01-02") $cutoff) }}{{ $recent = $recent | append . }}{{ end }}
+  {{- end }}
+  {{- with $recent }}
+  <h2 class="mt-14 text-2xl font-semibold">Recent events</h2>
+  <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {{- range sort . "start" "desc" }}{{ partial "listing-card.html" . }}{{ end }}
+  </div>
+  {{- end }}
   {{- with site.Params.eventsEmail }}
   <p class="mt-10 text-sm text-slate-600 dark:text-slate-400">
     Know of a conference, school or workshop that should be here?

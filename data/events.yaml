@@ -11,6 +11,28 @@
 #   techniques  list of technique ids from data/techniques.yaml
 #   description optional, one or two sentences
 events:
+- title: South West Structural Biology Consortium Conference 2026
+  organiser: South West Structural Biology Consortium (SWSBC)
+  url: https://events.cardiff.ac.uk/view/2026-south-west-structural-biology-consortium-conference/
+  start: '2026-07-09'
+  end: '2026-07-10'
+  location: Cardiff, UK
+  techniques:
+  - crystallography
+  - nmr
+  - cryo-em
+  - modelling-ai
+  description: Annual meeting of structural biology groups from Exeter, Cardiff, Bath, Bristol, Reading, Portsmouth, Southampton, Sussex and UCL, covering crystallography, NMR and cryo-EM through to modelling and simulation. Held at Cardiff University's Centre for Student Life; main sponsor CCP4.
+- title: CCP4 Northern Structural Biology Meeting 2026
+  organiser: CCP4 and Newcastle University
+  url: https://nusbf.ncl.ac.uk/ccp4-northern-Meeting-2026/
+  start: '2026-11-11'
+  end: '2026-11-13'
+  location: Newcastle upon Tyne, UK
+  techniques:
+  - crystallography
+  - cryo-em
+  description: Free three-day meeting that particularly welcomes early-career researchers and students, with talk and poster prizes. Abstracts by 18 October, registration by 30 October; student travel bursaries available.
 - title: Biophysical Society 71st Annual Meeting (BPS2027)
   organiser: Biophysical Society
   url: https://www.biophysics.org/2027meeting

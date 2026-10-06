@@ -352,7 +352,7 @@ content:
         fields:
           - name: events
             label: Events
-            description: Conferences and courses run by other organisations. Past events are hidden automatically.
+            description: Conferences and courses run by other organisations. Past events move to 'Recent events' for a year, then are hidden.
             type: object
             list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
             fields:
