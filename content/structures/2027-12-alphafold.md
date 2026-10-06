@@ -1,6 +1,6 @@
 ---
 title: "AlphaFold: predicting protein structures"
-date: 2026-08-01
+date: 2027-12-01
 summary: "A London-built AI system that predicts protein structures from sequence, now used alongside experiments every day."
 image: ""
 image_alt: ""

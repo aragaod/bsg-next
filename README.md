@@ -1,6 +1,6 @@
-# Biological Structures Group website (draft)
+# Biological Structures Group website
 
-Draft of a new website for the Biological Structures Group (BSG) of the British Crystallographic Association, for review by the BSG committee and BCA council. Not the official BSG site yet.
+Website of the Biological Structures Group (BSG) of the British Crystallographic Association, at https://biostructures.org.uk. Approved by the BSG committee in October 2026 as the group's main site, replacing bsg.crystallography.org.uk.
 
 Built with [Hugo](https://gohugo.io/) and [Tailwind CSS](https://tailwindcss.com/), deployed to GitHub Pages by GitHub Actions.
 
@@ -63,7 +63,7 @@ Committee members edit the site in the browser at [app.pagescms.org](https://app
 
 Built in: a title and description on every page (from the `description` or `summary` fields, or generated for meetings), link previews for social media and email (`static/images/social-card.png`, or a page's own image), structured data (organisation on the home page, events for dated meetings, articles for news and structures), an automatic sitemap with last-updated dates, and redirects from the old site's page names (`/organisation.html` and so on). `handover/old-site-stub/` holds the pages to put on the old site at launch.
 
-## Going live (after committee approval)
+## Going live (approved October 2026)
 
 1. In `hugo.yaml`, set `params.noindex: false`. This lets search engines in, adds the sitemap to `robots.txt`, and removes the "draft mockup" footer notice.
 2. Add the site to [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters), verified by a DNS TXT record, and submit `https://biostructures.org.uk/sitemap.xml`.

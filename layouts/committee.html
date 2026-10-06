@@ -3,7 +3,7 @@
 {{- $c := hugo.Data.committee }}
 <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
   {{- if not $c.confirmed }}
-  <p class="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-100">Draft: this list is copied from the current BSG site and is being confirmed with the Secretary.</p>
+  <p class="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950 dark:text-amber-100">This list is being updated following the latest committee elections.</p>
   {{- end }}
   <div class="prose-bsg">{{ .Content }}</div>
   {{- range slice (dict "title" "Officers" "people" $c.officers) (dict "title" "Ordinary members" "people" $c.members) }}

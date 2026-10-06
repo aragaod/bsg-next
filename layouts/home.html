@@ -31,8 +31,17 @@
 <section class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="whatwedo">
   <h2 id="whatwedo" class="text-2xl font-semibold sm:text-3xl">What the BSG does</h2>
   <div class="mt-8 grid gap-6 md:grid-cols-3">
+    {{- /* Winter card names the next winter meeting, if one is listed. */}}
+    {{- $next := slice }}
+    {{- range (where (where site.RegularPages "Section" "meetings") "Params.kind" "winter").ByDate }}
+      {{- if partial "fn/is-upcoming.html" .Params }}{{ $next = $next | append . }}{{ end }}
+    {{- end }}
+    {{- $winter := "A one-day meeting hosted by a different UK university each year." }}
+    {{- range first 1 $next }}
+      {{- $winter = printf "%s %d: %s, %s." $winter .Params.year (.Params.city | default "venue to be announced") (partial "fn/meeting-when.html" .) }}
+    {{- end }}
     {{- $cards := slice
-      (dict "kicker" "Every winter" "title" "Winter Meeting" "text" "A one-day meeting hosted by a different UK university each year. 2026: Leicester, date to be confirmed." "link" "/meetings")
+      (dict "kicker" "Every winter" "title" "Winter Meeting" "text" $winter "link" "/meetings")
       (dict "kicker" "Every spring" "title" "BCA Spring Meeting sessions" "text" "BSG sessions at the BCA Spring Meeting. 2027 theme: AI in the era of large-scale structural biology." "link" "/meetings")
       (dict "kicker" "Every September" "title" "Training" "text" "The CCP4-BCA Summer School, plus courses across cryo-EM, SAXS and computational methods." "link" "/training")
     }}

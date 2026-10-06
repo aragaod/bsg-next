@@ -1,6 +1,6 @@
 ---
 title: "ATP synthase: the cell's rotary engine"
-date: 2026-09-01
+date: 2028-01-01
 summary: "The 1994 structure of F1-ATPase caught a molecular motor mid-cycle and showed how cells make their energy currency."
 image: "/images/structures/1bmf.jpeg"
 image_alt: "Ribbon model of bovine F1-ATPase: six subunits arranged around a central stalk"

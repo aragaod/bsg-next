@@ -1,6 +1,6 @@
 ---
 title: "Lysozyme: the first enzyme structure"
-date: 2026-06-01
+date: 2027-11-01
 summary: "In 1965 a team at the Royal Institution in London revealed, for the first time, how an enzyme grips and cuts its target."
 image: "/images/structures/1lyz.jpeg"
 image_alt: ""

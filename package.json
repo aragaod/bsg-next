@@ -1,7 +1,7 @@
 {
   "name": "bsg-next",
   "version": "1.0.0",
-  "description": "Draft website for the BCA Biological Structures Group",
+  "description": "Website of the BCA Biological Structures Group",
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --gc --minify"

@@ -1,5 +1,5 @@
-# BSG committee, as listed on the current site (bsg.crystallography.org.uk).
-# To be confirmed with the Secretary before the site goes public.
+# BSG committee. Set confirmed: true once the Secretary has confirmed the list
+# (this removes the 'being updated' notice on the Committee page).
 #
 # Fields: name, roles (officers only), affiliation, term_start, term_end,
 #         photo (optional, path under static/, only with the person's permission),

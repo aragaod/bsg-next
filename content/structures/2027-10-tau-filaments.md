@@ -1,6 +1,6 @@
 ---
 title: "Tau filaments from Alzheimer's disease"
-date: 2026-07-01
+date: 2027-10-01
 summary: "Cryo-EM showed that the tau filaments in Alzheimer's disease brains have a defined structure, opening the way to classifying diseases by fold."
 image: "/images/structures/5o3l.jpeg"
 image_alt: ""
