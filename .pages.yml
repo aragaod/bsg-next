@@ -221,6 +221,7 @@ content:
           - { name: date, label: Date, type: date }
           - { name: role, label: Role, type: string }
           - { name: institution, label: Institution, type: string }
+          - { name: link, label: Profile link, type: string, description: 'One public page about the person, e.g. their university staff page, company page or LinkedIn.' }
           - { name: techniques, component: techniques }
           - { name: photo, label: Photo, type: image, description: Only with the person's permission., options: { media: images } }
           - { name: summary, label: Summary, type: text }

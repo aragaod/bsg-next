@@ -5,6 +5,7 @@ example: true
 draft: true
 role: "PhD student"
 institution: "A UK university"
+link: "https://www.example.ac.uk/people/example"
 techniques: [cryo-em, modelling-ai]
 photo: ""
 summary: "An example of the format: a few questions and answers about someone's work and career."
