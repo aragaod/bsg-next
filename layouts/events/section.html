@@ -1,7 +1,16 @@
 {{ define "main" }}
 {{ partial "page-header.html" . }}
+{{- /* BSG's own meetings (content/meetings with a start date) join the external events. */}}
+{{- $all := hugo.Data.events.events }}
+{{- range $p := where site.RegularPages "Section" "meetings" }}
+  {{- with $p.Params.start }}
+    {{- $m := dict "title" $p.Title "start" (time.Format "2006-01-02" .) "url" $p.RelPermalink "location" (partial "fn/place.html" $p.Params) "description" ($p.Params.theme | default "") "organiser" (cond (eq $p.Params.kind "spring") "BCA, with BSG sessions" "BSG") }}
+    {{- with $p.Params.end }}{{ $m = merge $m (dict "end" (time.Format "2006-01-02" .)) }}{{ end }}
+    {{- $all = $all | append $m }}
+  {{- end }}
+{{- end }}
 {{- $upcoming := slice }}
-{{- range hugo.Data.events.events }}
+{{- range $all }}
   {{- if partial "fn/is-upcoming.html" . }}{{ $upcoming = $upcoming | append . }}{{ end }}
 {{- end }}
 {{- /* "start" may be missing or an empty string (as saved by the CMS). */}}
@@ -37,7 +46,7 @@
   {{- /* Events that ended in the last year, newest first. */}}
   {{- $cutoff := (now.AddDate -1 0 0).Format "2006-01-02" }}
   {{- $recent := slice }}
-  {{- range hugo.Data.events.events }}
+  {{- range $all }}
     {{- if and .start (not (partial "fn/is-upcoming.html" .)) (ge ((time.AsTime (or .end .start)).Format "2006-01-02") $cutoff) }}{{ $recent = $recent | append . }}{{ end }}
   {{- end }}
   {{- with $recent }}
