@@ -14,11 +14,14 @@
       <div class="lg:col-span-3">
         <h3 class="text-sm font-semibold tracking-wide text-slate-500 uppercase dark:text-slate-400">Past winners</h3>
         <ol class="mt-4 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
-          {{- range .winners }}
+          {{- range $w := .winners }}
           <li class="flex gap-4 py-3">
             <span class="w-12 shrink-0 font-display font-semibold text-accent-600 dark:text-accent-400">{{ .year }}</span>
             <div>
-              <p class="font-medium text-slate-900 dark:text-white">{{ .name }}{{ with .affiliation }} <span class="font-normal text-slate-500 dark:text-slate-400">· {{ . }}</span>{{ end }}</p>
+              {{- /* Optional "spotlight": a member spotlight's name or address; linked only once that spotlight is published. */}}
+              {{- $sp := "" }}
+              {{- with .spotlight }}{{ $path := strings.TrimSuffix "/" (cond (strings.HasPrefix . "/") . (printf "/community/spotlights/%s" .)) }}{{ with site.GetPage $path }}{{ $sp = . }}{{ end }}{{ end }}
+              <p class="font-medium text-slate-900 dark:text-white">{{ with $sp }}<a href="{{ .RelPermalink }}" class="underline decoration-brand-300 underline-offset-2 hover:text-brand-700 dark:hover:text-brand-300">{{ $w.name }}</a> <span class="ml-1 rounded-full bg-accent-300/30 px-2 py-0.5 text-xs font-medium text-accent-700 dark:text-accent-300">Spotlight</span>{{ else }}{{ .name }}{{ end }}{{ with .affiliation }} <span class="font-normal text-slate-500 dark:text-slate-400">· {{ . }}</span>{{ end }}</p>
               {{- with .title }}<p class="mt-0.5 text-sm text-slate-600 italic dark:text-slate-400">{{ . }}</p>{{ end }}
             </div>
           </li>

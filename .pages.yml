@@ -498,6 +498,7 @@ content:
               - { name: name, label: Name, type: string, required: true }
               - { name: affiliation, label: Affiliation, type: string }
               - { name: title, label: Poster or talk title, type: string }
+              - { name: spotlight, label: Spotlight, type: string, description: 'If this winner has a member spotlight, its name as in the address, e.g. jane-doe for /community/spotlights/jane-doe/. The name then links to it.' }
 
       - name: resources
         label: Resources (links)

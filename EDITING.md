@@ -93,6 +93,7 @@ Every save is recorded with your name. Mistakes can always be undone, so don't w
 - **Schedule a structure of the month:** Structure of the month → Add an entry → date = 1st of the month. Include the PDB IDs; the first one is shown in the 3D viewer.
 - **Add a temporary notice to the top bar:** Lists → Announcements bar → add a message with a **Show until** date. Use this for things that are not meeting deadlines, such as a prize call or another organisation's event.
 - **Record prize winners:** Lists → Prizes → the prize → Winners → add the year and name.
+- **Add a member spotlight:** Community → Member spotlights → Add an entry → name, role, institution, **Profile link**, techniques, photo (only with permission) and three questions with answers. For a prize winner, also open Lists → Prizes → the winner and put the spotlight's address name (e.g. `jane-doe`) in **Spotlight**: their name on the Prizes page then links to the profile.
 
 ### Please remember
 
