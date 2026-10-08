@@ -15,3 +15,6 @@ announcements:
   - text: "Winter Meeting 2026: registration closes 26 November"
     url: https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=161036&eventID=388
     until: 2026-11-26
+  - text: "BCA Spring Meeting 2027, York, 22–24 March: registration open, early bird rate until 26 February"
+    url: /meetings/2027-spring/
+    until: 2027-02-26
