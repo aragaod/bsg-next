@@ -110,6 +110,15 @@ content:
           - { name: label, label: Link text, type: string, required: true, description: 'e.g. "Poster (PDF)"' }
           - { name: file, label: File, type: file, options: { media: documents } }
       - { name: registration, label: Registration link, type: string }
+      - name: deadlines
+        label: Deadlines (abstracts, registration)
+        type: object
+        list: true
+        description: The next deadline rotates in the bar at the top of every page, and each one is added to subscribers' calendars.
+        fields:
+          - { name: label, label: What, type: string, required: true, description: 'e.g. "Abstracts due" or "Registration closes"' }
+          - { name: date, label: Date, type: date, required: true }
+      - { name: short, label: Short name, type: string, description: 'Optional, used in the top bar, e.g. "BCA Spring Meeting 2027".' }
       - { name: body, component: body }
 
   # ------------------------------------------------ Structure of the month

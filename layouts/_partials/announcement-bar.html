@@ -16,6 +16,16 @@
   {{- $msgs = $msgs | append (dict "label" "News" "text" .Title "url" .RelPermalink) }}
 {{- end }}
 {{- $today := now.Format "2006-01-02" }}
+{{- /* The next deadline of each upcoming BSG meeting (front matter "deadlines"). */}}
+{{- range $p := partial "fn/upcoming-meetings.html" . }}
+  {{- $next := "" }}
+  {{- range sort ($p.Params.deadlines | default slice) "date" }}
+    {{- if and (not $next) (ge (time.Format "2006-01-02" .date) $today) }}{{ $next = . }}{{ end }}
+  {{- end }}
+  {{- with $next }}
+    {{- $msgs = $msgs | append (dict "label" "Deadline" "text" (printf "%s: %s %s" ($p.Params.short | default $p.Title) (lower .label) (time.Format "2 January" .date)) "url" $p.RelPermalink) }}
+  {{- end }}
+{{- end }}
 {{- range hugo.Data.announcements.announcements }}
   {{- if or (not .until) (ge (time.AsTime .until | time.Format "2006-01-02") $today) }}
     {{- $u := "" }}{{ with .url }}{{ $u = partial "fn/file-url.html" . }}{{ else }}{{ with .file }}{{ $u = partial "fn/file-url.html" . }}{{ end }}{{ end }}

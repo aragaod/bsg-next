@@ -10,6 +10,11 @@ venue: "University of York"
 theme: "AI in the era of large-scale structural biology"
 programme: ""
 registration: "https://registrations.hg3conferences.co.uk/hg3/frontend/reg/thome.csp?pageID=156758&eventID=380"
+short: "BCA Spring Meeting 2027"
+deadlines:
+  - { label: "Abstracts due", date: 2027-01-18 }
+  - { label: "Early bird registration ends", date: 2027-02-26 }
+  - { label: "Registration closes", date: 2027-03-18 }
 ---
 
 The BSG will run sessions at the BCA Spring Meeting 2027 on the theme *AI in the era of large-scale structural biology*. The BCA Spring Meeting 2027, *Diversity in Diffraction*, takes place in person at the University of York from Monday 22 to Wednesday 24 March 2027.
