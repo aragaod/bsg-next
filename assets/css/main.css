@@ -91,3 +91,21 @@
   .prose-bsg .footnotes { @apply mt-12 border-t border-slate-200 pt-6 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400; }
   .prose-bsg .footnotes hr { @apply hidden; }
 }
+
+/* Tables, code and rules in Markdown content (e.g. the editor guide) */
+@layer components {
+  .prose-guide { @apply max-w-4xl; }
+  .prose-bsg table { @apply my-6 w-full border-collapse text-sm; }
+  .prose-bsg th { @apply border border-slate-300 bg-brand-50 px-3 py-2 text-left font-semibold dark:border-slate-700 dark:bg-brand-950; }
+  .prose-bsg td { @apply border border-slate-300 px-3 py-2 align-top dark:border-slate-700; }
+  .prose-bsg code { @apply rounded bg-slate-100 px-1 text-[0.9em] dark:bg-slate-800; }
+  .prose-bsg hr { @apply my-10 border-slate-200 dark:border-slate-800; }
+}
+
+/* Printing: content only, black on white */
+@media print {
+  [data-rotator], body > header, body > footer, .no-print { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .prose-bsg tr { break-inside: avoid; }
+  .prose-bsg h2, .prose-bsg h3 { break-after: avoid; }
+}

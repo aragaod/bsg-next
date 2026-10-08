@@ -2,7 +2,7 @@
 
 The site is edited in the browser with **Pages CMS**. You don't need to know HTML, and you don't need a GitHub account.
 
-**Editor:** <https://app.pagescms.org> · **Website:** <https://biostructures.org.uk>
+**Editor:** <https://app.pagescms.org> · **Website:** <https://biostructures.org.uk> · **This guide, formatted and printable:** <https://biostructures.org.uk/editing/>
 
 ---
 

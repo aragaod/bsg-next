@@ -14,7 +14,7 @@
 {{- $desc := partial "fn/description.html" . }}
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc }}">
-{{- if site.Params.noindex }}
+{{- if or site.Params.noindex .Params.noindex }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
 <meta name="color-scheme" content="light dark">

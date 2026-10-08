@@ -49,7 +49,7 @@ content:
     type: file
     path: EDITING.md
     fields:
-      - { name: body, label: Guide, type: code, options: { language: markdown }, description: How the site is edited. A printable PDF copy is available from the administrator. }
+      - { name: body, label: Guide, type: code, options: { language: markdown }, description: 'Formatted, printable version: https://biostructures.org.uk/editing/ (updates when this text is saved).' }
 
   # ---------------------------------------------------------------- News
   - name: news

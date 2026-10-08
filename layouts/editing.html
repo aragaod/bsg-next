@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{- /* Formatted copy of EDITING.md (the guide editors also see in Pages CMS),
+       without its title and the administrator section. Not linked from the
+       menus and kept out of search engines. */}}
+{{- $md := readFile "EDITING.md" }}
+{{- $md = replaceRE `(?s)^# [^\n]*\n` "" $md }}
+{{- $md = replaceRE `(?s)## For the site administrator.*?\n---\n` "" $md }}
+{{- $md = replace $md "## For editors\n" "" }}
+{{ partial "page-header.html" . }}
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+  <p class="no-print mb-8"><button type="button" onclick="window.print()" class="rounded-lg bg-brand-700 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-800">Print or save as PDF</button></p>
+  <div class="prose-bsg prose-guide">{{ $md | markdownify }}</div>
+</div>
+{{ end }}
