@@ -43,6 +43,14 @@ components:
     type: rich-text
 
 content:
+  # ---------------------------------------------------------------- Guide
+  - name: guide
+    label: Editor guide (read me)
+    type: file
+    path: EDITING.md
+    fields:
+      - { name: body, label: Guide, type: code, options: { language: markdown }, description: How the site is edited. A printable PDF copy is available from the administrator. }
+
   # ---------------------------------------------------------------- News
   - name: news
     label: News
@@ -344,7 +352,7 @@ content:
         fields:
           - name: announcements
             label: Extra messages
-            description: The next meeting, structure of the month and latest news are added automatically.
+            description: Notices only. The next meeting, meeting deadlines (set on each meeting), structure of the month and latest news are added automatically. See the Editor guide.
             type: object
             list: true
             fields:
