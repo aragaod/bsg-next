@@ -49,7 +49,7 @@ content:
     type: file
     path: EDITING.md
     fields:
-      - { name: body, label: Guide, type: code, options: { language: markdown }, description: 'Formatted, printable version: https://biostructures.org.uk/editing/ (updates when this text is saved).' }
+      - { name: body, label: 'Guide text. To read it formatted or print it, open biostructures.org.uk/editing (updates a minute after saving)', type: code, options: { language: markdown } }
 
   # ---------------------------------------------------------------- News
   - name: news
