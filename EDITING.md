@@ -8,12 +8,23 @@ The site is edited in the browser with **Pages CMS**. You don't need to know HTM
 
 ## For the site administrator: giving someone editing access
 
+There are two ways. Use the first for most editors.
+
+**By email (no GitHub account needed)**
+
 1. Sign in at <https://app.pagescms.org> with GitHub and open **aragaod/bsg-next** (branch `main`).
 2. In the left sidebar, under **Admin**, choose **Collaborators**.
 3. Enter the person's email address and send the invitation.
 4. They receive an email titled **Join "aragaod/bsg-next" on Pages CMS** with a link to accept.
 
 To remove access, delete the person from the same Collaborators list.
+
+**With their GitHub account**
+
+1. On GitHub, open the repository → **Settings** → **Collaborators** → **Add people**, and enter their GitHub username.
+2. They accept the invitation (by email or on GitHub), then sign in at <https://app.pagescms.org> with **Sign in with GitHub**.
+
+This gives them write access to the whole repository, including the site's code, not just the content, so keep it for people who are comfortable with GitHub. To remove access, delete them from the same GitHub Collaborators list.
 
 The Pages CMS GitHub app must stay installed on the `bsg-next` repository (GitHub → Settings → Applications → Pages CMS). If the repository is later transferred to the `bcabsg` organisation, the app needs installing there and collaborators re-inviting.
 
@@ -27,6 +38,8 @@ The Pages CMS GitHub app must stay installed on the `bsg-next` repository (GitHu
 2. Choose to sign in with **email** and enter the address the invitation was sent to.
 3. You receive a **one-time code** by email. It is valid for 5 minutes. Enter it to sign in.
 4. Open **aragaod/bsg-next**.
+
+If you were given access through your **GitHub account** instead, choose **Sign in with GitHub** at step 2.
 
 ### What you can edit
 
