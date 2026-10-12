@@ -1,6 +1,597 @@
 {
- "updated": "2026-10-05",
+ "updated": "2026-10-12",
  "entries": [
+  {
+   "id": "9TXB",
+   "db": "PDB",
+   "title": "Mature MPMV capsid hexamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9txb",
+   "image": "images/latest/9txb.jpeg",
+   "resolution": 3.2,
+   "emdb": [
+    "EMD-56394"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TXA",
+   "db": "PDB",
+   "title": "Mature MPMV capsid pentamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9txa",
+   "image": "images/latest/9txa.jpeg",
+   "resolution": 3.3,
+   "emdb": [
+    "EMD-56393"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX9",
+   "db": "PDB",
+   "title": "Mature MPMV E26A capsid hexamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx9",
+   "image": "images/latest/9tx9.jpeg",
+   "resolution": 3.8,
+   "emdb": [
+    "EMD-56392"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX8",
+   "db": "PDB",
+   "title": "Mature MPMV E26A capsid pentamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx8",
+   "image": "images/latest/9tx8.jpeg",
+   "resolution": 4.6,
+   "emdb": [
+    "EMD-56391"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX7",
+   "db": "PDB",
+   "title": "Mature MPMV capsid hexamer 3-fold interface from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx7",
+   "image": "images/latest/9tx7.jpeg",
+   "resolution": 4.1,
+   "emdb": [
+    "EMD-56390"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX6",
+   "db": "PDB",
+   "title": "Mature MoMLV capsid pentamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx6",
+   "image": "images/latest/9tx6.jpeg",
+   "resolution": 3.9,
+   "emdb": [
+    "EMD-56389"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX5",
+   "db": "PDB",
+   "title": "Mature MoMLV capsid hexamer structure from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx5",
+   "image": "images/latest/9tx5.jpeg",
+   "resolution": 3.5,
+   "emdb": [
+    "EMD-56388"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9TX4",
+   "db": "PDB",
+   "title": "Mature MoMLV capsid hexamer 3-fold interface from capsid-like particles",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9tx4",
+   "image": "images/latest/9tx4.jpeg",
+   "resolution": 4.2,
+   "emdb": [
+    "EMD-56387"
+   ],
+   "paper": {
+    "title": "Retroviruses use different IP 6 binding mechanisms to alter the properties of their capsids",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76510-7",
+    "authors": "Klarhof, J.O. … James, L.C."
+   }
+  },
+  {
+   "id": "9T0G",
+   "db": "PDB",
+   "title": "human GDP-L-fucose synthase (C116A) with bound NADP and substrate GDP-D-4-keto-6-deoxy-mannose",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9t0g",
+   "image": "images/latest/9t0g.jpeg",
+   "resolution": 2.2,
+   "paper": {
+    "title": "human GDP-L-fucose synthase (C116A) with bound NADP and substrate GDP-D-4-keto-6-deoxy-mannose",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Pfeiffer, M. … Nidetzky, B."
+   }
+  },
+  {
+   "id": "9SX8",
+   "db": "PDB",
+   "title": "Crystal structure of eSNAr1.3 (K39A) in complex with 2,4-dinitrobromobenzene",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sx8",
+   "image": "images/latest/9sx8.jpeg",
+   "resolution": 2.1,
+   "paper": {
+    "title": "Directed evolution of an enantiocomplementary S N Arase reveals divergent catalytic features",
+    "journal": "Nat Commun",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-76922-5",
+    "authors": "Lister, T.M. … Green, A.P."
+   }
+  },
+  {
+   "id": "9SUO",
+   "db": "PDB",
+   "title": "DtxR-like iron-dependent regulator IdeR complexed with cobalt and a mutated consensus DNA-binding sequence",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9suo",
+   "image": "images/latest/9suo.jpeg",
+   "resolution": 2.26,
+   "paper": {
+    "title": "The bacterial iron sensor IdeR distinguishes DNA sequences by applying stress to non-cognate DNA rather than engaging in base-specific interactions",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Ghosh, S. … Satpati, P."
+   }
+  },
+  {
+   "id": "9SUH",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0830",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9suh",
+   "image": "images/latest/9suh.jpeg",
+   "resolution": 1.46,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0830",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SUG",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0822",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sug",
+   "image": "images/latest/9sug.jpeg",
+   "resolution": 1.38,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0822",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SUF",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0807",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9suf",
+   "image": "images/latest/9suf.jpeg",
+   "resolution": 1.3,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0807",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SUE",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0802",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sue",
+   "image": "images/latest/9sue.jpeg",
+   "resolution": 1.42,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0802",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SUD",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0801",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sud",
+   "image": "images/latest/9sud.jpeg",
+   "resolution": 1.41,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0801",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SUC",
+   "db": "PDB",
+   "title": "High Throughput Crystallography to Combat Antibiotic Resistance - VIM2 with compound x0797",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9suc",
+   "image": "images/latest/9suc.jpeg",
+   "resolution": 1.36,
+   "paper": {
+    "title": "High Throughput Crystallography to Combat\nAntibiotic Resistance - VIM2 with compound x0797",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Wang, D.Y. … Schofield, C.J."
+   }
+  },
+  {
+   "id": "9SSJ",
+   "db": "PDB",
+   "title": "Dishevelled 2 PDZ domain in complex with Daple peptide",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9ssj",
+   "image": "images/latest/9ssj.jpeg",
+   "resolution": 1.4,
+   "paper": {
+    "title": "Dishevelled 2 PDZ domain in complex with Daple peptide",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Renko, M. … Gammons, M.V."
+   }
+  },
+  {
+   "id": "9S15",
+   "db": "PDB",
+   "title": "MspA-M2 in a POPC nanodisc",
+   "method": "Cryo-EM",
+   "techniques": [
+    "cryo-em"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9s15",
+   "image": "images/latest/9s15.jpeg",
+   "resolution": 2.8,
+   "emdb": [
+    "EMD-54442"
+   ],
+   "paper": {
+    "title": "M2-MspA in a POPC nanodisc",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Ashworth, M. … Antson, A.A."
+   }
+  },
+  {
+   "id": "9QOQ",
+   "db": "PDB",
+   "title": "Leishmania donovani ISP2 in complex with bovine trypsin",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qoq",
+   "image": "images/latest/9qoq.jpeg",
+   "resolution": 2.59,
+   "paper": {
+    "title": "Leishmania donovani ISP2 in complex with bovine trypsin",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Freitag-Pohl, S. … Pohl, E."
+   }
+  },
+  {
+   "id": "36CA",
+   "db": "PDB",
+   "title": "Dehydrogenase AprD5 complexed with NAD and UDP-beta-D-Glucose",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/36ca",
+   "image": "images/latest/36ca.jpeg",
+   "resolution": 1.87,
+   "paper": {
+    "title": "Structural and Mechanistic Insights into 4'-Dehydrogenation Catalyzed by AprD5 in Apramycin Biosynthesis",
+    "journal": "Biochemistry",
+    "year": 2026,
+    "doi": "10.1021/acs.biochem.6c00553",
+    "authors": "Kim, W. … Zhang, Y.J."
+   }
+  },
+  {
+   "id": "34JY",
+   "db": "PDB",
+   "title": "IDOL RING domain in complex with PCM-0102246-001",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/34jy",
+   "image": "images/latest/34jy.jpeg",
+   "resolution": 1.48,
+   "paper": {
+    "title": "IDOL RING domain in complex with PCM-0102246-001",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Bradshaw, W.J. … Guenther, F."
+   }
+  },
+  {
+   "id": "34JX",
+   "db": "PDB",
+   "title": "IDOL RING domain in complex with PCM-0102126-001",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/34jx",
+   "image": "images/latest/34jx.jpeg",
+   "resolution": 1.53,
+   "paper": {
+    "title": "IDOL RING domain in complex with PCM-0102126-001",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Bradshaw, W.J. … Guenther, F."
+   }
+  },
+  {
+   "id": "34JW",
+   "db": "PDB",
+   "title": "IDOL RING domain in complex with Z1213725191",
+   "method": "X-ray crystallography",
+   "techniques": [
+    "crystallography"
+   ],
+   "released": "2026-10-07",
+   "reasons": [
+    "UK-funded",
+    "Data collected at Diamond"
+   ],
+   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/34jw",
+   "image": "images/latest/34jw.jpeg",
+   "resolution": 1.23,
+   "paper": {
+    "title": "IDOL RING domain in complex with Z1213725191",
+    "journal": "To Be Published",
+    "year": null,
+    "doi": "",
+    "authors": "Bradshaw, W.J. … Guenther, F."
+   }
+  },
   {
    "id": "9TMK",
    "db": "PDB",
@@ -872,471 +1463,6 @@
     "year": 2026,
     "doi": "10.1002/ceur.70357",
     "authors": "Klintrot, C.I.R. … Grossmann, T.N."
-   }
-  },
-  {
-   "id": "29KK",
-   "db": "PDB",
-   "title": "Crystal structure of Human Catenin Beta-1 in complex with linear beta sheet peptide inhibitor",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/29kk",
-   "image": "images/latest/29kk.jpeg",
-   "resolution": 2.33,
-   "paper": {
-    "title": "To be decided please",
-    "journal": "To Be Published",
-    "year": 2026,
-    "doi": "10.1002/ceur.70357",
-    "authors": "Klintrot, C.I.R. … Grossmann, T.N."
-   }
-  },
-  {
-   "id": "29JR",
-   "db": "PDB",
-   "title": "Cryo-EM structure of human CCDC103/DNAAF19 in complex with RUVBL1/2",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/29jr",
-   "image": "images/latest/29jr.jpeg",
-   "resolution": 3.47,
-   "emdb": [
-    "EMD-57214"
-   ],
-   "paper": {
-    "title": "CCDC103-RUVBL1/2 complex recruits multiple adaptors to promote dynein arm assembly",
-    "journal": "To Be Published",
-    "year": 2026,
-    "doi": "10.1073/pnas.2612755123",
-    "authors": "de Almeida Gomes, M. … Ochi, T."
-   }
-  },
-  {
-   "id": "28MQ",
-   "db": "PDB",
-   "title": "Cryo-EM structure of UBA6-FAT10Dha-UBE2Z trapped ternary complex",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mq",
-   "image": "images/latest/28mq.jpeg",
-   "resolution": 3.04,
-   "emdb": [
-    "EMD-56646"
-   ],
-   "paper": {
-    "title": "Structural determinants for FAT10 activation and transfer from UBA6 to E2 enzymes",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "10.1038/s41467-026-76603-3",
-    "authors": "Ellison, C.J. … Elliott, P.R."
-   }
-  },
-  {
-   "id": "28MP",
-   "db": "PDB",
-   "title": "Cryo-EM structure of UBA6-UbDha-UBE2Z trapped ternary complex (doubly loaded)",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mp",
-   "image": "images/latest/28mp.jpeg",
-   "resolution": 3.12,
-   "emdb": [
-    "EMD-56645"
-   ],
-   "paper": {
-    "title": "Structural determinants for FAT10 activation and transfer from UBA6 to E2 enzymes",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "10.1038/s41467-026-76603-3",
-    "authors": "Ellison, C.J. … Elliott, P.R."
-   }
-  },
-  {
-   "id": "28MO",
-   "db": "PDB",
-   "title": "Cryo-EM structure of UBA6-UbDha-UBE2Z trapped ternary complex (singly loaded)",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mo",
-   "image": "images/latest/28mo.jpeg",
-   "resolution": 3.01,
-   "emdb": [
-    "EMD-56644"
-   ],
-   "paper": {
-    "title": "Structural determinants for FAT10 activation and transfer from UBA6 to E2 enzymes",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "10.1038/s41467-026-76603-3",
-    "authors": "Ellison, C.J. … Elliott, P.R."
-   }
-  },
-  {
-   "id": "28MK",
-   "db": "PDB",
-   "title": "Cryo-EM structure of UBA6 in complex with FAT10 in the post-thiolation state.",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mk",
-   "image": "images/latest/28mk.jpeg",
-   "resolution": 3.53,
-   "emdb": [
-    "EMD-56615"
-   ],
-   "paper": {
-    "title": "Structural determinants for FAT10 activation and transfer from UBA6 to E2 enzymes",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "10.1038/s41467-026-76603-3",
-    "authors": "Ellison, C.J. … Elliott, P.R."
-   }
-  },
-  {
-   "id": "28MJ",
-   "db": "PDB",
-   "title": "Cryo-EM structure of UBA6 in complex with FAT10 in the pre-adenylation state.",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28mj",
-   "image": "images/latest/28mj.jpeg",
-   "resolution": 2.77,
-   "emdb": [
-    "EMD-56614"
-   ],
-   "paper": {
-    "title": "Structural determinants for FAT10 activation and transfer from UBA6 to E2 enzymes",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "10.1038/s41467-026-76603-3",
-    "authors": "Ellison, C.J. … Elliott, P.R."
-   }
-  },
-  {
-   "id": "28IY",
-   "db": "PDB",
-   "title": "Crystal structure of the TPR domain of KLC1 in complex with the C-terminal peptide of JIP1 at 2.13 Angstrom resolution",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-23",
-   "reasons": [
-    "UK-funded",
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/28iy",
-   "image": "images/latest/28iy.jpeg",
-   "resolution": 2.13,
-   "paper": {
-    "title": "Trio analysis in dystonia identifies de novo KLC1 variants in a kinesinopathy with distinct motor and neurodevelopmental features",
-    "journal": "Ebiomedicine",
-    "year": 2026,
-    "doi": "10.1016/j.ebiom.2026.106358",
-    "authors": "Peirano, E. … Zech, M."
-   }
-  },
-  {
-   "id": "9ZRT",
-   "db": "PDB",
-   "title": "Shigella flexneri type III secretion system (T3SS) protein IpaD bound to hemolysis blocking antibody fragment D13r-34",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9zrt",
-   "image": "images/latest/9zrt.jpeg",
-   "resolution": 3.3,
-   "emdb": [
-    "EMD-74630"
-   ],
-   "paper": {
-    "title": "Multifunctional antibody responses from a primate Shigella outbreak inform vaccine design",
-    "journal": "Sci Transl Med",
-    "year": 2026,
-    "doi": "10.1126/scitranslmed.aef7084",
-    "authors": "Gallant, R.M. … Schmidt, H.R."
-   }
-  },
-  {
-   "id": "9ZRS",
-   "db": "PDB",
-   "title": "Shigella flexneri type III secretion system (T3SS) protein IpaD bound to hemolysis blocking Fab D02-F2 and hemolysis enhancing Fab D02-E4",
-   "method": "Cryo-EM",
-   "techniques": [
-    "cryo-em"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "UK-funded"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9zrs",
-   "image": "images/latest/9zrs.jpeg",
-   "resolution": 3.4,
-   "emdb": [
-    "EMD-74629"
-   ],
-   "paper": {
-    "title": "Multifunctional antibody responses from a primate Shigella outbreak inform vaccine design",
-    "journal": "Sci Transl Med",
-    "year": 2026,
-    "doi": "10.1126/scitranslmed.aef7084",
-    "authors": "Gallant, R.M. … Schmidt, H.R."
-   }
-  },
-  {
-   "id": "9SOL",
-   "db": "PDB",
-   "title": "Structure of TCR-581 in complex with Peptide-HLA",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "UK-funded",
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sol",
-   "image": "images/latest/9sol.jpeg",
-   "resolution": 2.93,
-   "paper": {
-    "title": "Isolation of Human TCRs specific to any peptide-HLA complex",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "",
-    "authors": "Karuppiah, V. … Rangel, V.L."
-   }
-  },
-  {
-   "id": "9SOK",
-   "db": "PDB",
-   "title": "Structure of three-domain single chain TCR-581 in complex with Peptide-HLA",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "UK-funded",
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sok",
-   "image": "images/latest/9sok.jpeg",
-   "resolution": 2.5,
-   "paper": {
-    "title": "Isolation of Human TCRs specific to any peptide-HLA complex",
-    "journal": "Nat Commun",
-    "year": 2026,
-    "doi": "",
-    "authors": "Karuppiah, V."
-   }
-  },
-  {
-   "id": "9SLA",
-   "db": "PDB",
-   "title": "Pseudomonas putida 4-hydroxyphenylpyruvate dioxygenase in complex with Topramezone (Mn)",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "UK-funded",
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9sla",
-   "image": "images/latest/9sla.jpeg",
-   "resolution": 1.65,
-   "paper": {
-    "title": "Pseudomonas putida 4-hydroxyphenylpyruvate dioxygenase in complex with Topramezone (Mn)",
-    "journal": "To Be Published",
-    "year": null,
-    "doi": "",
-    "authors": "Alshref, F.M. … Schofield, C.J."
-   }
-  },
-  {
-   "id": "9QKM",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 16",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qkm",
-   "image": "images/latest/9qkm.jpeg",
-   "resolution": 2.26,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
-   }
-  },
-  {
-   "id": "9QKL",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 15",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qkl",
-   "image": "images/latest/9qkl.jpeg",
-   "resolution": 2.4,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
-   }
-  },
-  {
-   "id": "9QKK",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 14",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qkk",
-   "image": "images/latest/9qkk.jpeg",
-   "resolution": 2.09,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
-   }
-  },
-  {
-   "id": "9QKJ",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 13",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qkj",
-   "image": "images/latest/9qkj.jpeg",
-   "resolution": 1.78,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
-   }
-  },
-  {
-   "id": "9QKI",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 12",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qki",
-   "image": "images/latest/9qki.jpeg",
-   "resolution": 1.9,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
-   }
-  },
-  {
-   "id": "9QKH",
-   "db": "PDB",
-   "title": "NCS-1 bound to XChem ligand 11",
-   "method": "X-ray crystallography",
-   "techniques": [
-    "crystallography"
-   ],
-   "released": "2026-09-16",
-   "reasons": [
-    "Data collected at Diamond"
-   ],
-   "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9qkh",
-   "image": "images/latest/9qkh.jpeg",
-   "resolution": 1.73,
-   "paper": {
-    "title": "A resource-efficient structure-based workflow for fragment progression enables parallel hit discovery and validation of functionally diverse modulators of NCS-1 protein-protein interactions",
-    "journal": "Chem Sci",
-    "year": 2026,
-    "doi": "10.1039/D6SC02031C",
-    "authors": "Munoz-Reyes, D. … Sanchez-Barrena, M.J."
    }
   }
  ]
