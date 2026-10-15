@@ -81,7 +81,25 @@ courses:
   - imaging
   when: Courses through the year
   description: Training courses across structural biology techniques at Instruct centres in Europe.
+- title: Biochemical Society protein and drug discovery courses
+  provider: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/training/current-training-offerings/
+  format: in-person
+  level: all
+  techniques:
+  - biophysics
+  - drug-design
+  - other
+  when: Yearly; see the Society's training calendar for dates
+  location: UK
+  description: Short hands-on courses useful to structural biologists, including Engineering Recombinant Proteins for Structural and Functional Studies (construct design, expression, purification and quality control), the UK Membrane Proteins Workshop, Protein Purification and Biophysical Characterisation (including analytical ultracentrifugation), and Key Aspects of Modern Drug Discovery.
 online:
+- title: Biochemical Society online courses
+  provider: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/training/current-training-offerings/
+  techniques:
+  - other
+  description: Self-paced courses in data skills for biochemists, including R for Biochemists 101 and 201 (data handling, graphs, enzyme kinetics, proteomics), Practical Python for Beginners and Introduction to Statistics for the Life Sciences.
 - title: Getting started in cryo-EM
   provider: Caltech
   url: http://cryo-em-course.caltech.edu/
