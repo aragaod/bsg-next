@@ -45,15 +45,14 @@ events:
   - modelling-ai
   description: The first DRIIMB conference, on data, software and models for integrative structural biology, with panel discussions and poster sessions with flash talks. Listed by CCP-EM.
 - title: Icknield Model Building Workshop 2026
-  organiser: CCP-EM and CCP4
-  url: https://www.ccpem.ac.uk/training/courses/
+  organiser: CCP-EM
+  url: https://web.cvent.com/event/5e95d377-c35c-40ce-be7c-1f6866d5ac7c/summary
   start: '2026-11-09'
   end: '2026-11-13'
-  location: Rutherford Appleton Laboratory, Harwell, UK
+  location: Rutherford Appleton Laboratory and Diamond Light Source, Harwell, UK
   techniques:
   - cryo-em
-  - crystallography
-  description: Five-day course on atomic model building and validation for cryo-EM and crystallography, with lectures, tutorials and time on your own data. Registration is closed for this year.
+  description: Five-day in-person course for structural biologists with their own cryo-EM maps, from map optimisation and automated model building to refinement, validation and deposition. Limited to 20 places; applications for 2026 closed on 26 August.
 - title: Biophysical Society 71st Annual Meeting (BPS2027)
   organiser: Biophysical Society
   url: https://www.biophysics.org/2027meeting
