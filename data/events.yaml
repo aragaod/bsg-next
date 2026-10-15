@@ -105,15 +105,16 @@ events:
   location: Prague, Czech Republic
   techniques:
   - crystallography
-- title: CCP4 Study Weekend 2027
+- title: 'CCP4 Study Weekend 2027: Structural Biology on the Move'
   organiser: CCP4
   url: https://studyweekend.ccp4.ac.uk/
-  when: January 2027
-  location: UK
+  start: '2027-01-06'
+  end: '2027-01-08'
+  location: East Midlands Conference Centre, Nottingham, UK
   techniques:
   - crystallography
   - cryo-em
-  description: CCP4's annual study weekend on computational methods in macromolecular structure determination.
+  description: CCP4's annual study weekend, this year on time-resolved crystallography, metalloproteins, serial data processing and refinement. In person or online (free online), with the Diamond MX User Meeting on 6 January and a student poster session that evening. Registration is open; travel bursary applications by 31 October, early bird rate until 15 November, in-person registration closes 6 December.
 - title: Lorne Conference on Protein Structure and Function 2027
   organiser: Lorne Proteins
   url: https://www.lorneproteins.org/
