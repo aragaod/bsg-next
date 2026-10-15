@@ -33,6 +33,27 @@ events:
   - crystallography
   - cryo-em
   description: Free three-day meeting that particularly welcomes early-career researchers and students, with talk and poster prizes. Keynote speaker Professor Laura Spagnolo (University of Glasgow). Abstracts by 18 October, registration by 30 October; student travel bursaries available.
+- title: Integrative Structural Biology Conference 2026
+  organiser: DRIIMB (Digital Research Infrastructure for Integrative Molecular Biology)
+  url: https://driimb.org/integrative-structural-biology-conference/
+  start: '2026-10-12'
+  end: '2026-10-14'
+  location: Leeds, UK
+  techniques:
+  - cryo-em
+  - crystallography
+  - modelling-ai
+  description: The first DRIIMB conference, on data, software and models for integrative structural biology, with panel discussions and poster sessions with flash talks. Listed by CCP-EM.
+- title: Icknield Model Building Workshop 2026
+  organiser: CCP-EM and CCP4
+  url: https://www.ccpem.ac.uk/training/courses/
+  start: '2026-11-09'
+  end: '2026-11-13'
+  location: Rutherford Appleton Laboratory, Harwell, UK
+  techniques:
+  - cryo-em
+  - crystallography
+  description: Five-day course on atomic model building and validation for cryo-EM and crystallography, with lectures, tutorials and time on your own data. Registration is closed for this year.
 - title: Biophysical Society 71st Annual Meeting (BPS2027)
   organiser: Biophysical Society
   url: https://www.biophysics.org/2027meeting
