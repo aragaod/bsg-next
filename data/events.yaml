@@ -63,6 +63,7 @@ events:
   - biophysics
   - cryo-em
   - modelling-ai
+  description: The Biophysical Society's annual meeting, one of the largest biophysics conferences, with strong structural biology, cryo-EM and simulation sessions. The regular abstract deadline has passed; late abstracts (with a handling fee) and early-bird registration close on 5 January 2027.
 - title: ISCB UK 2027
   organiser: International Society for Computational Biology
   url: https://www.iscb.org/uk2027/home
@@ -118,6 +119,15 @@ events:
   - crystallography
   - cryo-em
   - nmr
+- title: 'Protons in Biology: Basic Science to Biomedicine (BPS Conference)'
+  organiser: Biophysical Society
+  url: https://www.biophysics.org/meetings-events/bps-conferences/2027-protons-in-biology-bps-conference
+  start: '2027-08-01'
+  end: '2027-08-04'
+  location: Keble College, University of Oxford, UK
+  techniques:
+  - biophysics
+  description: A Biophysical Society conference in Oxford on the roles of protons in biology, from basic science to biomedicine. Registration includes meals and, for those travelling, four nights in college. Abstracts by 5 April 2027 and early-bird registration by 26 April 2027.
 - title: 36th European Crystallographic Meeting (ECM36)
   organiser: European Crystallographic Association
   url: http://www.xray.cz/ecm36/
