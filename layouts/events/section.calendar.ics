@@ -5,7 +5,7 @@
 {{- $items := slice }}
 {{- range where site.RegularPages "Section" "meetings" }}
   {{- if and .Params.start (partial "fn/is-upcoming.html" .Params) }}
-    {{- $items = $items | append (dict "uid" (printf "bsg-%s@biostructures.org.uk" .File.ContentBaseName) "title" .Title "start" .Params.start "end" (or .Params.end .Params.start) "location" (partial "fn/place.html" .Params) "url" .Permalink "desc" (.Params.theme | default "")) }}
+    {{- $items = $items | append (dict "uid" (printf "bsg-%s@biostructures.org.uk" .File.ContentBaseName) "title" .Title "start" .Params.start "end" (or .Params.end .Params.start) "location" (partial "fn/place.html" .Params) "url" .Permalink "desc" (partial "fn/meeting-blurb.html" .)) }}
     {{- $p := . }}
     {{- range $i, $d := .Params.deadlines }}
       {{- $items = $items | append (dict "uid" (printf "bsg-%s-deadline-%d@biostructures.org.uk" $p.File.ContentBaseName $i) "title" (printf "%s: %s" ($p.Params.short | default $p.Title) $d.label) "start" $d.date "end" $d.date "location" "" "url" $p.Permalink "desc" (printf "Deadline for %s" ($p.Params.short | default $p.Title))) }}

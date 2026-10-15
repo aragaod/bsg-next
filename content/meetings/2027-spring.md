@@ -15,6 +15,7 @@ deadlines:
   - { label: "Abstracts due", date: 2027-01-18 }
   - { label: "Early bird registration ends", date: 2027-02-26 }
   - { label: "Registration closes", date: 2027-03-18 }
+techniques: [crystallography, modelling-ai]
 ---
 
 The BSG will run sessions at the BCA Spring Meeting 2027 on the theme *AI in the era of large-scale structural biology*. The BCA Spring Meeting 2027, *Diversity in Diffraction*, takes place in person at the University of York from Monday 22 to Wednesday 24 March 2027.

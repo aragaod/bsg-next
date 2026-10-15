@@ -1,0 +1,18 @@
+{{- /*
+  Plain-text description of a BSG meeting page for the Events list and the calendar feed:
+  the theme (unless the text already names it), the first paragraph of the page, and the
+  deadlines still to come. Context: the meeting page.
+*/ -}}
+{{- $parts := slice }}
+{{- $first := "" }}
+{{- with findRE `(?s)<p>.*?</p>` .Content 1 }}{{ $first = index . 0 | plainify | htmlUnescape | strings.TrimSpace }}{{ end }}
+{{- with .Params.theme }}{{ if not (in $first .) }}{{ $parts = $parts | append (printf "Theme: “%s”." .) }}{{ end }}{{ end }}
+{{- with $first }}{{ $parts = $parts | append . }}{{ end }}
+{{- $today := now.Format "2006-01-02" }}
+{{- $dl := slice }}
+{{- range sort (.Params.deadlines | default slice) "date" }}
+  {{- if ge (time.Format "2006-01-02" .date) $today }}{{ $dl = $dl | append (printf "%s %s" (lower .label) (time.Format "2 January" .date)) }}{{ end }}
+{{- end }}
+{{- if and .Params.registration $dl }}{{ $parts = $parts | append "Registration is open." }}{{ end }}
+{{- with $dl }}{{ $parts = $parts | append (printf "Deadlines: %s." (delimit . "; ")) }}{{ end }}
+{{- return delimit $parts " " }}

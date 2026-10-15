@@ -14,6 +14,7 @@ deadlines:
   - { label: "Short-talk abstracts due", date: 2026-11-20 }
   - { label: "Registration closes", date: 2026-11-26 }
 poster: "/images/meetings/bsg-winter-2026-poster.jpg"
+techniques: [crystallography, cryo-em, nmr, mass-spec]
 ---
 
 A one-day meeting on how structural biologists study proteins that move, from NMR and ion mobility mass spectrometry to cryo-EM and crystallography. Organised by Prof. Simon Newstead (University of Oxford) and Dr Rachael Wilkinson (University of Leicester).

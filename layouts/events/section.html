@@ -4,7 +4,7 @@
 {{- $all := hugo.Data.events.events }}
 {{- range $p := where site.RegularPages "Section" "meetings" }}
   {{- with $p.Params.start }}
-    {{- $m := dict "title" $p.Title "start" (time.Format "2006-01-02" .) "url" $p.RelPermalink "location" (partial "fn/place.html" $p.Params) "description" ($p.Params.theme | default "") "organiser" (cond (eq $p.Params.kind "spring") "BCA, with BSG sessions" "BSG") }}
+    {{- $m := dict "title" $p.Title "start" (time.Format "2006-01-02" .) "url" $p.RelPermalink "location" (partial "fn/place.html" $p.Params) "description" (partial "fn/meeting-blurb.html" $p) "techniques" ($p.Params.techniques | default slice) "organiser" (cond (eq $p.Params.kind "spring") "BCA, with BSG sessions" "BSG") }}
     {{- with $p.Params.end }}{{ $m = merge $m (dict "end" (time.Format "2006-01-02" .)) }}{{ end }}
     {{- $all = $all | append $m }}
   {{- end }}

@@ -128,6 +128,7 @@ content:
           - { name: label, label: What, type: string, required: true, description: 'e.g. "Abstracts due" or "Registration closes"' }
           - { name: date, label: Date, type: date, required: true }
       - { name: short, label: Short name, type: string, description: 'Optional, used in the top bar, e.g. "BCA Spring Meeting 2027".' }
+      - { name: techniques, component: techniques }
       - { name: body, component: body }
 
   # ------------------------------------------------ Structure of the month
