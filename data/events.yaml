@@ -53,6 +53,23 @@ events:
   techniques:
   - cryo-em
   description: Five-day in-person course for structural biologists with their own cryo-EM maps, from map optimisation and automated model building to refinement, validation and deposition. Limited to 20 places; applications for 2026 closed on 26 August.
+- title: 'Webinar: Lipid interactions driving actinoporin pore architecture and stoichiometry'
+  organiser: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/events-calendar/lipid-interactions-driving-actinoporin-pore-architecture-and-stoichiometry/
+  start: '2026-11-04'
+  location: Online
+  techniques:
+  - biophysics
+  description: One-hour webinar, 14:00–15:00 UK time. Dr Gašper Šolinc (National Institute of Chemistry, Ljubljana) presents recent findings on the pore-forming, actinoporin-like protein Fav from the coral Orbicella faveolata. Register through the Biochemical Society page.
+- title: 'Webinar: Biochemistry beyond academia, from small biotechs to big pharma'
+  organiser: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/events-calendar/biochemistry-beyond-academia-from-small-biotechs-to-big-pharma/
+  start: '2026-11-25'
+  location: Online
+  techniques:
+  - drug-design
+  - other
+  description: One-hour careers webinar, 14:00–15:00 UK time, on moving from academia into biotech and pharma, with practical advice on applications and development opportunities. Useful for PhD students and postdocs weighing up industry. Register through the Biochemical Society page.
 - title: Biophysical Society 71st Annual Meeting (BPS2027)
   organiser: Biophysical Society
   url: https://www.biophysics.org/2027meeting
