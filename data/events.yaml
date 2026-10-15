@@ -91,6 +91,8 @@ events:
   techniques:
   - drug-design
   - biophysics
+  - crystallography
+  description: The Biochemical Society's conference on the next generation of kinase and pseudokinase research, from signalling mechanisms, enzymology and structural biology to chemical biology, drug discovery and translational science. Keynotes, talks chosen for early-career researchers, and poster sessions. Venue and registration to be announced; you can register your interest for alerts.
 - title: 'Gordon Research Conference: Three Dimensional Electron Microscopy'
   organiser: Gordon Research Conferences
   url: https://www.grc.org/three-dimensional-electron-microscopy-conference/2027/
