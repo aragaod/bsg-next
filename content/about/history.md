@@ -23,7 +23,7 @@ The David Blow Poster Prize is awarded each year for the best poster at the BCA 
 
 Blue John is a banded blue and yellow fluorite, found only in Treak Cliff. The crystal on the trophy was mined in 1760 from the top of the Witches Cave, in the "Cliff Blue" vein. It broke into three pieces when it was mined: one went to the Geological Museum in London, one to Manchester University, and the finest stayed on display at the cavern until it was given to the BSG. Its cubic morphology (space group Fm3̄m) is well defined, with concave faces and many visible lattice dislocations. The plinth was made by Castleton cabinet maker David Elliot from an English oak felled in the Lake District in 1977, and the silver plates were engraved by Peter Devine of Sheffield.
 
-*Adapted from an account by David Rice (1991), typed up by Elspeth Garman in 2016 and reproduced with permission. [Read the full account (PDF)](/archive/bluejohn.pdf).*
+*Adapted from an account by David Rice (1991), typed up by Elspeth Garman in 2016 and reproduced with permission. [Read the full account (PDF)](https://biostructures.org.uk/archive/bluejohn.pdf).*
 
 The prize now carries the name of David Blow (1931–2004), a pioneer of protein crystallography at the MRC Laboratory of Molecular Biology and Imperial College and one of the architects of the BCA, and the man who proposed the Biological Structures Group; the 2004 Winter Meeting was held in his memory.[^blowmemoir]
 

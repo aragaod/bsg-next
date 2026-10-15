@@ -1,12 +1,17 @@
 {{- /* Resolves internal links ("/meetings/", "../about/") so they work under any baseURL; external links open normally. */ -}}
 {{- $u := urls.Parse .Destination }}
 {{- $href := .Destination }}
+{{- /* Full addresses on this site (the web editor drops "/path" links) are treated as internal. */ -}}
+{{- if and $u.IsAbs (eq $u.Host (urls.Parse site.BaseURL).Host) }}
+  {{- $href = strings.TrimPrefix (printf "%s://%s" $u.Scheme $u.Host) .Destination }}
+  {{- $u = urls.Parse $href }}
+{{- end }}
 {{- if and (not $u.IsAbs) $u.Path }}
   {{- with or (.PageInner.GetPage $u.Path) (site.GetPage $u.Path) }}
     {{- $href = .RelPermalink }}
     {{- with $u.Fragment }}{{ $href = printf "%s#%s" $href . }}{{ end }}
   {{- else }}
-    {{- if strings.HasPrefix $u.Path "/" }}{{ $href = strings.TrimPrefix "/" .Destination | relURL }}{{ end }}
+    {{- if strings.HasPrefix $u.Path "/" }}{{ $href = strings.TrimPrefix "/" $href | relURL }}{{ end }}
   {{- end }}
 {{- end -}}
 <a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $u.IsAbs }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}{{ if $u.IsAbs }}<span class="sr-only"> (opens in a new tab)</span>{{ end }}</a>

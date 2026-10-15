@@ -4,4 +4,4 @@ description: "Conferences, schools and workshops across the structural biology c
 outputs: [html, calendar]
 ---
 
-Events from other societies and facilities. For the BSG's own meetings, see [Meetings](/meetings/).
+Events from other societies and facilities. For the BSG's own meetings, see [Meetings](https://biostructures.org.uk/meetings/).

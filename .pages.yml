@@ -41,6 +41,7 @@ components:
   body:
     label: Text
     type: rich-text
+    description: 'For a link to another page on this site, use its full address, e.g. https://biostructures.org.uk/meetings/ (short links like /meetings/ are removed when saving).'
 
 content:
   # ---------------------------------------------------------------- Guide
@@ -66,7 +67,7 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
-      - { name: expiryDate, label: Remove after, type: date, description: 'Optional. Leave empty to keep the post permanently (the usual choice, so News keeps a record). If set, the post disappears from the site on this date (the site rebuilds every night).' }
+      - { name: expiryDate, label: Remove after, type: date, default: '', description: 'Optional. Leave empty to keep the post permanently (the usual choice, so News keeps a record). If set, the post disappears from the site on this date (the site rebuilds every night).' }
       - { name: author, label: Author, type: string }
       - { name: summary, label: Summary, type: text, description: One or two sentences for lists and the home page. }
       - { name: image, label: Image, type: image, description: Optional. Only use photos of people with their permission., options: { media: images } }
@@ -102,8 +103,8 @@ content:
             - { value: winter, label: BSG Winter Meeting }
             - { value: spring, label: BSG sessions at the BCA Spring Meeting }
       - { name: year, label: Year, type: number, required: true }
-      - { name: start, label: Start date, type: date, description: Leave empty until confirmed. The home page countdown starts as soon as this is set. }
-      - { name: end, label: End date, type: date, description: Only for meetings longer than one day. }
+      - { name: start, label: Start date, type: date, default: '', description: Leave empty until confirmed. The home page countdown starts as soon as this is set. }
+      - { name: end, label: End date, type: date, default: '', description: Only for meetings longer than one day. }
       - { name: when, label: Expected timing, type: string, description: 'Shown while the date is not confirmed, e.g. "December 2027".' }
       - { name: city, label: City, type: string }
       - { name: venue, label: Venue, type: string }
@@ -360,7 +361,7 @@ content:
               - { name: text, label: Message, type: string, required: true }
               - { name: url, label: Link, type: string, description: 'A page on this site (e.g. /prizes/) or a full URL. Leave empty if you upload a file instead.' }
               - { name: file, label: Or upload a file (PDF), type: file, options: { media: documents } }
-              - { name: until, label: Show until, type: date }
+              - { name: until, label: Show until, type: date, default: '' }
 
       - name: events
         label: Events calendar
@@ -377,8 +378,8 @@ content:
               - { name: title, label: Title, type: string, required: true }
               - { name: organiser, label: Organiser, type: string, required: true }
               - { name: url, label: Link, type: string, required: true }
-              - { name: start, label: Start date, type: date }
-              - { name: end, label: End date, type: date }
+              - { name: start, label: Start date, type: date, default: '' }
+              - { name: end, label: End date, type: date, default: '' }
               - { name: when, label: Timing if not dated, type: string, description: 'e.g. "January 2027"' }
               - { name: location, label: Location, type: string }
               - { name: techniques, component: techniques }
@@ -408,8 +409,8 @@ content:
                 type: select
                 options: { values: [introductory, intermediate, advanced, all] }
               - { name: techniques, component: techniques }
-              - { name: start, label: Start date, type: date }
-              - { name: end, label: End date, type: date }
+              - { name: start, label: Start date, type: date, default: '' }
+              - { name: end, label: End date, type: date, default: '' }
               - { name: when, label: Timing if not dated, type: string }
               - { name: location, label: Location, type: string }
               - { name: description, label: Description, type: text }
