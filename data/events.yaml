@@ -127,7 +127,10 @@ events:
   location: Keble College, University of Oxford, UK
   techniques:
   - biophysics
-  description: A Biophysical Society conference in Oxford on the roles of protons in biology, from basic science to biomedicine. Registration includes meals and, for those travelling, four nights in college. Abstracts by 5 April 2027 and early-bird registration by 26 April 2027.
+  - cryo-em
+  - nmr
+  - modelling-ai
+  description: A Biophysical Society conference in Oxford on the roles of protons in biology, from basic science to biomedicine, bringing together structural biology, simulation and physiology. Speakers include Judy Hirst, David Drew, Aashish Manglik, Mei Hong, Philip Biggin, Ville Kaila, Sharon Hammes-Schiffer and Pawel Swietach. Registration includes meals and, for those travelling, four nights in college. Abstracts by 5 April 2027 and early-bird registration by 26 April 2027.
 - title: 36th European Crystallographic Meeting (ECM36)
   organiser: European Crystallographic Association
   url: http://www.xray.cz/ecm36/
