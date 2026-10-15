@@ -12,10 +12,10 @@ There are two ways. Use the first for most editors.
 
 **By email (no GitHub account needed)**
 
-1. Sign in at <https://app.pagescms.org> with GitHub and open **aragaod/bsg-next** (branch `main`).
+1. Sign in at <https://app.pagescms.org> with GitHub and open **bsg-site/bsg-next** (branch `main`).
 2. In the left sidebar, under **Admin**, choose **Collaborators**.
 3. Enter the person's email address and send the invitation.
-4. They receive an email titled **Join "aragaod/bsg-next" on Pages CMS** with a link to accept.
+4. They receive an email titled **Join "bsg-site/bsg-next" on Pages CMS** with a link to accept.
 
 To remove access, delete the person from the same Collaborators list.
 
@@ -26,7 +26,7 @@ To remove access, delete the person from the same Collaborators list.
 
 This gives them write access to the whole repository, including the site's code, not just the content, so keep it for people who are comfortable with GitHub. To remove access, delete them from the same GitHub Collaborators list.
 
-The Pages CMS GitHub app must stay installed on the `bsg-next` repository (GitHub → Settings → Applications → Pages CMS). If the repository is later transferred to the `bcabsg` organisation, the app needs installing there and collaborators re-inviting.
+The repository belongs to the `bsg-site` GitHub organisation. The Pages CMS GitHub app must stay installed there with access to `bsg-next` (organisation → Settings → GitHub Apps → Pages CMS).
 
 ---
 
@@ -37,7 +37,7 @@ The Pages CMS GitHub app must stay installed on the `bsg-next` repository (GitHu
 1. Open the link in your invitation email, or go to <https://app.pagescms.org>.
 2. Choose to sign in with **email** and enter the address the invitation was sent to.
 3. You receive a **one-time code** by email. It is valid for 5 minutes. Enter it to sign in.
-4. Open **aragaod/bsg-next**.
+4. Open **bsg-site/bsg-next**.
 
 If you were given access through your **GitHub account** instead, choose **Sign in with GitHub** at step 2.
 
