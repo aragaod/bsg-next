@@ -177,6 +177,15 @@ events:
   techniques:
   - crystallography
   description: The European crystallography meeting, covering structural biology among all areas of crystallography. Free pre-registration is available on the meeting website; abstracts and paid registration open in November 2026. Key deadlines are bursary applications by 31 March 2027, abstracts for talks by 15 April, early-bird registration by 31 May and poster abstracts by 15 June (see the meeting's deadlines page).
+- title: CCP4/DLS Data Collection and Structure Solution Workshop 2026
+  organiser: CCP4 and Diamond Light Source
+  url: https://www.ccp4.ac.uk/workshop/ccp4-workshop-2-2-2-2/
+  start: '2026-11-24'
+  end: '2026-12-01'
+  location: Diamond Light Source, Harwell, UK
+  techniques:
+  - crystallography
+  description: Hands-on course for graduate students, postdocs and early-career scientists, from data collection through phasing, refinement, validation and deposition, with a day collecting data on Diamond beamlines and time on your own project. The first two days are online, the rest in person. Places are limited and applications need a supervisor's recommendation.
 - title: 'CCP4 Study Weekend 2027: Structural Biology on the Move'
   organiser: CCP4
   url: https://studyweekend.ccp4.ac.uk/

@@ -18,17 +18,17 @@ courses:
   location: UK
   description: For students and researchers relatively new to crystallography. Lectures cover protein expression through to structure validation, with supervised computer tutorials and a crystal manipulation
     and cryo-cooling workshop.
-- title: CCP4 Study Weekend
+- title: CCP4 workshops and schools
   provider: CCP4
-  url: https://studyweekend.ccp4.ac.uk/
+  url: https://www.ccp4.ac.uk/workshops/
   format: in-person
   level: all
   techniques:
   - crystallography
   - cryo-em
-  when: Every January
-  location: UK
-  description: Annual meeting on computational methods in macromolecular structure determination, with a different theme each year.
+  when: Through the year
+  location: UK and worldwide
+  description: Hands-on courses in macromolecular crystallography run by CCP4 with facilities and partners, including the yearly CCP4/DLS Data Collection and Structure Solution Workshop at Diamond for students, postdocs and early-career scientists, and schools around the world.
 - title: CCP-EM training
   provider: CCP-EM
   url: https://www.ccpem.ac.uk/training/
