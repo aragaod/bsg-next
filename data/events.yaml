@@ -119,12 +119,13 @@ events:
   - nmr
 - title: 36th European Crystallographic Meeting (ECM36)
   organiser: European Crystallographic Association
-  url: https://ecm36.ecanews.org/
+  url: http://www.xray.cz/ecm36/
   start: 2027-08-23
   end: 2027-08-28
   location: Prague, Czech Republic
   techniques:
   - crystallography
+  description: The European crystallography meeting, covering structural biology among all areas of crystallography. Free pre-registration is available on the meeting website; abstracts and paid registration open in November 2026. Key deadlines are bursary applications by 31 March 2027, abstracts for talks by 15 April, early-bird registration by 31 May and poster abstracts by 15 June (see the meeting's deadlines page).
 - title: 'CCP4 Study Weekend 2027: Structural Biology on the Move'
   organiser: CCP4
   url: https://studyweekend.ccp4.ac.uk/
