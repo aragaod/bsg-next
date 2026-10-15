@@ -70,6 +70,24 @@ events:
   - drug-design
   - other
   description: One-hour careers webinar, 14:00–15:00 UK time, on moving from academia into biotech and pharma, with practical advice on applications and development opportunities. Useful for PhD students and postdocs weighing up industry. Register through the Biochemical Society page.
+- title: 'Early Career Symposium 2026: Industry Transition Toolkit'
+  organiser: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/events-calendar/early-career-symposium-2026-industry-transition-toolkit/
+  start: '2026-11-09'
+  location: UK
+  techniques:
+  - other
+  description: The Biochemical Society's annual one-day symposium for early-career researchers, this year on moving from academia into industry, recognising the transferable skills you already have and how to present them. Free for Biochemical Society members.
+- title: Engineering Recombinant Proteins 2026
+  organiser: Biochemical Society
+  url: https://www.biochemistry.org/events-and-training/events-calendar/engineering-recombinant-proteins-2026/
+  start: '2026-11-24'
+  end: '2026-11-25'
+  location: UK
+  techniques:
+  - biophysics
+  - other
+  description: Two-day hands-on training on producing pure, homogeneous, high-quality recombinant proteins for structural and functional studies, from bioinformatic construct design to expression, purification, stability and quality control with biophysical techniques.
 - title: Biophysical Society 71st Annual Meeting (BPS2027)
   organiser: Biophysical Society
   url: https://www.biophysics.org/2027meeting
